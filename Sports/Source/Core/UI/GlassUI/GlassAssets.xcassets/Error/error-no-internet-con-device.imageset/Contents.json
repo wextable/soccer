@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "error-no-internet-con-device.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

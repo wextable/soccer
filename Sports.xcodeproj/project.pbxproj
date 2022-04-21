@@ -1,0 +1,2383 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3305B96927FB95D8009DD870 /* FiveStarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3305B96827FB95D8009DD870 /* FiveStarRatingView.swift */; };
+		3313274E27CE777A009D4DBD /* HighlightHUDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3313274D27CE777A009D4DBD /* HighlightHUDView.swift */; };
+		3313275027CE7A92009D4DBD /* TeamHUDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3313274F27CE7A92009D4DBD /* TeamHUDView.swift */; };
+		3313275327CE7F46009D4DBD /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3313275227CE7F46009D4DBD /* UIView+Extensions.swift */; };
+		3317359427FA2097007E0BC0 /* TeamGameScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3317359127FA2097007E0BC0 /* TeamGameScheduleCell.swift */; };
+		3317359527FA2097007E0BC0 /* TeamGameScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3317359227FA2097007E0BC0 /* TeamGameScheduleView.swift */; };
+		3317359627FA2097007E0BC0 /* TeamScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3317359327FA2097007E0BC0 /* TeamScheduleViewController.swift */; };
+		3317359827FA22A0007E0BC0 /* TeamSchedulePresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3317359727FA22A0007E0BC0 /* TeamSchedulePresentation.swift */; };
+		3317359B27FA2A09007E0BC0 /* TeamSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3317359A27FA2A09007E0BC0 /* TeamSelectionViewController.swift */; };
+		331735A227FA2AC8007E0BC0 /* TeamSelectionPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331735A127FA2AC8007E0BC0 /* TeamSelectionPresentation.swift */; };
+		331735A727FA2B6D007E0BC0 /* TeamSelectionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331735A627FA2B6D007E0BC0 /* TeamSelectionCoordinator.swift */; };
+		331735A927FA2DD3007E0BC0 /* TeamSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331735A827FA2DD3007E0BC0 /* TeamSelectionView.swift */; };
+		331735AB27FA2FA0007E0BC0 /* TeamSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331735AA27FA2FA0007E0BC0 /* TeamSelectionCell.swift */; };
+		331735AD27FA30FC007E0BC0 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331735AC27FA30FC007E0BC0 /* Int+Extensions.swift */; };
+		3317976327CDC95A00CF65F5 /* GameHighlightsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3317976227CDC95A00CF65F5 /* GameHighlightsCoordinator.swift */; };
+		3317976627CDC9EB00CF65F5 /* GameHighlightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3317976527CDC9EB00CF65F5 /* GameHighlightsViewController.swift */; };
+		3317976827CDCCB200CF65F5 /* HighlightPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3317976727CDCCB200CF65F5 /* HighlightPlayerView.swift */; };
+		331F663727C31CF300878C0B /* Scheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331F663627C31CF300878C0B /* Scheduler.swift */; };
+		331F663B27C31EC300878C0B /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331F663A27C31EC300878C0B /* DataStore.swift */; };
+		332FE0CC27CA7A2C00520AB3 /* GameSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332FE0CB27CA7A2C00520AB3 /* GameSummaryViewController.swift */; };
+		332FE0CE27CA7D3B00520AB3 /* GameSummaryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332FE0CD27CA7D3B00520AB3 /* GameSummaryCoordinator.swift */; };
+		332FE0D027CA7DAC00520AB3 /* GameSummaryPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332FE0CF27CA7DAC00520AB3 /* GameSummaryPresentation.swift */; };
+		3332399527C8800D009194B5 /* LeagueCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3332399427C8800D009194B5 /* LeagueCoordinator.swift */; };
+		3332399827C880AD009194B5 /* LeagueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3332399727C880AD009194B5 /* LeagueViewController.swift */; };
+		3332399A27C888FC009194B5 /* LeaguePresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3332399927C888FC009194B5 /* LeaguePresentation.swift */; };
+		33323CC427C891DB009194B5 /* LeagueScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33323CC327C891DB009194B5 /* LeagueScheduleViewController.swift */; };
+		33323CC627C892C2009194B5 /* GameScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33323CC527C892C2009194B5 /* GameScheduleView.swift */; };
+		33323CC827C89469009194B5 /* GameScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33323CC727C89469009194B5 /* GameScheduleCell.swift */; };
+		33323CCA27C895C9009194B5 /* LeagueSchedulePresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33323CC927C895C9009194B5 /* LeagueSchedulePresentation.swift */; };
+		333F8D612782399600F051E5 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333F8D602782399600F051E5 /* Position.swift */; };
+		335527E1280E29E700A96974 /* PlayerCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335527E0280E29E700A96974 /* PlayerCardView.swift */; };
+		335527E3280EFBEB00A96974 /* PlayerCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335527E2280EFBEB00A96974 /* PlayerCardCell.swift */; };
+		335527E5280EFC5000A96974 /* PlayerCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335527E4280EFC5000A96974 /* PlayerCardViewController.swift */; };
+		3357930127BB63CA00EBFC7F /* PixelatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357930027BB63CA00EBFC7F /* PixelatedImageView.swift */; };
+		335A05D427C079A20000D37E /* FaceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335A05D327C079A20000D37E /* FaceFactory.swift */; };
+		335BEB7227F5248D0071FD53 /* TeamCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335BEB7127F5248D0071FD53 /* TeamCoordinator.swift */; };
+		335BEB7427F5252C0071FD53 /* TeamRosterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335BEB7327F5252C0071FD53 /* TeamRosterViewController.swift */; };
+		335BEB7627F526680071FD53 /* TeamPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335BEB7527F526680071FD53 /* TeamPresentation.swift */; };
+		335E653327D1C42C00FA9281 /* GameHighlightZones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335E653227D1C42C00FA9281 /* GameHighlightZones.swift */; };
+		336579742810ECE300AA242F /* Presentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336579732810ECE300AA242F /* Presentation.swift */; };
+		336CD56427C59FEF00E47DDE /* UIImage+PaintBucket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336CD56127C59FEF00E47DDE /* UIImage+PaintBucket.swift */; };
+		336CD56527C59FEF00E47DDE /* ImageBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336CD56227C59FEF00E47DDE /* ImageBuffer.swift */; };
+		336CD56627C59FEF00E47DDE /* Pixel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336CD56327C59FEF00E47DDE /* Pixel.swift */; };
+		336E37EC27729A8D002E1088 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336E37EB27729A8D002E1088 /* AppDelegate.swift */; };
+		336E37F527729A8E002E1088 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 336E37F427729A8E002E1088 /* Assets.xcassets */; };
+		336E37F827729A8E002E1088 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 336E37F627729A8E002E1088 /* LaunchScreen.storyboard */; };
+		336E380327729A8F002E1088 /* SportsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336E380227729A8F002E1088 /* SportsTests.swift */; };
+		336E380D27729A8F002E1088 /* SportsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336E380C27729A8F002E1088 /* SportsUITests.swift */; };
+		336E380F27729A8F002E1088 /* SportsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336E380E27729A8F002E1088 /* SportsUITestsLaunchTests.swift */; };
+		336E382127729C1C002E1088 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336E382027729C1C002E1088 /* Player.swift */; };
+		336E382427729D11002E1088 /* PlayerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336E382327729D11002E1088 /* PlayerFactory.swift */; };
+		336E382627729D5B002E1088 /* NameFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336E382527729D5B002E1088 /* NameFactory.swift */; };
+		336E382827740925002E1088 /* LeagueFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336E382727740925002E1088 /* LeagueFactory.swift */; };
+		336E382A2774097E002E1088 /* TeamFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336E38292774097E002E1088 /* TeamFactory.swift */; };
+		336E382C277409A1002E1088 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336E382B277409A1002E1088 /* Team.swift */; };
+		336E382F277527CD002E1088 /* LeagueDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336E382E277527CD002E1088 /* LeagueDataSource.swift */; };
+		336E3A6A277529BC002E1088 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336E3A69277529BC002E1088 /* Game.swift */; };
+		336E3A6C27752A12002E1088 /* GameSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336E3A6B27752A12002E1088 /* GameSimulator.swift */; };
+		337187E4277AC3060048CD12 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337187E3277AC3060048CD12 /* HomeCoordinator.swift */; };
+		33718A20277AC3BD0048CD12 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718A1F277AC3BD0048CD12 /* Coordinator.swift */; };
+		33718A22277AC48A0048CD12 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718A21277AC48A0048CD12 /* HomeViewController.swift */; };
+		33718B6D277ACCA80048CD12 /* ListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718A6E277ACCA70048CD12 /* ListItemView.swift */; };
+		33718B6E277ACCA80048CD12 /* GlassHapticDurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718A70277ACCA70048CD12 /* GlassHapticDurations.swift */; };
+		33718B6F277ACCA80048CD12 /* GlassIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718A71277ACCA70048CD12 /* GlassIcon.swift */; };
+		33718B70277ACCA80048CD12 /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718A73277ACCA70048CD12 /* Transition.swift */; };
+		33718B71277ACCA80048CD12 /* GlassPageIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718A75277ACCA70048CD12 /* GlassPageIndicator.swift */; };
+		33718B72277ACCA80048CD12 /* GlassToolTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718A77277ACCA70048CD12 /* GlassToolTip.swift */; };
+		33718B73277ACCA80048CD12 /* EasyTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718A78277ACCA70048CD12 /* EasyTipView.swift */; };
+		33718B74277ACCA80048CD12 /* GlassSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718A79277ACCA70048CD12 /* GlassSpacing.swift */; };
+		33718B75277ACCA80048CD12 /* GlassSwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718A7B277ACCA70048CD12 /* GlassSwatch.swift */; };
+		33718B76277ACCA80048CD12 /* PreviewAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33718A7D277ACCA70048CD12 /* PreviewAssets.xcassets */; };
+		33718B77277ACCA80048CD12 /* GlassRoundProgressIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718A7F277ACCA70048CD12 /* GlassRoundProgressIndicator.swift */; };
+		33718B78277ACCA80048CD12 /* GlassProgressIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718A80277ACCA70048CD12 /* GlassProgressIndicator.swift */; };
+		33718B79277ACCA80048CD12 /* PassThroughScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718A82277ACCA70048CD12 /* PassThroughScrollView.swift */; };
+		33718B7A277ACCA80048CD12 /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718A83277ACCA70048CD12 /* StackViewController.swift */; };
+		33718B7B277ACCA80048CD12 /* GlassAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33718A84277ACCA70048CD12 /* GlassAssets.xcassets */; };
+		33718B7C277ACCA80048CD12 /* GlassAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718A85277ACCA70048CD12 /* GlassAsset.swift */; };
+		33718B7D277ACCA80048CD12 /* BaseReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718A87277ACCA70048CD12 /* BaseReusableView.swift */; };
+		33718B7E277ACCA80048CD12 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718A88277ACCA70048CD12 /* BaseViewController.swift */; };
+		33718B7F277ACCA80048CD12 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718A89277ACCA70048CD12 /* BaseTableViewCell.swift */; };
+		33718B80277ACCA80048CD12 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718A8A277ACCA70048CD12 /* BaseCollectionViewCell.swift */; };
+		33718B81277ACCA80048CD12 /* BaseTableViewHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718A8B277ACCA70048CD12 /* BaseTableViewHeaderFooterView.swift */; };
+		33718B82277ACCA80048CD12 /* BaseAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718A8C277ACCA70048CD12 /* BaseAnnotationView.swift */; };
+		33718B83277ACCA80048CD12 /* GlassBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718A8D277ACCA70048CD12 /* GlassBaseViewController.swift */; };
+		33718B84277ACCA80048CD12 /* BaseCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718A8E277ACCA70048CD12 /* BaseCollectionReusableView.swift */; };
+		33718B85277ACCA80048CD12 /* BaseControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718A8F277ACCA70048CD12 /* BaseControl.swift */; };
+		33718B86277ACCA80048CD12 /* ViewConstructable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718A90277ACCA70048CD12 /* ViewConstructable.swift */; };
+		33718B87277ACCA80048CD12 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718A91277ACCA70048CD12 /* BaseView.swift */; };
+		33718B88277ACCA80048CD12 /* GlassCircularBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718A93277ACCA70048CD12 /* GlassCircularBadge.swift */; };
+		33718B89277ACCA80048CD12 /* GlassSnackbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718A95277ACCA70048CD12 /* GlassSnackbar.swift */; };
+		33718B8A277ACCA80048CD12 /* GlassSnackbarStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718A96277ACCA70048CD12 /* GlassSnackbarStackView.swift */; };
+		33718B8B277ACCA80048CD12 /* GlassAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718A98277ACCA70048CD12 /* GlassAppearance.swift */; };
+		33718B8F277ACCA80048CD12 /* GlassComponentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718A9D277ACCA70048CD12 /* GlassComponentManager.swift */; };
+		33718B90277ACCA80048CD12 /* LayoutConstrainingInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718A9F277ACCA70048CD12 /* LayoutConstrainingInsets.swift */; };
+		33718B91277ACCA80048CD12 /* LayoutAnchorable+SizingTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AA0277ACCA70048CD12 /* LayoutAnchorable+SizingTo.swift */; };
+		33718B92277ACCA80048CD12 /* LayoutAnchorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AA1277ACCA70048CD12 /* LayoutAnchorable.swift */; };
+		33718B93277ACCA80048CD12 /* LayoutConstrainingEdges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AA2277ACCA70048CD12 /* LayoutConstrainingEdges.swift */; };
+		33718B94277ACCA80048CD12 /* NSLayoutConstraint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AA3277ACCA70048CD12 /* NSLayoutConstraint+Extension.swift */; };
+		33718B95277ACCA80048CD12 /* LayoutAnchorable+PinningEdgesTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AA4277ACCA70048CD12 /* LayoutAnchorable+PinningEdgesTo.swift */; };
+		33718B96277ACCA80048CD12 /* LayoutConstrainingOffsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AA5277ACCA70048CD12 /* LayoutConstrainingOffsets.swift */; };
+		33718B97277ACCA80048CD12 /* LayoutConstraining.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AA6277ACCA70048CD12 /* LayoutConstraining.swift */; };
+		33718B98277ACCA80048CD12 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AA7277ACCA70048CD12 /* Layout.swift */; };
+		33718B99277ACCA80048CD12 /* LayoutAnchorable+PinningEdgesInside.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AA8277ACCA70048CD12 /* LayoutAnchorable+PinningEdgesInside.swift */; };
+		33718B9A277ACCA80048CD12 /* LayoutConstrainingAxes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AA9277ACCA70048CD12 /* LayoutConstrainingAxes.swift */; };
+		33718B9B277ACCA80048CD12 /* LayoutAnchorable+CenteringInside.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AAA277ACCA70048CD12 /* LayoutAnchorable+CenteringInside.swift */; };
+		33718B9C277ACCA80048CD12 /* UILayoutPriority+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AAB277ACCA70048CD12 /* UILayoutPriority+Extensions.swift */; };
+		33718B9D277ACCA80048CD12 /* GlassBarLabelGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AAD277ACCA70048CD12 /* GlassBarLabelGroup.swift */; };
+		33718B9E277ACCA80048CD12 /* GlassBarIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AAE277ACCA70048CD12 /* GlassBarIndicator.swift */; };
+		33718B9F277ACCA80048CD12 /* GlassProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AAF277ACCA70048CD12 /* GlassProgressView.swift */; };
+		33718BA0277ACCA80048CD12 /* GlassTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AB1277ACCA70048CD12 /* GlassTextFieldDelegate.swift */; };
+		33718BA1277ACCA80048CD12 /* GlassTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AB2277ACCA70048CD12 /* GlassTextField.swift */; };
+		33718BA2277ACCA80048CD12 /* GlassAccessoryToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AB3277ACCA70048CD12 /* GlassAccessoryToolbar.swift */; };
+		33718BA3277ACCA80048CD12 /* GlassTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AB4277ACCA70048CD12 /* GlassTextView.swift */; };
+		33718BA4277ACCA80048CD12 /* GlassChip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AB6277ACCA70048CD12 /* GlassChip.swift */; };
+		33718BA5277ACCA80048CD12 /* GlassProductLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AB8277ACCA70048CD12 /* GlassProductLabel.swift */; };
+		33718BA6277ACCA80048CD12 /* GlassBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AB9277ACCA70048CD12 /* GlassBadge.swift */; };
+		33718BA7277ACCA80048CD12 /* GlassBadge+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718ABA277ACCA70048CD12 /* GlassBadge+Model.swift */; };
+		33718BA8277ACCA80048CD12 /* GlassLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718ABB277ACCA70048CD12 /* GlassLabel.swift */; };
+		33718BA9277ACCA80048CD12 /* GlassFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718ABC277ACCA70048CD12 /* GlassFlag.swift */; };
+		33718BAA277ACCA80048CD12 /* GlassFlag+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718ABD277ACCA70048CD12 /* GlassFlag+Model.swift */; };
+		33718BAB277ACCA80048CD12 /* GlassSwiftUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718ABF277ACCA70048CD12 /* GlassSwiftUILabel.swift */; };
+		33718BAC277ACCA80048CD12 /* GlassSwiftUIBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AC0277ACCA70048CD12 /* GlassSwiftUIBadge.swift */; };
+		33718BAD277ACCA80048CD12 /* GlassNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AC2277ACCA70048CD12 /* GlassNavigationController.swift */; };
+		33718BAE277ACCA80048CD12 /* GlassStepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AC4277ACCA70048CD12 /* GlassStepperView.swift */; };
+		33718BAF277ACCA80048CD12 /* GlassStepperView+Presentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AC5277ACCA70048CD12 /* GlassStepperView+Presentation.swift */; };
+		33718BB0277ACCA80048CD12 /* GlassStepperInnerView+Presentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AC6277ACCA70048CD12 /* GlassStepperInnerView+Presentation.swift */; };
+		33718BB1277ACCA80048CD12 /* GlassStepperInnerView+Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AC7277ACCA70048CD12 /* GlassStepperInnerView+Animator.swift */; };
+		33718BB2277ACCA80048CD12 /* GlassStepperInnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AC8277ACCA70048CD12 /* GlassStepperInnerView.swift */; };
+		33718BB3277ACCA80048CD12 /* GlassFeatureUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718ACA277ACCA70048CD12 /* GlassFeatureUpdateView.swift */; };
+		33718BB4277ACCA80048CD12 /* VisibilityDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718ACC277ACCA70048CD12 /* VisibilityDetector.swift */; };
+		33718BB5277ACCA80048CD12 /* OnViewVisible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718ACD277ACCA70048CD12 /* OnViewVisible.swift */; };
+		33718BB6277ACCA80048CD12 /* AccessibilityCustomAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718ACE277ACCA70048CD12 /* AccessibilityCustomAction.swift */; };
+		33718BB7277ACCA80048CD12 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718ACF277ACCA70048CD12 /* ContainerViewController.swift */; };
+		33718BB8277ACCA80048CD12 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AD0277ACCA70048CD12 /* ContainerView.swift */; };
+		33718BB9277ACCA80048CD12 /* DemoWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AD1277ACCA70048CD12 /* DemoWindow.swift */; };
+		33718BBA277ACCA80048CD12 /* GlassProductCarouselHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AD3277ACCA70048CD12 /* GlassProductCarouselHeaderView.swift */; };
+		33718BBB277ACCA80048CD12 /* GlassProductCarouselFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AD4277ACCA70048CD12 /* GlassProductCarouselFooterView.swift */; };
+		33718BBC277ACCA80048CD12 /* GlassProductCarouselLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AD5277ACCA70048CD12 /* GlassProductCarouselLayout.swift */; };
+		33718BBD277ACCA80048CD12 /* GlassBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AD7277ACCA70048CD12 /* GlassBubbleView.swift */; };
+		33718BBE277ACCA80048CD12 /* UITabBarItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AD9277ACCA70048CD12 /* UITabBarItem+Extension.swift */; };
+		33718BBF277ACCA80048CD12 /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718ADA277ACCA70048CD12 /* UIWindow+Extension.swift */; };
+		33718BC0277ACCA80048CD12 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718ADB277ACCA70048CD12 /* UIView+Extension.swift */; };
+		33718BC1277ACCA80048CD12 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718ADC277ACCA70048CD12 /* UIImage+Extension.swift */; };
+		33718BC2277ACCA80048CD12 /* NSDirectionalEdgeInsets+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718ADD277ACCA70048CD12 /* NSDirectionalEdgeInsets+Extensions.swift */; };
+		33718BC3277ACCA80048CD12 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718ADE277ACCA70048CD12 /* UIViewController+Extension.swift */; };
+		33718BC4277ACCA80048CD12 /* Device+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718ADF277ACCA70048CD12 /* Device+Extension.swift */; };
+		33718BC5277ACCA80048CD12 /* NSMutableAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AE0277ACCA70048CD12 /* NSMutableAttributedString+Extension.swift */; };
+		33718BC6277ACCA80048CD12 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AE1277ACCA70048CD12 /* UICollectionView+Extension.swift */; };
+		33718BC7277ACCA80048CD12 /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AE2277ACCA70048CD12 /* UIStackView+Extension.swift */; };
+		33718BC8277ACCA80048CD12 /* Bundle+GlassUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AE3277ACCA70048CD12 /* Bundle+GlassUI.swift */; };
+		33718BC9277ACCA80048CD12 /* CAMediaTimingFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AE4277ACCA70048CD12 /* CAMediaTimingFunction.swift */; };
+		33718BCA277ACCA80048CD12 /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AE5277ACCA70048CD12 /* UIBarButtonItem+Extension.swift */; };
+		33718BCB277ACCA80048CD12 /* Image+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AE6277ACCA70048CD12 /* Image+Extension.swift */; };
+		33718BCC277ACCA80048CD12 /* CGSize+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AE7277ACCA70048CD12 /* CGSize+Extension.swift */; };
+		33718BCD277ACCA80048CD12 /* UIView+isViewObscured.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AE8277ACCA70048CD12 /* UIView+isViewObscured.swift */; };
+		33718BCE277ACCA80048CD12 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AE9277ACCA70048CD12 /* View+Extension.swift */; };
+		33718BCF277ACCA80048CD12 /* Comparable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AEA277ACCA70048CD12 /* Comparable+Extension.swift */; };
+		33718BD0277ACCA80048CD12 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AEB277ACCA70048CD12 /* UITableView+Extension.swift */; };
+		33718BD1277ACCA80048CD12 /* GlassCalloutTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AED277ACCA70048CD12 /* GlassCalloutTipView.swift */; };
+		33718BD2277ACCA80048CD12 /* GlassCalloutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AEE277ACCA70048CD12 /* GlassCalloutView.swift */; };
+		33718BD3277ACCA80048CD12 /* NudgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AF0277ACCA70048CD12 /* NudgeView.swift */; };
+		33718BD4277ACCA80048CD12 /* GlassLinkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AF2277ACCA70048CD12 /* GlassLinkButton.swift */; };
+		33718BD5277ACCA80048CD12 /* UIControl+OnTapBlocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AF3277ACCA70048CD12 /* UIControl+OnTapBlocks.swift */; };
+		33718BD6277ACCA80048CD12 /* GlassSecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AF4277ACCA70048CD12 /* GlassSecondaryButton.swift */; };
+		33718BD7277ACCA80048CD12 /* GlassRadioButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AF5277ACCA70048CD12 /* GlassRadioButtonGroup.swift */; };
+		33718BD8277ACCA80048CD12 /* GlassButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AF6277ACCA70048CD12 /* GlassButton.swift */; };
+		33718BD9277ACCA80048CD12 /* GlassCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AF7277ACCA70048CD12 /* GlassCheckbox.swift */; };
+		33718BDA277ACCA80048CD12 /* GlassButtonStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AF8277ACCA70048CD12 /* GlassButtonStyling.swift */; };
+		33718BDB277ACCA80048CD12 /* GlassRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AF9277ACCA70048CD12 /* GlassRadioButton.swift */; };
+		33718BDC277ACCA80048CD12 /* GlassToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AFA277ACCA70048CD12 /* GlassToggle.swift */; };
+		33718BDD277ACCA80048CD12 /* GlassSwiftUIIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AFC277ACCA70048CD12 /* GlassSwiftUIIconButton.swift */; };
+		33718BDE277ACCA80048CD12 /* GlassSwiftUIPrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AFD277ACCA70048CD12 /* GlassSwiftUIPrimaryButton.swift */; };
+		33718BDF277ACCA80048CD12 /* GlobalBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718AFF277ACCA70048CD12 /* GlobalBanner.swift */; };
+		33718BE0277ACCA80048CD12 /* AutosizingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B01277ACCA70048CD12 /* AutosizingTableView.swift */; };
+		33718BE1277ACCA80048CD12 /* AutosizingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B02277ACCA70048CD12 /* AutosizingScrollView.swift */; };
+		33718BE2277ACCA80048CD12 /* GlassPII.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B04277ACCA70048CD12 /* GlassPII.swift */; };
+		33718BE3277ACCA80048CD12 /* DebugPanelContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B07277ACCA70048CD12 /* DebugPanelContainerViewController.swift */; };
+		33718BE4277ACCA80048CD12 /* DebugPanelWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B08277ACCA70048CD12 /* DebugPanelWindow.swift */; };
+		33718BE5277ACCA80048CD12 /* DebugPanelContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B09277ACCA70048CD12 /* DebugPanelContainerCell.swift */; };
+		33718BE6277ACCA80048CD12 /* LoggingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B0B277ACCA70048CD12 /* LoggingViewController.swift */; };
+		33718BE7277ACCA80048CD12 /* LoggingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B0C277ACCA70048CD12 /* LoggingTableViewCell.swift */; };
+		33718BE8277ACCA80048CD12 /* GlassColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B0E277ACCA70048CD12 /* GlassColor.swift */; };
+		33718BE9277ACCA80048CD12 /* GlassColor.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33718B0F277ACCA70048CD12 /* GlassColor.xcassets */; };
+		33718BEA277ACCA80048CD12 /* GlassDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B10277ACCA70048CD12 /* GlassDivider.swift */; };
+		33718BEB277ACCA80048CD12 /* GlassAlertMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B12277ACCA70048CD12 /* GlassAlertMessage.swift */; };
+		33718BEC277ACCA80048CD12 /* GlassFilterChip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B14277ACCA70048CD12 /* GlassFilterChip.swift */; };
+		33718BED277ACCA80048CD12 /* GlassActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B16277ACCA70048CD12 /* GlassActivityIndicator.swift */; };
+		33718BEE277ACCA80048CD12 /* GlassLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B17277ACCA70048CD12 /* GlassLoadingView.swift */; };
+		33718BEF277ACCA80048CD12 /* GlassLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B18277ACCA70048CD12 /* GlassLoadingViewController.swift */; };
+		33718BF0277ACCA80048CD12 /* ErrorAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B1A277ACCA70048CD12 /* ErrorAlertViewController.swift */; };
+		33718BF1277ACCA80048CD12 /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B1D277ACCA70048CD12 /* KeyboardObserver.swift */; };
+		33718BF2277ACCA80048CD12 /* HTMLBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B1E277ACCA70048CD12 /* HTMLBottomSheetViewController.swift */; };
+		33718BF3277ACCA80048CD12 /* BottomSheetContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B1F277ACCA70048CD12 /* BottomSheetContainerViewController.swift */; };
+		33718BF4277ACCA80048CD12 /* PopoverContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B20277ACCA70048CD12 /* PopoverContainerViewController.swift */; };
+		33718BF5277ACCA80048CD12 /* BottomSheetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B22277ACCA70048CD12 /* BottomSheetable.swift */; };
+		33718BF6277ACCA80048CD12 /* BottomSheetNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B23277ACCA70048CD12 /* BottomSheetNavigationController.swift */; };
+		33718BF7277ACCA80048CD12 /* BottomSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B24277ACCA70048CD12 /* BottomSheetViewModel.swift */; };
+		33718BF8277ACCA90048CD12 /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B25277ACCA70048CD12 /* BottomSheetView.swift */; };
+		33718BF9277ACCA90048CD12 /* TransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B26277ACCA70048CD12 /* TransitionAnimator.swift */; };
+		33718BFA277ACCA90048CD12 /* GrabberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B27277ACCA70048CD12 /* GrabberView.swift */; };
+		33718BFB277ACCA90048CD12 /* StandardModalContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B28277ACCA70048CD12 /* StandardModalContainerViewController.swift */; };
+		33718C07277ACCA90048CD12 /* Elevatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B36277ACCA70048CD12 /* Elevatable.swift */; };
+		33718C08277ACCA90048CD12 /* ElevatingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B38277ACCA70048CD12 /* ElevatingTableViewCell.swift */; };
+		33718C09277ACCA90048CD12 /* ElevatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B39277ACCA70048CD12 /* ElevatingView.swift */; };
+		33718C0A277ACCA90048CD12 /* ElevatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B3A277ACCA70048CD12 /* ElevatingControl.swift */; };
+		33718C0B277ACCA90048CD12 /* GlassStarRatingView+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B3C277ACCA70048CD12 /* GlassStarRatingView+Model.swift */; };
+		33718C0C277ACCA90048CD12 /* GlassStarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B3D277ACCA70048CD12 /* GlassStarRatingView.swift */; };
+		33718C0D277ACCA90048CD12 /* GlassUserStarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B3E277ACCA70048CD12 /* GlassUserStarRatingView.swift */; };
+		33718C0E277ACCA90048CD12 /* GlassUserStarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B3F277ACCA80048CD12 /* GlassUserStarView.swift */; };
+		33718C0F277ACCA90048CD12 /* SparkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B41277ACCA80048CD12 /* SparkView.swift */; };
+		33718C10277ACCA90048CD12 /* GlassProductList+InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B43277ACCA80048CD12 /* GlassProductList+InfoView.swift */; };
+		33718C11277ACCA90048CD12 /* GlassProductList+PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B44277ACCA80048CD12 /* GlassProductList+PriceView.swift */; };
+		33718C12277ACCA90048CD12 /* GlassProductList+ProductImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B45277ACCA80048CD12 /* GlassProductList+ProductImageView.swift */; };
+		33718C13277ACCA90048CD12 /* GlassProductListTopInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B46277ACCA80048CD12 /* GlassProductListTopInfoView.swift */; };
+		33718C14277ACCA90048CD12 /* GlassProductListCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B47277ACCA80048CD12 /* GlassProductListCollectionCell.swift */; };
+		33718C15277ACCA90048CD12 /* GlassProductList+Discount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B48277ACCA80048CD12 /* GlassProductList+Discount.swift */; };
+		33718C16277ACCA90048CD12 /* GlassProductList+CarePlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B49277ACCA80048CD12 /* GlassProductList+CarePlan.swift */; };
+		33718C17277ACCA90048CD12 /* GlassProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B4A277ACCA80048CD12 /* GlassProductList.swift */; };
+		33718C18277ACCA90048CD12 /* GlassProductListCenterInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B4B277ACCA80048CD12 /* GlassProductListCenterInfoView.swift */; };
+		33718C19277ACCA90048CD12 /* GlassProductListBottomInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B4C277ACCA80048CD12 /* GlassProductListBottomInfoView.swift */; };
+		33718C1A277ACCA90048CD12 /* GlassProductList+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B4D277ACCA80048CD12 /* GlassProductList+Model.swift */; };
+		33718C1B277ACCA90048CD12 /* GlassString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B4E277ACCA80048CD12 /* GlassString.swift */; };
+		33718C1C277ACCA90048CD12 /* GlassCardsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B50277ACCA80048CD12 /* GlassCardsRow.swift */; };
+		33718C1D277ACCA90048CD12 /* GlassCardHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B51277ACCA80048CD12 /* GlassCardHeader.swift */; };
+		33718C1E277ACCA90048CD12 /* GlassCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B52277ACCA80048CD12 /* GlassCard.swift */; };
+		33718C1F277ACCA90048CD12 /* GlassCardTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B53277ACCA80048CD12 /* GlassCardTemplate.swift */; };
+		33718C20277ACCA90048CD12 /* GlassImageDimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B54277ACCA80048CD12 /* GlassImageDimension.swift */; };
+		33718C21277ACCA90048CD12 /* GlassFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B56277ACCA80048CD12 /* GlassFonts.swift */; };
+		33718C22277ACCA90048CD12 /* SparkSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B58277ACCA80048CD12 /* SparkSplashViewController.swift */; };
+		33718C23277ACCA90048CD12 /* AccessibilityFocusManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B5A277ACCA80048CD12 /* AccessibilityFocusManager.swift */; };
+		33718C24277ACCA90048CD12 /* Accessible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B5B277ACCA80048CD12 /* Accessible.swift */; };
+		33718C25277ACCA90048CD12 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B5D277ACCA80048CD12 /* ErrorViewController.swift */; };
+		33718C26277ACCA90048CD12 /* GlassTagModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B5F277ACCA80048CD12 /* GlassTagModel.swift */; };
+		33718C27277ACCA90048CD12 /* GlassTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B61277ACCA80048CD12 /* GlassTag.swift */; };
+		33718C28277ACCA90048CD12 /* GlassErrorImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B62277ACCA80048CD12 /* GlassErrorImage.swift */; };
+		33718C29277ACCA90048CD12 /* GlassScrollbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B64277ACCA80048CD12 /* GlassScrollbar.swift */; };
+		33718C2B277ACCA90048CD12 /* GlassAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B67277ACCA80048CD12 /* GlassAnimations.swift */; };
+		33718C2C277ACCA90048CD12 /* ScrollableSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B69277ACCA80048CD12 /* ScrollableSegmentControl.swift */; };
+		33718C2D277ACCA90048CD12 /* GlassSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B6A277ACCA80048CD12 /* GlassSegmentedControl.swift */; };
+		33718C2E277ACCA90048CD12 /* CollapseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718B6C277ACCA80048CD12 /* CollapseView.swift */; };
+		33718C30277BE8350048CD12 /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718C2F277BE8350048CD12 /* League.swift */; };
+		33718C37277BEBEC0048CD12 /* LeagueStandingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718C36277BEBEC0048CD12 /* LeagueStandingsViewController.swift */; };
+		33718C39277BEC0C0048CD12 /* TeamStandingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718C38277BEC0C0048CD12 /* TeamStandingsView.swift */; };
+		33718C3B277BF14C0048CD12 /* TeamStandingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718C3A277BF14C0048CD12 /* TeamStandingsCell.swift */; };
+		33718C40277BF8FC0048CD12 /* LeagueStandingsPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718C3F277BF8FC0048CD12 /* LeagueStandingsPresentation.swift */; };
+		33718C45277C38A00048CD12 /* TeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718C44277C38A00048CD12 /* TeamViewController.swift */; };
+		33718C47277C39790048CD12 /* PlayerListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718C46277C39790048CD12 /* PlayerListingView.swift */; };
+		33718C49277C3DB00048CD12 /* PlayerListingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718C48277C3DB00048CD12 /* PlayerListingCell.swift */; };
+		33718C4B277C408F0048CD12 /* TeamRosterPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718C4A277C408F0048CD12 /* TeamRosterPresentation.swift */; };
+		33718C4E277CEBC80048CD12 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718C4D277CEBC80048CD12 /* PlayerViewController.swift */; };
+		33718C50277CEF3D0048CD12 /* PlayerPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718C4F277CEF3D0048CD12 /* PlayerPresentation.swift */; };
+		33718C52277CF0B20048CD12 /* PlayerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718C51277CF0B20048CD12 /* PlayerCoordinator.swift */; };
+		33718C57277E48C10048CD12 /* LeagueLeadersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718C56277E48C10048CD12 /* LeagueLeadersViewController.swift */; };
+		33718C5A277E49380048CD12 /* SortableTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33718C59277E49380048CD12 /* SortableTableHeaderView.swift */; };
+		33810C8527FBFFE000C02EB1 /* PlayerLevelUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33810C8427FBFFE000C02EB1 /* PlayerLevelUpCoordinator.swift */; };
+		33810C8727FC011A00C02EB1 /* PlayerRatingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33810C8627FC011A00C02EB1 /* PlayerRatingsViewController.swift */; };
+		33810C8927FC048600C02EB1 /* PlayerRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33810C8827FC048600C02EB1 /* PlayerRatingView.swift */; };
+		33810C8B27FC063E00C02EB1 /* PlayerRatingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33810C8A27FC063E00C02EB1 /* PlayerRatingCell.swift */; };
+		33810C8D27FC094600C02EB1 /* PlayerRatingsPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33810C8C27FC094600C02EB1 /* PlayerRatingsPresentation.swift */; };
+		33A919FC27FE65E80073431F /* BarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A919FB27FE65E80073431F /* BarRatingView.swift */; };
+		33AC33E92807C711004F6B54 /* TeamIconNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AC33E82807C711004F6B54 /* TeamIconNameView.swift */; };
+		33BA9EF127CF07ED003AA93A /* GameHighlightsPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BA9EF027CF07ED003AA93A /* GameHighlightsPresentation.swift */; };
+		33C05E2E27D3BCA000EA5BB8 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C05E2D27D3BCA000EA5BB8 /* UIImage+Extensions.swift */; };
+		33C05E3027D3E2A600EA5BB8 /* PlayerHighlightProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C05E2F27D3E2A600EA5BB8 /* PlayerHighlightProfileView.swift */; };
+		33F5576A27822C37000CED02 /* LeagueLeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F5576927822C37000CED02 /* LeagueLeaderView.swift */; };
+		33F5576C27823100000CED02 /* LeagueLeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F5576B27823100000CED02 /* LeagueLeaderCell.swift */; };
+		33F5576E278231A6000CED02 /* LeagueLeadersPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F5576D278231A6000CED02 /* LeagueLeadersPresentation.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		336E37FF27729A8F002E1088 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 336E37E027729A8D002E1088 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 336E37E727729A8D002E1088;
+			remoteInfo = Sports;
+		};
+		336E380927729A8F002E1088 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 336E37E027729A8D002E1088 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 336E37E727729A8D002E1088;
+			remoteInfo = Sports;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3305B96827FB95D8009DD870 /* FiveStarRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveStarRatingView.swift; sourceTree = "<group>"; };
+		3313274D27CE777A009D4DBD /* HighlightHUDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightHUDView.swift; sourceTree = "<group>"; };
+		3313274F27CE7A92009D4DBD /* TeamHUDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamHUDView.swift; sourceTree = "<group>"; };
+		3313275227CE7F46009D4DBD /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		3317359127FA2097007E0BC0 /* TeamGameScheduleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamGameScheduleCell.swift; sourceTree = "<group>"; };
+		3317359227FA2097007E0BC0 /* TeamGameScheduleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamGameScheduleView.swift; sourceTree = "<group>"; };
+		3317359327FA2097007E0BC0 /* TeamScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamScheduleViewController.swift; sourceTree = "<group>"; };
+		3317359727FA22A0007E0BC0 /* TeamSchedulePresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamSchedulePresentation.swift; sourceTree = "<group>"; };
+		3317359A27FA2A09007E0BC0 /* TeamSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamSelectionViewController.swift; sourceTree = "<group>"; };
+		331735A127FA2AC8007E0BC0 /* TeamSelectionPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamSelectionPresentation.swift; sourceTree = "<group>"; };
+		331735A627FA2B6D007E0BC0 /* TeamSelectionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamSelectionCoordinator.swift; sourceTree = "<group>"; };
+		331735A827FA2DD3007E0BC0 /* TeamSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamSelectionView.swift; sourceTree = "<group>"; };
+		331735AA27FA2FA0007E0BC0 /* TeamSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamSelectionCell.swift; sourceTree = "<group>"; };
+		331735AC27FA30FC007E0BC0 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
+		3317976227CDC95A00CF65F5 /* GameHighlightsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHighlightsCoordinator.swift; sourceTree = "<group>"; };
+		3317976527CDC9EB00CF65F5 /* GameHighlightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHighlightsViewController.swift; sourceTree = "<group>"; };
+		3317976727CDCCB200CF65F5 /* HighlightPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightPlayerView.swift; sourceTree = "<group>"; };
+		331F663627C31CF300878C0B /* Scheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scheduler.swift; sourceTree = "<group>"; };
+		331F663A27C31EC300878C0B /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		332FE0CB27CA7A2C00520AB3 /* GameSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSummaryViewController.swift; sourceTree = "<group>"; };
+		332FE0CD27CA7D3B00520AB3 /* GameSummaryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSummaryCoordinator.swift; sourceTree = "<group>"; };
+		332FE0CF27CA7DAC00520AB3 /* GameSummaryPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSummaryPresentation.swift; sourceTree = "<group>"; };
+		3332399427C8800D009194B5 /* LeagueCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueCoordinator.swift; sourceTree = "<group>"; };
+		3332399727C880AD009194B5 /* LeagueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueViewController.swift; sourceTree = "<group>"; };
+		3332399927C888FC009194B5 /* LeaguePresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguePresentation.swift; sourceTree = "<group>"; };
+		33323CC327C891DB009194B5 /* LeagueScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueScheduleViewController.swift; sourceTree = "<group>"; };
+		33323CC527C892C2009194B5 /* GameScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScheduleView.swift; sourceTree = "<group>"; };
+		33323CC727C89469009194B5 /* GameScheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScheduleCell.swift; sourceTree = "<group>"; };
+		33323CC927C895C9009194B5 /* LeagueSchedulePresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueSchedulePresentation.swift; sourceTree = "<group>"; };
+		333F8D602782399600F051E5 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
+		335527E0280E29E700A96974 /* PlayerCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCardView.swift; sourceTree = "<group>"; };
+		335527E2280EFBEB00A96974 /* PlayerCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCardCell.swift; sourceTree = "<group>"; };
+		335527E4280EFC5000A96974 /* PlayerCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCardViewController.swift; sourceTree = "<group>"; };
+		3357930027BB63CA00EBFC7F /* PixelatedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelatedImageView.swift; sourceTree = "<group>"; };
+		335A05D327C079A20000D37E /* FaceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceFactory.swift; sourceTree = "<group>"; };
+		335BEB7127F5248D0071FD53 /* TeamCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamCoordinator.swift; sourceTree = "<group>"; };
+		335BEB7327F5252C0071FD53 /* TeamRosterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamRosterViewController.swift; sourceTree = "<group>"; };
+		335BEB7527F526680071FD53 /* TeamPresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamPresentation.swift; sourceTree = "<group>"; };
+		335E653227D1C42C00FA9281 /* GameHighlightZones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHighlightZones.swift; sourceTree = "<group>"; };
+		336579732810ECE300AA242F /* Presentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentation.swift; sourceTree = "<group>"; };
+		336CD56127C59FEF00E47DDE /* UIImage+PaintBucket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+PaintBucket.swift"; sourceTree = "<group>"; };
+		336CD56227C59FEF00E47DDE /* ImageBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageBuffer.swift; sourceTree = "<group>"; };
+		336CD56327C59FEF00E47DDE /* Pixel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pixel.swift; sourceTree = "<group>"; };
+		336E37E827729A8D002E1088 /* Sports.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sports.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		336E37EB27729A8D002E1088 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		336E37F427729A8E002E1088 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		336E37F727729A8E002E1088 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		336E37F927729A8E002E1088 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		336E37FE27729A8F002E1088 /* SportsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SportsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		336E380227729A8F002E1088 /* SportsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsTests.swift; sourceTree = "<group>"; };
+		336E380827729A8F002E1088 /* SportsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SportsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		336E380C27729A8F002E1088 /* SportsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsUITests.swift; sourceTree = "<group>"; };
+		336E380E27729A8F002E1088 /* SportsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		336E382027729C1C002E1088 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		336E382327729D11002E1088 /* PlayerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerFactory.swift; sourceTree = "<group>"; };
+		336E382527729D5B002E1088 /* NameFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameFactory.swift; sourceTree = "<group>"; };
+		336E382727740925002E1088 /* LeagueFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueFactory.swift; sourceTree = "<group>"; };
+		336E38292774097E002E1088 /* TeamFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamFactory.swift; sourceTree = "<group>"; };
+		336E382B277409A1002E1088 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		336E382E277527CD002E1088 /* LeagueDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueDataSource.swift; sourceTree = "<group>"; };
+		336E3A69277529BC002E1088 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		336E3A6B27752A12002E1088 /* GameSimulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSimulator.swift; sourceTree = "<group>"; };
+		337187E3277AC3060048CD12 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		33718A1F277AC3BD0048CD12 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		33718A21277AC48A0048CD12 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		33718A6E277ACCA70048CD12 /* ListItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemView.swift; sourceTree = "<group>"; };
+		33718A70277ACCA70048CD12 /* GlassHapticDurations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassHapticDurations.swift; sourceTree = "<group>"; };
+		33718A71277ACCA70048CD12 /* GlassIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassIcon.swift; sourceTree = "<group>"; };
+		33718A73277ACCA70048CD12 /* Transition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
+		33718A75277ACCA70048CD12 /* GlassPageIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassPageIndicator.swift; sourceTree = "<group>"; };
+		33718A77277ACCA70048CD12 /* GlassToolTip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassToolTip.swift; sourceTree = "<group>"; };
+		33718A78277ACCA70048CD12 /* EasyTipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyTipView.swift; sourceTree = "<group>"; };
+		33718A79277ACCA70048CD12 /* GlassSpacing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassSpacing.swift; sourceTree = "<group>"; };
+		33718A7B277ACCA70048CD12 /* GlassSwatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassSwatch.swift; sourceTree = "<group>"; };
+		33718A7D277ACCA70048CD12 /* PreviewAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PreviewAssets.xcassets; sourceTree = "<group>"; };
+		33718A7F277ACCA70048CD12 /* GlassRoundProgressIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassRoundProgressIndicator.swift; sourceTree = "<group>"; };
+		33718A80277ACCA70048CD12 /* GlassProgressIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassProgressIndicator.swift; sourceTree = "<group>"; };
+		33718A82277ACCA70048CD12 /* PassThroughScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassThroughScrollView.swift; sourceTree = "<group>"; };
+		33718A83277ACCA70048CD12 /* StackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
+		33718A84277ACCA70048CD12 /* GlassAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = GlassAssets.xcassets; sourceTree = "<group>"; };
+		33718A85277ACCA70048CD12 /* GlassAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassAsset.swift; sourceTree = "<group>"; };
+		33718A87277ACCA70048CD12 /* BaseReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseReusableView.swift; sourceTree = "<group>"; };
+		33718A88277ACCA70048CD12 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		33718A89277ACCA70048CD12 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		33718A8A277ACCA70048CD12 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		33718A8B277ACCA70048CD12 /* BaseTableViewHeaderFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewHeaderFooterView.swift; sourceTree = "<group>"; };
+		33718A8C277ACCA70048CD12 /* BaseAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseAnnotationView.swift; sourceTree = "<group>"; };
+		33718A8D277ACCA70048CD12 /* GlassBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassBaseViewController.swift; sourceTree = "<group>"; };
+		33718A8E277ACCA70048CD12 /* BaseCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionReusableView.swift; sourceTree = "<group>"; };
+		33718A8F277ACCA70048CD12 /* BaseControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseControl.swift; sourceTree = "<group>"; };
+		33718A90277ACCA70048CD12 /* ViewConstructable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewConstructable.swift; sourceTree = "<group>"; };
+		33718A91277ACCA70048CD12 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		33718A93277ACCA70048CD12 /* GlassCircularBadge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassCircularBadge.swift; sourceTree = "<group>"; };
+		33718A95277ACCA70048CD12 /* GlassSnackbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassSnackbar.swift; sourceTree = "<group>"; };
+		33718A96277ACCA70048CD12 /* GlassSnackbarStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassSnackbarStackView.swift; sourceTree = "<group>"; };
+		33718A98277ACCA70048CD12 /* GlassAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassAppearance.swift; sourceTree = "<group>"; };
+		33718A9D277ACCA70048CD12 /* GlassComponentManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassComponentManager.swift; sourceTree = "<group>"; };
+		33718A9F277ACCA70048CD12 /* LayoutConstrainingInsets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutConstrainingInsets.swift; sourceTree = "<group>"; };
+		33718AA0277ACCA70048CD12 /* LayoutAnchorable+SizingTo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LayoutAnchorable+SizingTo.swift"; sourceTree = "<group>"; };
+		33718AA1277ACCA70048CD12 /* LayoutAnchorable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutAnchorable.swift; sourceTree = "<group>"; };
+		33718AA2277ACCA70048CD12 /* LayoutConstrainingEdges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutConstrainingEdges.swift; sourceTree = "<group>"; };
+		33718AA3277ACCA70048CD12 /* NSLayoutConstraint+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Extension.swift"; sourceTree = "<group>"; };
+		33718AA4277ACCA70048CD12 /* LayoutAnchorable+PinningEdgesTo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LayoutAnchorable+PinningEdgesTo.swift"; sourceTree = "<group>"; };
+		33718AA5277ACCA70048CD12 /* LayoutConstrainingOffsets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutConstrainingOffsets.swift; sourceTree = "<group>"; };
+		33718AA6277ACCA70048CD12 /* LayoutConstraining.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutConstraining.swift; sourceTree = "<group>"; };
+		33718AA7277ACCA70048CD12 /* Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
+		33718AA8277ACCA70048CD12 /* LayoutAnchorable+PinningEdgesInside.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LayoutAnchorable+PinningEdgesInside.swift"; sourceTree = "<group>"; };
+		33718AA9277ACCA70048CD12 /* LayoutConstrainingAxes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutConstrainingAxes.swift; sourceTree = "<group>"; };
+		33718AAA277ACCA70048CD12 /* LayoutAnchorable+CenteringInside.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LayoutAnchorable+CenteringInside.swift"; sourceTree = "<group>"; };
+		33718AAB277ACCA70048CD12 /* UILayoutPriority+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILayoutPriority+Extensions.swift"; sourceTree = "<group>"; };
+		33718AAD277ACCA70048CD12 /* GlassBarLabelGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassBarLabelGroup.swift; sourceTree = "<group>"; };
+		33718AAE277ACCA70048CD12 /* GlassBarIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassBarIndicator.swift; sourceTree = "<group>"; };
+		33718AAF277ACCA70048CD12 /* GlassProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassProgressView.swift; sourceTree = "<group>"; };
+		33718AB1277ACCA70048CD12 /* GlassTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassTextFieldDelegate.swift; sourceTree = "<group>"; };
+		33718AB2277ACCA70048CD12 /* GlassTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassTextField.swift; sourceTree = "<group>"; };
+		33718AB3277ACCA70048CD12 /* GlassAccessoryToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassAccessoryToolbar.swift; sourceTree = "<group>"; };
+		33718AB4277ACCA70048CD12 /* GlassTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassTextView.swift; sourceTree = "<group>"; };
+		33718AB6277ACCA70048CD12 /* GlassChip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassChip.swift; sourceTree = "<group>"; };
+		33718AB8277ACCA70048CD12 /* GlassProductLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassProductLabel.swift; sourceTree = "<group>"; };
+		33718AB9277ACCA70048CD12 /* GlassBadge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassBadge.swift; sourceTree = "<group>"; };
+		33718ABA277ACCA70048CD12 /* GlassBadge+Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GlassBadge+Model.swift"; sourceTree = "<group>"; };
+		33718ABB277ACCA70048CD12 /* GlassLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassLabel.swift; sourceTree = "<group>"; };
+		33718ABC277ACCA70048CD12 /* GlassFlag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassFlag.swift; sourceTree = "<group>"; };
+		33718ABD277ACCA70048CD12 /* GlassFlag+Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GlassFlag+Model.swift"; sourceTree = "<group>"; };
+		33718ABF277ACCA70048CD12 /* GlassSwiftUILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassSwiftUILabel.swift; sourceTree = "<group>"; };
+		33718AC0277ACCA70048CD12 /* GlassSwiftUIBadge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassSwiftUIBadge.swift; sourceTree = "<group>"; };
+		33718AC2277ACCA70048CD12 /* GlassNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassNavigationController.swift; sourceTree = "<group>"; };
+		33718AC4277ACCA70048CD12 /* GlassStepperView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassStepperView.swift; sourceTree = "<group>"; };
+		33718AC5277ACCA70048CD12 /* GlassStepperView+Presentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GlassStepperView+Presentation.swift"; sourceTree = "<group>"; };
+		33718AC6277ACCA70048CD12 /* GlassStepperInnerView+Presentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GlassStepperInnerView+Presentation.swift"; sourceTree = "<group>"; };
+		33718AC7277ACCA70048CD12 /* GlassStepperInnerView+Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GlassStepperInnerView+Animator.swift"; sourceTree = "<group>"; };
+		33718AC8277ACCA70048CD12 /* GlassStepperInnerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassStepperInnerView.swift; sourceTree = "<group>"; };
+		33718ACA277ACCA70048CD12 /* GlassFeatureUpdateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassFeatureUpdateView.swift; sourceTree = "<group>"; };
+		33718ACC277ACCA70048CD12 /* VisibilityDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisibilityDetector.swift; sourceTree = "<group>"; };
+		33718ACD277ACCA70048CD12 /* OnViewVisible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnViewVisible.swift; sourceTree = "<group>"; };
+		33718ACE277ACCA70048CD12 /* AccessibilityCustomAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessibilityCustomAction.swift; sourceTree = "<group>"; };
+		33718ACF277ACCA70048CD12 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		33718AD0277ACCA70048CD12 /* ContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
+		33718AD1277ACCA70048CD12 /* DemoWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoWindow.swift; sourceTree = "<group>"; };
+		33718AD3277ACCA70048CD12 /* GlassProductCarouselHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassProductCarouselHeaderView.swift; sourceTree = "<group>"; };
+		33718AD4277ACCA70048CD12 /* GlassProductCarouselFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassProductCarouselFooterView.swift; sourceTree = "<group>"; };
+		33718AD5277ACCA70048CD12 /* GlassProductCarouselLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassProductCarouselLayout.swift; sourceTree = "<group>"; };
+		33718AD7277ACCA70048CD12 /* GlassBubbleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassBubbleView.swift; sourceTree = "<group>"; };
+		33718AD9277ACCA70048CD12 /* UITabBarItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBarItem+Extension.swift"; sourceTree = "<group>"; };
+		33718ADA277ACCA70048CD12 /* UIWindow+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extension.swift"; sourceTree = "<group>"; };
+		33718ADB277ACCA70048CD12 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		33718ADC277ACCA70048CD12 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		33718ADD277ACCA70048CD12 /* NSDirectionalEdgeInsets+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDirectionalEdgeInsets+Extensions.swift"; sourceTree = "<group>"; };
+		33718ADE277ACCA70048CD12 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		33718ADF277ACCA70048CD12 /* Device+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Device+Extension.swift"; sourceTree = "<group>"; };
+		33718AE0277ACCA70048CD12 /* NSMutableAttributedString+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Extension.swift"; sourceTree = "<group>"; };
+		33718AE1277ACCA70048CD12 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		33718AE2277ACCA70048CD12 /* UIStackView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
+		33718AE3277ACCA70048CD12 /* Bundle+GlassUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+GlassUI.swift"; sourceTree = "<group>"; };
+		33718AE4277ACCA70048CD12 /* CAMediaTimingFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAMediaTimingFunction.swift; sourceTree = "<group>"; };
+		33718AE5277ACCA70048CD12 /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
+		33718AE6277ACCA70048CD12 /* Image+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+Extension.swift"; sourceTree = "<group>"; };
+		33718AE7277ACCA70048CD12 /* CGSize+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGSize+Extension.swift"; sourceTree = "<group>"; };
+		33718AE8277ACCA70048CD12 /* UIView+isViewObscured.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+isViewObscured.swift"; sourceTree = "<group>"; };
+		33718AE9277ACCA70048CD12 /* View+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		33718AEA277ACCA70048CD12 /* Comparable+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Comparable+Extension.swift"; sourceTree = "<group>"; };
+		33718AEB277ACCA70048CD12 /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		33718AED277ACCA70048CD12 /* GlassCalloutTipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassCalloutTipView.swift; sourceTree = "<group>"; };
+		33718AEE277ACCA70048CD12 /* GlassCalloutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassCalloutView.swift; sourceTree = "<group>"; };
+		33718AF0277ACCA70048CD12 /* NudgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NudgeView.swift; sourceTree = "<group>"; };
+		33718AF2277ACCA70048CD12 /* GlassLinkButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassLinkButton.swift; sourceTree = "<group>"; };
+		33718AF3277ACCA70048CD12 /* UIControl+OnTapBlocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+OnTapBlocks.swift"; sourceTree = "<group>"; };
+		33718AF4277ACCA70048CD12 /* GlassSecondaryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassSecondaryButton.swift; sourceTree = "<group>"; };
+		33718AF5277ACCA70048CD12 /* GlassRadioButtonGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassRadioButtonGroup.swift; sourceTree = "<group>"; };
+		33718AF6277ACCA70048CD12 /* GlassButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassButton.swift; sourceTree = "<group>"; };
+		33718AF7277ACCA70048CD12 /* GlassCheckbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassCheckbox.swift; sourceTree = "<group>"; };
+		33718AF8277ACCA70048CD12 /* GlassButtonStyling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassButtonStyling.swift; sourceTree = "<group>"; };
+		33718AF9277ACCA70048CD12 /* GlassRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassRadioButton.swift; sourceTree = "<group>"; };
+		33718AFA277ACCA70048CD12 /* GlassToggle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassToggle.swift; sourceTree = "<group>"; };
+		33718AFC277ACCA70048CD12 /* GlassSwiftUIIconButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassSwiftUIIconButton.swift; sourceTree = "<group>"; };
+		33718AFD277ACCA70048CD12 /* GlassSwiftUIPrimaryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassSwiftUIPrimaryButton.swift; sourceTree = "<group>"; };
+		33718AFF277ACCA70048CD12 /* GlobalBanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalBanner.swift; sourceTree = "<group>"; };
+		33718B01277ACCA70048CD12 /* AutosizingTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutosizingTableView.swift; sourceTree = "<group>"; };
+		33718B02277ACCA70048CD12 /* AutosizingScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutosizingScrollView.swift; sourceTree = "<group>"; };
+		33718B04277ACCA70048CD12 /* GlassPII.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassPII.swift; sourceTree = "<group>"; };
+		33718B07277ACCA70048CD12 /* DebugPanelContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugPanelContainerViewController.swift; sourceTree = "<group>"; };
+		33718B08277ACCA70048CD12 /* DebugPanelWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugPanelWindow.swift; sourceTree = "<group>"; };
+		33718B09277ACCA70048CD12 /* DebugPanelContainerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugPanelContainerCell.swift; sourceTree = "<group>"; };
+		33718B0B277ACCA70048CD12 /* LoggingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggingViewController.swift; sourceTree = "<group>"; };
+		33718B0C277ACCA70048CD12 /* LoggingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggingTableViewCell.swift; sourceTree = "<group>"; };
+		33718B0E277ACCA70048CD12 /* GlassColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassColor.swift; sourceTree = "<group>"; };
+		33718B0F277ACCA70048CD12 /* GlassColor.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = GlassColor.xcassets; sourceTree = "<group>"; };
+		33718B10277ACCA70048CD12 /* GlassDivider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassDivider.swift; sourceTree = "<group>"; };
+		33718B12277ACCA70048CD12 /* GlassAlertMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassAlertMessage.swift; sourceTree = "<group>"; };
+		33718B14277ACCA70048CD12 /* GlassFilterChip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassFilterChip.swift; sourceTree = "<group>"; };
+		33718B16277ACCA70048CD12 /* GlassActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassActivityIndicator.swift; sourceTree = "<group>"; };
+		33718B17277ACCA70048CD12 /* GlassLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassLoadingView.swift; sourceTree = "<group>"; };
+		33718B18277ACCA70048CD12 /* GlassLoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassLoadingViewController.swift; sourceTree = "<group>"; };
+		33718B1A277ACCA70048CD12 /* ErrorAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorAlertViewController.swift; sourceTree = "<group>"; };
+		33718B1D277ACCA70048CD12 /* KeyboardObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
+		33718B1E277ACCA70048CD12 /* HTMLBottomSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTMLBottomSheetViewController.swift; sourceTree = "<group>"; };
+		33718B1F277ACCA70048CD12 /* BottomSheetContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetContainerViewController.swift; sourceTree = "<group>"; };
+		33718B20277ACCA70048CD12 /* PopoverContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverContainerViewController.swift; sourceTree = "<group>"; };
+		33718B22277ACCA70048CD12 /* BottomSheetable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetable.swift; sourceTree = "<group>"; };
+		33718B23277ACCA70048CD12 /* BottomSheetNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetNavigationController.swift; sourceTree = "<group>"; };
+		33718B24277ACCA70048CD12 /* BottomSheetViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetViewModel.swift; sourceTree = "<group>"; };
+		33718B25277ACCA70048CD12 /* BottomSheetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
+		33718B26277ACCA70048CD12 /* TransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionAnimator.swift; sourceTree = "<group>"; };
+		33718B27277ACCA70048CD12 /* GrabberView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrabberView.swift; sourceTree = "<group>"; };
+		33718B28277ACCA70048CD12 /* StandardModalContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardModalContainerViewController.swift; sourceTree = "<group>"; };
+		33718B36277ACCA70048CD12 /* Elevatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Elevatable.swift; sourceTree = "<group>"; };
+		33718B38277ACCA70048CD12 /* ElevatingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElevatingTableViewCell.swift; sourceTree = "<group>"; };
+		33718B39277ACCA70048CD12 /* ElevatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElevatingView.swift; sourceTree = "<group>"; };
+		33718B3A277ACCA70048CD12 /* ElevatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElevatingControl.swift; sourceTree = "<group>"; };
+		33718B3C277ACCA70048CD12 /* GlassStarRatingView+Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GlassStarRatingView+Model.swift"; sourceTree = "<group>"; };
+		33718B3D277ACCA70048CD12 /* GlassStarRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassStarRatingView.swift; sourceTree = "<group>"; };
+		33718B3E277ACCA70048CD12 /* GlassUserStarRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassUserStarRatingView.swift; sourceTree = "<group>"; };
+		33718B3F277ACCA80048CD12 /* GlassUserStarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassUserStarView.swift; sourceTree = "<group>"; };
+		33718B41277ACCA80048CD12 /* SparkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SparkView.swift; sourceTree = "<group>"; };
+		33718B43277ACCA80048CD12 /* GlassProductList+InfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GlassProductList+InfoView.swift"; sourceTree = "<group>"; };
+		33718B44277ACCA80048CD12 /* GlassProductList+PriceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GlassProductList+PriceView.swift"; sourceTree = "<group>"; };
+		33718B45277ACCA80048CD12 /* GlassProductList+ProductImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GlassProductList+ProductImageView.swift"; sourceTree = "<group>"; };
+		33718B46277ACCA80048CD12 /* GlassProductListTopInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassProductListTopInfoView.swift; sourceTree = "<group>"; };
+		33718B47277ACCA80048CD12 /* GlassProductListCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassProductListCollectionCell.swift; sourceTree = "<group>"; };
+		33718B48277ACCA80048CD12 /* GlassProductList+Discount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GlassProductList+Discount.swift"; sourceTree = "<group>"; };
+		33718B49277ACCA80048CD12 /* GlassProductList+CarePlan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GlassProductList+CarePlan.swift"; sourceTree = "<group>"; };
+		33718B4A277ACCA80048CD12 /* GlassProductList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassProductList.swift; sourceTree = "<group>"; };
+		33718B4B277ACCA80048CD12 /* GlassProductListCenterInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassProductListCenterInfoView.swift; sourceTree = "<group>"; };
+		33718B4C277ACCA80048CD12 /* GlassProductListBottomInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassProductListBottomInfoView.swift; sourceTree = "<group>"; };
+		33718B4D277ACCA80048CD12 /* GlassProductList+Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GlassProductList+Model.swift"; sourceTree = "<group>"; };
+		33718B4E277ACCA80048CD12 /* GlassString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassString.swift; sourceTree = "<group>"; };
+		33718B50277ACCA80048CD12 /* GlassCardsRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassCardsRow.swift; sourceTree = "<group>"; };
+		33718B51277ACCA80048CD12 /* GlassCardHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassCardHeader.swift; sourceTree = "<group>"; };
+		33718B52277ACCA80048CD12 /* GlassCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassCard.swift; sourceTree = "<group>"; };
+		33718B53277ACCA80048CD12 /* GlassCardTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassCardTemplate.swift; sourceTree = "<group>"; };
+		33718B54277ACCA80048CD12 /* GlassImageDimension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassImageDimension.swift; sourceTree = "<group>"; };
+		33718B56277ACCA80048CD12 /* GlassFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassFonts.swift; sourceTree = "<group>"; };
+		33718B58277ACCA80048CD12 /* SparkSplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SparkSplashViewController.swift; sourceTree = "<group>"; };
+		33718B5A277ACCA80048CD12 /* AccessibilityFocusManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessibilityFocusManager.swift; sourceTree = "<group>"; };
+		33718B5B277ACCA80048CD12 /* Accessible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Accessible.swift; sourceTree = "<group>"; };
+		33718B5D277ACCA80048CD12 /* ErrorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
+		33718B5F277ACCA80048CD12 /* GlassTagModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassTagModel.swift; sourceTree = "<group>"; };
+		33718B61277ACCA80048CD12 /* GlassTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassTag.swift; sourceTree = "<group>"; };
+		33718B62277ACCA80048CD12 /* GlassErrorImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassErrorImage.swift; sourceTree = "<group>"; };
+		33718B64277ACCA80048CD12 /* GlassScrollbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassScrollbar.swift; sourceTree = "<group>"; };
+		33718B67277ACCA80048CD12 /* GlassAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassAnimations.swift; sourceTree = "<group>"; };
+		33718B69277ACCA80048CD12 /* ScrollableSegmentControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollableSegmentControl.swift; sourceTree = "<group>"; };
+		33718B6A277ACCA80048CD12 /* GlassSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassSegmentedControl.swift; sourceTree = "<group>"; };
+		33718B6C277ACCA80048CD12 /* CollapseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapseView.swift; sourceTree = "<group>"; };
+		33718C2F277BE8350048CD12 /* League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
+		33718C36277BEBEC0048CD12 /* LeagueStandingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueStandingsViewController.swift; sourceTree = "<group>"; };
+		33718C38277BEC0C0048CD12 /* TeamStandingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamStandingsView.swift; sourceTree = "<group>"; };
+		33718C3A277BF14C0048CD12 /* TeamStandingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamStandingsCell.swift; sourceTree = "<group>"; };
+		33718C3F277BF8FC0048CD12 /* LeagueStandingsPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueStandingsPresentation.swift; sourceTree = "<group>"; };
+		33718C44277C38A00048CD12 /* TeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewController.swift; sourceTree = "<group>"; };
+		33718C46277C39790048CD12 /* PlayerListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerListingView.swift; sourceTree = "<group>"; };
+		33718C48277C3DB00048CD12 /* PlayerListingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerListingCell.swift; sourceTree = "<group>"; };
+		33718C4A277C408F0048CD12 /* TeamRosterPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamRosterPresentation.swift; sourceTree = "<group>"; };
+		33718C4D277CEBC80048CD12 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		33718C4F277CEF3D0048CD12 /* PlayerPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerPresentation.swift; sourceTree = "<group>"; };
+		33718C51277CF0B20048CD12 /* PlayerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCoordinator.swift; sourceTree = "<group>"; };
+		33718C56277E48C10048CD12 /* LeagueLeadersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueLeadersViewController.swift; sourceTree = "<group>"; };
+		33718C59277E49380048CD12 /* SortableTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortableTableHeaderView.swift; sourceTree = "<group>"; };
+		33810C8427FBFFE000C02EB1 /* PlayerLevelUpCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerLevelUpCoordinator.swift; sourceTree = "<group>"; };
+		33810C8627FC011A00C02EB1 /* PlayerRatingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerRatingsViewController.swift; sourceTree = "<group>"; };
+		33810C8827FC048600C02EB1 /* PlayerRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerRatingView.swift; sourceTree = "<group>"; };
+		33810C8A27FC063E00C02EB1 /* PlayerRatingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerRatingCell.swift; sourceTree = "<group>"; };
+		33810C8C27FC094600C02EB1 /* PlayerRatingsPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerRatingsPresentation.swift; sourceTree = "<group>"; };
+		33A919FB27FE65E80073431F /* BarRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarRatingView.swift; sourceTree = "<group>"; };
+		33AC33E82807C711004F6B54 /* TeamIconNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamIconNameView.swift; sourceTree = "<group>"; };
+		33BA9EF027CF07ED003AA93A /* GameHighlightsPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHighlightsPresentation.swift; sourceTree = "<group>"; };
+		33C05E2D27D3BCA000EA5BB8 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		33C05E2F27D3E2A600EA5BB8 /* PlayerHighlightProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerHighlightProfileView.swift; sourceTree = "<group>"; };
+		33F5576927822C37000CED02 /* LeagueLeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueLeaderView.swift; sourceTree = "<group>"; };
+		33F5576B27823100000CED02 /* LeagueLeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueLeaderCell.swift; sourceTree = "<group>"; };
+		33F5576D278231A6000CED02 /* LeagueLeadersPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueLeadersPresentation.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		336E37E527729A8D002E1088 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		336E37FB27729A8F002E1088 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		336E380527729A8F002E1088 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3313275127CE7F28009D4DBD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3313275227CE7F46009D4DBD /* UIView+Extensions.swift */,
+				33C05E2D27D3BCA000EA5BB8 /* UIImage+Extensions.swift */,
+				331735AC27FA30FC007E0BC0 /* Int+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3317358F27FA1A2B007E0BC0 /* TeamRoster */ = {
+			isa = PBXGroup;
+			children = (
+				335BEB7327F5252C0071FD53 /* TeamRosterViewController.swift */,
+				33718C46277C39790048CD12 /* PlayerListingView.swift */,
+				33718C48277C3DB00048CD12 /* PlayerListingCell.swift */,
+			);
+			path = TeamRoster;
+			sourceTree = "<group>";
+		};
+		3317359027FA1A3D007E0BC0 /* TeamSchedule */ = {
+			isa = PBXGroup;
+			children = (
+				3317359127FA2097007E0BC0 /* TeamGameScheduleCell.swift */,
+				3317359227FA2097007E0BC0 /* TeamGameScheduleView.swift */,
+				3317359327FA2097007E0BC0 /* TeamScheduleViewController.swift */,
+			);
+			path = TeamSchedule;
+			sourceTree = "<group>";
+		};
+		3317359927FA29F2007E0BC0 /* NewGame */ = {
+			isa = PBXGroup;
+			children = (
+				3317359A27FA2A09007E0BC0 /* TeamSelectionViewController.swift */,
+				331735A827FA2DD3007E0BC0 /* TeamSelectionView.swift */,
+				331735AA27FA2FA0007E0BC0 /* TeamSelectionCell.swift */,
+			);
+			path = NewGame;
+			sourceTree = "<group>";
+		};
+		3317359C27FA2A17007E0BC0 /* League */ = {
+			isa = PBXGroup;
+			children = (
+				3332399927C888FC009194B5 /* LeaguePresentation.swift */,
+				33718C3F277BF8FC0048CD12 /* LeagueStandingsPresentation.swift */,
+				33323CC927C895C9009194B5 /* LeagueSchedulePresentation.swift */,
+				33F5576D278231A6000CED02 /* LeagueLeadersPresentation.swift */,
+			);
+			path = League;
+			sourceTree = "<group>";
+		};
+		3317359D27FA2A27007E0BC0 /* Team */ = {
+			isa = PBXGroup;
+			children = (
+				335BEB7527F526680071FD53 /* TeamPresentation.swift */,
+				33718C4A277C408F0048CD12 /* TeamRosterPresentation.swift */,
+				3317359727FA22A0007E0BC0 /* TeamSchedulePresentation.swift */,
+			);
+			path = Team;
+			sourceTree = "<group>";
+		};
+		3317359E27FA2A39007E0BC0 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				33718C4F277CEF3D0048CD12 /* PlayerPresentation.swift */,
+				33810C8C27FC094600C02EB1 /* PlayerRatingsPresentation.swift */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		3317359F27FA2A4C007E0BC0 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				332FE0CF27CA7DAC00520AB3 /* GameSummaryPresentation.swift */,
+				33BA9EF027CF07ED003AA93A /* GameHighlightsPresentation.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		331735A027FA2AA9007E0BC0 /* NewGame */ = {
+			isa = PBXGroup;
+			children = (
+				331735A127FA2AC8007E0BC0 /* TeamSelectionPresentation.swift */,
+			);
+			path = NewGame;
+			sourceTree = "<group>";
+		};
+		3317976427CDC9CA00CF65F5 /* GameHighlights */ = {
+			isa = PBXGroup;
+			children = (
+				3317976527CDC9EB00CF65F5 /* GameHighlightsViewController.swift */,
+				3317976727CDCCB200CF65F5 /* HighlightPlayerView.swift */,
+				3313274D27CE777A009D4DBD /* HighlightHUDView.swift */,
+				3313274F27CE7A92009D4DBD /* TeamHUDView.swift */,
+				335E653227D1C42C00FA9281 /* GameHighlightZones.swift */,
+				33C05E2F27D3E2A600EA5BB8 /* PlayerHighlightProfileView.swift */,
+			);
+			path = GameHighlights;
+			sourceTree = "<group>";
+		};
+		331F663827C31D0A00878C0B /* GameLogic */ = {
+			isa = PBXGroup;
+			children = (
+				336E3A6B27752A12002E1088 /* GameSimulator.swift */,
+				331F663627C31CF300878C0B /* Scheduler.swift */,
+			);
+			path = GameLogic;
+			sourceTree = "<group>";
+		};
+		331F663927C31EAD00878C0B /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+				331F663A27C31EC300878C0B /* DataStore.swift */,
+			);
+			path = DataStore;
+			sourceTree = "<group>";
+		};
+		332FE0CA27CA79F100520AB3 /* GameSummary */ = {
+			isa = PBXGroup;
+			children = (
+				332FE0CB27CA7A2C00520AB3 /* GameSummaryViewController.swift */,
+				335527E2280EFBEB00A96974 /* PlayerCardCell.swift */,
+				335527E0280E29E700A96974 /* PlayerCardView.swift */,
+				335527E4280EFC5000A96974 /* PlayerCardViewController.swift */,
+			);
+			path = GameSummary;
+			sourceTree = "<group>";
+		};
+		3332399627C88095009194B5 /* League */ = {
+			isa = PBXGroup;
+			children = (
+				33718C35277BEBCE0048CD12 /* LeagueStandings */,
+				33323CC227C891BE009194B5 /* LeagueSchedule */,
+				33718C55277E48AA0048CD12 /* LeagueLeaders */,
+				3332399727C880AD009194B5 /* LeagueViewController.swift */,
+			);
+			path = League;
+			sourceTree = "<group>";
+		};
+		33323CC227C891BE009194B5 /* LeagueSchedule */ = {
+			isa = PBXGroup;
+			children = (
+				33323CC327C891DB009194B5 /* LeagueScheduleViewController.swift */,
+				33323CC527C892C2009194B5 /* GameScheduleView.swift */,
+				33323CC727C89469009194B5 /* GameScheduleCell.swift */,
+			);
+			path = LeagueSchedule;
+			sourceTree = "<group>";
+		};
+		336CD56027C59FEF00E47DDE /* PaintBucket */ = {
+			isa = PBXGroup;
+			children = (
+				336CD56127C59FEF00E47DDE /* UIImage+PaintBucket.swift */,
+				336CD56227C59FEF00E47DDE /* ImageBuffer.swift */,
+				336CD56327C59FEF00E47DDE /* Pixel.swift */,
+			);
+			path = PaintBucket;
+			sourceTree = "<group>";
+		};
+		336E37DF27729A8D002E1088 = {
+			isa = PBXGroup;
+			children = (
+				336E37EA27729A8D002E1088 /* Sports */,
+				336E380127729A8F002E1088 /* SportsTests */,
+				336E380B27729A8F002E1088 /* SportsUITests */,
+				336E37E927729A8D002E1088 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		336E37E927729A8D002E1088 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				336E37E827729A8D002E1088 /* Sports.app */,
+				336E37FE27729A8F002E1088 /* SportsTests.xctest */,
+				336E380827729A8F002E1088 /* SportsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		336E37EA27729A8D002E1088 /* Sports */ = {
+			isa = PBXGroup;
+			children = (
+				336E381E27729AE1002E1088 /* Source */,
+				336E37F427729A8E002E1088 /* Assets.xcassets */,
+				336E37F627729A8E002E1088 /* LaunchScreen.storyboard */,
+				336E37F927729A8E002E1088 /* Info.plist */,
+			);
+			path = Sports;
+			sourceTree = "<group>";
+		};
+		336E380127729A8F002E1088 /* SportsTests */ = {
+			isa = PBXGroup;
+			children = (
+				336E380227729A8F002E1088 /* SportsTests.swift */,
+			);
+			path = SportsTests;
+			sourceTree = "<group>";
+		};
+		336E380B27729A8F002E1088 /* SportsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				336E380C27729A8F002E1088 /* SportsUITests.swift */,
+				336E380E27729A8F002E1088 /* SportsUITestsLaunchTests.swift */,
+			);
+			path = SportsUITests;
+			sourceTree = "<group>";
+		};
+		336E381E27729AE1002E1088 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				336E37EB27729A8D002E1088 /* AppDelegate.swift */,
+				336CD56027C59FEF00E47DDE /* PaintBucket */,
+				331F663827C31D0A00878C0B /* GameLogic */,
+				33718A1E277AC3AE0048CD12 /* Core */,
+				3313275127CE7F28009D4DBD /* Extensions */,
+				33718C33277BEB900048CD12 /* Coordinators */,
+				336E381F27729AE8002E1088 /* DataModels */,
+				336E382D2775279B002E1088 /* DataSources */,
+				331F663927C31EAD00878C0B /* DataStore */,
+				336E382227729D00002E1088 /* Factories */,
+				33718C3E277BF8E60048CD12 /* Presentation */,
+				33718C32277BEB830048CD12 /* Views */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		336E381F27729AE8002E1088 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				336E3A69277529BC002E1088 /* Game.swift */,
+				33718C2F277BE8350048CD12 /* League.swift */,
+				336E382027729C1C002E1088 /* Player.swift */,
+				333F8D602782399600F051E5 /* Position.swift */,
+				336E382B277409A1002E1088 /* Team.swift */,
+			);
+			path = DataModels;
+			sourceTree = "<group>";
+		};
+		336E382227729D00002E1088 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				336E382327729D11002E1088 /* PlayerFactory.swift */,
+				336E382527729D5B002E1088 /* NameFactory.swift */,
+				336E382727740925002E1088 /* LeagueFactory.swift */,
+				336E38292774097E002E1088 /* TeamFactory.swift */,
+				335A05D327C079A20000D37E /* FaceFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		336E382D2775279B002E1088 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				336E382E277527CD002E1088 /* LeagueDataSource.swift */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		33718A1E277AC3AE0048CD12 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				33718A6B277ACC710048CD12 /* UI */,
+				33718A1F277AC3BD0048CD12 /* Coordinator.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		33718A6B277ACC710048CD12 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				33718A6C277ACCA70048CD12 /* GlassUI */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		33718A6C277ACCA70048CD12 /* GlassUI */ = {
+			isa = PBXGroup;
+			children = (
+				33718A6D277ACCA70048CD12 /* ListItemView */,
+				33718A6F277ACCA70048CD12 /* Haptics */,
+				33718A71277ACCA70048CD12 /* GlassIcon.swift */,
+				33718A72277ACCA70048CD12 /* Transition */,
+				33718A74277ACCA70048CD12 /* Pagination */,
+				33718A76277ACCA70048CD12 /* ToolTip */,
+				33718A79277ACCA70048CD12 /* GlassSpacing.swift */,
+				33718A7A277ACCA70048CD12 /* Swatch */,
+				33718A7C277ACCA70048CD12 /* PreviewContent */,
+				33718A7E277ACCA70048CD12 /* ProgressIndicator */,
+				33718A81277ACCA70048CD12 /* StackViewController */,
+				33718A84277ACCA70048CD12 /* GlassAssets.xcassets */,
+				33718A85277ACCA70048CD12 /* GlassAsset.swift */,
+				33718A86277ACCA70048CD12 /* BaseView */,
+				33718A92277ACCA70048CD12 /* CircularBadge */,
+				33718A94277ACCA70048CD12 /* Snackbar */,
+				33718A97277ACCA70048CD12 /* Appearance */,
+				33718A9D277ACCA70048CD12 /* GlassComponentManager.swift */,
+				33718A9E277ACCA70048CD12 /* Layout */,
+				33718AAC277ACCA70048CD12 /* Indicators */,
+				33718AB0277ACCA70048CD12 /* TextInput */,
+				33718AB5277ACCA70048CD12 /* Chip */,
+				33718AB7277ACCA70048CD12 /* Labels */,
+				33718AC1277ACCA70048CD12 /* Navigation */,
+				33718AC3277ACCA70048CD12 /* Stepper */,
+				33718AC9277ACCA70048CD12 /* FeatureUpdate */,
+				33718ACB277ACCA70048CD12 /* Utilties */,
+				33718AD2277ACCA70048CD12 /* Carousel */,
+				33718AD6277ACCA70048CD12 /* Bubble */,
+				33718AD8277ACCA70048CD12 /* Extensions */,
+				33718AEC277ACCA70048CD12 /* Callout */,
+				33718AEF277ACCA70048CD12 /* Nudge */,
+				33718AF1277ACCA70048CD12 /* Controls */,
+				33718AFE277ACCA70048CD12 /* GlobalBanner */,
+				33718B00277ACCA70048CD12 /* AutosizingScrolling */,
+				33718B03277ACCA70048CD12 /* PersonallyIdentifiableInformation */,
+				33718B05277ACCA70048CD12 /* DebugPanel */,
+				33718B0D277ACCA70048CD12 /* Colors */,
+				33718B10277ACCA70048CD12 /* GlassDivider.swift */,
+				33718B11277ACCA70048CD12 /* AlertMessage */,
+				33718B13277ACCA70048CD12 /* FilterChip */,
+				33718B15277ACCA70048CD12 /* ActivityIndicator */,
+				33718B19277ACCA70048CD12 /* ErrorAlert */,
+				33718B1C277ACCA70048CD12 /* BottomSheet */,
+				33718B35277ACCA70048CD12 /* Elevation */,
+				33718B3B277ACCA70048CD12 /* StarRating */,
+				33718B40277ACCA80048CD12 /* SparkView */,
+				33718B42277ACCA80048CD12 /* ProductList */,
+				33718B4E277ACCA80048CD12 /* GlassString.swift */,
+				33718B4F277ACCA80048CD12 /* Containers */,
+				33718B54277ACCA80048CD12 /* GlassImageDimension.swift */,
+				33718B55277ACCA80048CD12 /* Fonts */,
+				33718B57277ACCA80048CD12 /* SparkSplashViewController */,
+				33718B59277ACCA80048CD12 /* Accessibility */,
+				33718B5C277ACCA80048CD12 /* Error */,
+				33718B5E277ACCA80048CD12 /* Tag */,
+				33718B62277ACCA80048CD12 /* GlassErrorImage.swift */,
+				33718B63277ACCA80048CD12 /* Scrollbar */,
+				33718B66277ACCA80048CD12 /* Animations */,
+				33718B68277ACCA80048CD12 /* SegmentControl */,
+				33718B6B277ACCA80048CD12 /* CollapseView */,
+			);
+			path = GlassUI;
+			sourceTree = "<group>";
+		};
+		33718A6D277ACCA70048CD12 /* ListItemView */ = {
+			isa = PBXGroup;
+			children = (
+				33718A6E277ACCA70048CD12 /* ListItemView.swift */,
+			);
+			path = ListItemView;
+			sourceTree = "<group>";
+		};
+		33718A6F277ACCA70048CD12 /* Haptics */ = {
+			isa = PBXGroup;
+			children = (
+				33718A70277ACCA70048CD12 /* GlassHapticDurations.swift */,
+			);
+			path = Haptics;
+			sourceTree = "<group>";
+		};
+		33718A72277ACCA70048CD12 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				33718A73277ACCA70048CD12 /* Transition.swift */,
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
+		33718A74277ACCA70048CD12 /* Pagination */ = {
+			isa = PBXGroup;
+			children = (
+				33718A75277ACCA70048CD12 /* GlassPageIndicator.swift */,
+			);
+			path = Pagination;
+			sourceTree = "<group>";
+		};
+		33718A76277ACCA70048CD12 /* ToolTip */ = {
+			isa = PBXGroup;
+			children = (
+				33718A77277ACCA70048CD12 /* GlassToolTip.swift */,
+				33718A78277ACCA70048CD12 /* EasyTipView.swift */,
+			);
+			path = ToolTip;
+			sourceTree = "<group>";
+		};
+		33718A7A277ACCA70048CD12 /* Swatch */ = {
+			isa = PBXGroup;
+			children = (
+				33718A7B277ACCA70048CD12 /* GlassSwatch.swift */,
+			);
+			path = Swatch;
+			sourceTree = "<group>";
+		};
+		33718A7C277ACCA70048CD12 /* PreviewContent */ = {
+			isa = PBXGroup;
+			children = (
+				33718A7D277ACCA70048CD12 /* PreviewAssets.xcassets */,
+			);
+			path = PreviewContent;
+			sourceTree = "<group>";
+		};
+		33718A7E277ACCA70048CD12 /* ProgressIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				33718A7F277ACCA70048CD12 /* GlassRoundProgressIndicator.swift */,
+				33718A80277ACCA70048CD12 /* GlassProgressIndicator.swift */,
+			);
+			path = ProgressIndicator;
+			sourceTree = "<group>";
+		};
+		33718A81277ACCA70048CD12 /* StackViewController */ = {
+			isa = PBXGroup;
+			children = (
+				33718A82277ACCA70048CD12 /* PassThroughScrollView.swift */,
+				33718A83277ACCA70048CD12 /* StackViewController.swift */,
+			);
+			path = StackViewController;
+			sourceTree = "<group>";
+		};
+		33718A86277ACCA70048CD12 /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				33718A87277ACCA70048CD12 /* BaseReusableView.swift */,
+				33718A88277ACCA70048CD12 /* BaseViewController.swift */,
+				33718A89277ACCA70048CD12 /* BaseTableViewCell.swift */,
+				33718A8A277ACCA70048CD12 /* BaseCollectionViewCell.swift */,
+				33718A8B277ACCA70048CD12 /* BaseTableViewHeaderFooterView.swift */,
+				33718A8C277ACCA70048CD12 /* BaseAnnotationView.swift */,
+				33718A8D277ACCA70048CD12 /* GlassBaseViewController.swift */,
+				33718A8E277ACCA70048CD12 /* BaseCollectionReusableView.swift */,
+				33718A8F277ACCA70048CD12 /* BaseControl.swift */,
+				33718A90277ACCA70048CD12 /* ViewConstructable.swift */,
+				33718A91277ACCA70048CD12 /* BaseView.swift */,
+			);
+			path = BaseView;
+			sourceTree = "<group>";
+		};
+		33718A92277ACCA70048CD12 /* CircularBadge */ = {
+			isa = PBXGroup;
+			children = (
+				33718A93277ACCA70048CD12 /* GlassCircularBadge.swift */,
+			);
+			path = CircularBadge;
+			sourceTree = "<group>";
+		};
+		33718A94277ACCA70048CD12 /* Snackbar */ = {
+			isa = PBXGroup;
+			children = (
+				33718A95277ACCA70048CD12 /* GlassSnackbar.swift */,
+				33718A96277ACCA70048CD12 /* GlassSnackbarStackView.swift */,
+			);
+			path = Snackbar;
+			sourceTree = "<group>";
+		};
+		33718A97277ACCA70048CD12 /* Appearance */ = {
+			isa = PBXGroup;
+			children = (
+				33718A98277ACCA70048CD12 /* GlassAppearance.swift */,
+			);
+			path = Appearance;
+			sourceTree = "<group>";
+		};
+		33718A9E277ACCA70048CD12 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				33718A9F277ACCA70048CD12 /* LayoutConstrainingInsets.swift */,
+				33718AA0277ACCA70048CD12 /* LayoutAnchorable+SizingTo.swift */,
+				33718AA1277ACCA70048CD12 /* LayoutAnchorable.swift */,
+				33718AA2277ACCA70048CD12 /* LayoutConstrainingEdges.swift */,
+				33718AA3277ACCA70048CD12 /* NSLayoutConstraint+Extension.swift */,
+				33718AA4277ACCA70048CD12 /* LayoutAnchorable+PinningEdgesTo.swift */,
+				33718AA5277ACCA70048CD12 /* LayoutConstrainingOffsets.swift */,
+				33718AA6277ACCA70048CD12 /* LayoutConstraining.swift */,
+				33718AA7277ACCA70048CD12 /* Layout.swift */,
+				33718AA8277ACCA70048CD12 /* LayoutAnchorable+PinningEdgesInside.swift */,
+				33718AA9277ACCA70048CD12 /* LayoutConstrainingAxes.swift */,
+				33718AAA277ACCA70048CD12 /* LayoutAnchorable+CenteringInside.swift */,
+				33718AAB277ACCA70048CD12 /* UILayoutPriority+Extensions.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		33718AAC277ACCA70048CD12 /* Indicators */ = {
+			isa = PBXGroup;
+			children = (
+				33718AAD277ACCA70048CD12 /* GlassBarLabelGroup.swift */,
+				33718AAE277ACCA70048CD12 /* GlassBarIndicator.swift */,
+				33718AAF277ACCA70048CD12 /* GlassProgressView.swift */,
+			);
+			path = Indicators;
+			sourceTree = "<group>";
+		};
+		33718AB0277ACCA70048CD12 /* TextInput */ = {
+			isa = PBXGroup;
+			children = (
+				33718AB1277ACCA70048CD12 /* GlassTextFieldDelegate.swift */,
+				33718AB2277ACCA70048CD12 /* GlassTextField.swift */,
+				33718AB3277ACCA70048CD12 /* GlassAccessoryToolbar.swift */,
+				33718AB4277ACCA70048CD12 /* GlassTextView.swift */,
+			);
+			path = TextInput;
+			sourceTree = "<group>";
+		};
+		33718AB5277ACCA70048CD12 /* Chip */ = {
+			isa = PBXGroup;
+			children = (
+				33718AB6277ACCA70048CD12 /* GlassChip.swift */,
+			);
+			path = Chip;
+			sourceTree = "<group>";
+		};
+		33718AB7277ACCA70048CD12 /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				33718AB8277ACCA70048CD12 /* GlassProductLabel.swift */,
+				33718AB9277ACCA70048CD12 /* GlassBadge.swift */,
+				33718ABA277ACCA70048CD12 /* GlassBadge+Model.swift */,
+				33718ABB277ACCA70048CD12 /* GlassLabel.swift */,
+				33718ABC277ACCA70048CD12 /* GlassFlag.swift */,
+				33718ABD277ACCA70048CD12 /* GlassFlag+Model.swift */,
+				33718ABE277ACCA70048CD12 /* SwiftUI */,
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
+		33718ABE277ACCA70048CD12 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				33718ABF277ACCA70048CD12 /* GlassSwiftUILabel.swift */,
+				33718AC0277ACCA70048CD12 /* GlassSwiftUIBadge.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		33718AC1277ACCA70048CD12 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				33718AC2277ACCA70048CD12 /* GlassNavigationController.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		33718AC3277ACCA70048CD12 /* Stepper */ = {
+			isa = PBXGroup;
+			children = (
+				33718AC4277ACCA70048CD12 /* GlassStepperView.swift */,
+				33718AC5277ACCA70048CD12 /* GlassStepperView+Presentation.swift */,
+				33718AC6277ACCA70048CD12 /* GlassStepperInnerView+Presentation.swift */,
+				33718AC7277ACCA70048CD12 /* GlassStepperInnerView+Animator.swift */,
+				33718AC8277ACCA70048CD12 /* GlassStepperInnerView.swift */,
+			);
+			path = Stepper;
+			sourceTree = "<group>";
+		};
+		33718AC9277ACCA70048CD12 /* FeatureUpdate */ = {
+			isa = PBXGroup;
+			children = (
+				33718ACA277ACCA70048CD12 /* GlassFeatureUpdateView.swift */,
+			);
+			path = FeatureUpdate;
+			sourceTree = "<group>";
+		};
+		33718ACB277ACCA70048CD12 /* Utilties */ = {
+			isa = PBXGroup;
+			children = (
+				33718ACC277ACCA70048CD12 /* VisibilityDetector.swift */,
+				33718ACD277ACCA70048CD12 /* OnViewVisible.swift */,
+				33718ACE277ACCA70048CD12 /* AccessibilityCustomAction.swift */,
+				33718ACF277ACCA70048CD12 /* ContainerViewController.swift */,
+				33718AD0277ACCA70048CD12 /* ContainerView.swift */,
+				33718AD1277ACCA70048CD12 /* DemoWindow.swift */,
+			);
+			path = Utilties;
+			sourceTree = "<group>";
+		};
+		33718AD2277ACCA70048CD12 /* Carousel */ = {
+			isa = PBXGroup;
+			children = (
+				33718AD3277ACCA70048CD12 /* GlassProductCarouselHeaderView.swift */,
+				33718AD4277ACCA70048CD12 /* GlassProductCarouselFooterView.swift */,
+				33718AD5277ACCA70048CD12 /* GlassProductCarouselLayout.swift */,
+			);
+			path = Carousel;
+			sourceTree = "<group>";
+		};
+		33718AD6277ACCA70048CD12 /* Bubble */ = {
+			isa = PBXGroup;
+			children = (
+				33718AD7277ACCA70048CD12 /* GlassBubbleView.swift */,
+			);
+			path = Bubble;
+			sourceTree = "<group>";
+		};
+		33718AD8277ACCA70048CD12 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				33718AD9277ACCA70048CD12 /* UITabBarItem+Extension.swift */,
+				33718ADA277ACCA70048CD12 /* UIWindow+Extension.swift */,
+				33718ADB277ACCA70048CD12 /* UIView+Extension.swift */,
+				33718ADC277ACCA70048CD12 /* UIImage+Extension.swift */,
+				33718ADD277ACCA70048CD12 /* NSDirectionalEdgeInsets+Extensions.swift */,
+				33718ADE277ACCA70048CD12 /* UIViewController+Extension.swift */,
+				33718ADF277ACCA70048CD12 /* Device+Extension.swift */,
+				33718AE0277ACCA70048CD12 /* NSMutableAttributedString+Extension.swift */,
+				33718AE1277ACCA70048CD12 /* UICollectionView+Extension.swift */,
+				33718AE2277ACCA70048CD12 /* UIStackView+Extension.swift */,
+				33718AE3277ACCA70048CD12 /* Bundle+GlassUI.swift */,
+				33718AE4277ACCA70048CD12 /* CAMediaTimingFunction.swift */,
+				33718AE5277ACCA70048CD12 /* UIBarButtonItem+Extension.swift */,
+				33718AE6277ACCA70048CD12 /* Image+Extension.swift */,
+				33718AE7277ACCA70048CD12 /* CGSize+Extension.swift */,
+				33718AE8277ACCA70048CD12 /* UIView+isViewObscured.swift */,
+				33718AE9277ACCA70048CD12 /* View+Extension.swift */,
+				33718AEA277ACCA70048CD12 /* Comparable+Extension.swift */,
+				33718AEB277ACCA70048CD12 /* UITableView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		33718AEC277ACCA70048CD12 /* Callout */ = {
+			isa = PBXGroup;
+			children = (
+				33718AED277ACCA70048CD12 /* GlassCalloutTipView.swift */,
+				33718AEE277ACCA70048CD12 /* GlassCalloutView.swift */,
+			);
+			path = Callout;
+			sourceTree = "<group>";
+		};
+		33718AEF277ACCA70048CD12 /* Nudge */ = {
+			isa = PBXGroup;
+			children = (
+				33718AF0277ACCA70048CD12 /* NudgeView.swift */,
+			);
+			path = Nudge;
+			sourceTree = "<group>";
+		};
+		33718AF1277ACCA70048CD12 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				33718AF2277ACCA70048CD12 /* GlassLinkButton.swift */,
+				33718AF3277ACCA70048CD12 /* UIControl+OnTapBlocks.swift */,
+				33718AF4277ACCA70048CD12 /* GlassSecondaryButton.swift */,
+				33718AF5277ACCA70048CD12 /* GlassRadioButtonGroup.swift */,
+				33718AF6277ACCA70048CD12 /* GlassButton.swift */,
+				33718AF7277ACCA70048CD12 /* GlassCheckbox.swift */,
+				33718AF8277ACCA70048CD12 /* GlassButtonStyling.swift */,
+				33718AF9277ACCA70048CD12 /* GlassRadioButton.swift */,
+				33718AFA277ACCA70048CD12 /* GlassToggle.swift */,
+				33718AFB277ACCA70048CD12 /* SwiftUI */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		33718AFB277ACCA70048CD12 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				33718AFC277ACCA70048CD12 /* GlassSwiftUIIconButton.swift */,
+				33718AFD277ACCA70048CD12 /* GlassSwiftUIPrimaryButton.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		33718AFE277ACCA70048CD12 /* GlobalBanner */ = {
+			isa = PBXGroup;
+			children = (
+				33718AFF277ACCA70048CD12 /* GlobalBanner.swift */,
+			);
+			path = GlobalBanner;
+			sourceTree = "<group>";
+		};
+		33718B00277ACCA70048CD12 /* AutosizingScrolling */ = {
+			isa = PBXGroup;
+			children = (
+				33718B01277ACCA70048CD12 /* AutosizingTableView.swift */,
+				33718B02277ACCA70048CD12 /* AutosizingScrollView.swift */,
+			);
+			path = AutosizingScrolling;
+			sourceTree = "<group>";
+		};
+		33718B03277ACCA70048CD12 /* PersonallyIdentifiableInformation */ = {
+			isa = PBXGroup;
+			children = (
+				33718B04277ACCA70048CD12 /* GlassPII.swift */,
+			);
+			path = PersonallyIdentifiableInformation;
+			sourceTree = "<group>";
+		};
+		33718B05277ACCA70048CD12 /* DebugPanel */ = {
+			isa = PBXGroup;
+			children = (
+				33718B06277ACCA70048CD12 /* ContainerViewController */,
+				33718B0A277ACCA70048CD12 /* LoggingViewController */,
+			);
+			path = DebugPanel;
+			sourceTree = "<group>";
+		};
+		33718B06277ACCA70048CD12 /* ContainerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				33718B07277ACCA70048CD12 /* DebugPanelContainerViewController.swift */,
+				33718B08277ACCA70048CD12 /* DebugPanelWindow.swift */,
+				33718B09277ACCA70048CD12 /* DebugPanelContainerCell.swift */,
+			);
+			path = ContainerViewController;
+			sourceTree = "<group>";
+		};
+		33718B0A277ACCA70048CD12 /* LoggingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				33718B0B277ACCA70048CD12 /* LoggingViewController.swift */,
+				33718B0C277ACCA70048CD12 /* LoggingTableViewCell.swift */,
+			);
+			path = LoggingViewController;
+			sourceTree = "<group>";
+		};
+		33718B0D277ACCA70048CD12 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				33718B0E277ACCA70048CD12 /* GlassColor.swift */,
+				33718B0F277ACCA70048CD12 /* GlassColor.xcassets */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		33718B11277ACCA70048CD12 /* AlertMessage */ = {
+			isa = PBXGroup;
+			children = (
+				33718B12277ACCA70048CD12 /* GlassAlertMessage.swift */,
+			);
+			path = AlertMessage;
+			sourceTree = "<group>";
+		};
+		33718B13277ACCA70048CD12 /* FilterChip */ = {
+			isa = PBXGroup;
+			children = (
+				33718B14277ACCA70048CD12 /* GlassFilterChip.swift */,
+			);
+			path = FilterChip;
+			sourceTree = "<group>";
+		};
+		33718B15277ACCA70048CD12 /* ActivityIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				33718B16277ACCA70048CD12 /* GlassActivityIndicator.swift */,
+				33718B17277ACCA70048CD12 /* GlassLoadingView.swift */,
+				33718B18277ACCA70048CD12 /* GlassLoadingViewController.swift */,
+			);
+			path = ActivityIndicator;
+			sourceTree = "<group>";
+		};
+		33718B19277ACCA70048CD12 /* ErrorAlert */ = {
+			isa = PBXGroup;
+			children = (
+				33718B1A277ACCA70048CD12 /* ErrorAlertViewController.swift */,
+			);
+			path = ErrorAlert;
+			sourceTree = "<group>";
+		};
+		33718B1C277ACCA70048CD12 /* BottomSheet */ = {
+			isa = PBXGroup;
+			children = (
+				33718B1D277ACCA70048CD12 /* KeyboardObserver.swift */,
+				33718B1E277ACCA70048CD12 /* HTMLBottomSheetViewController.swift */,
+				33718B1F277ACCA70048CD12 /* BottomSheetContainerViewController.swift */,
+				33718B20277ACCA70048CD12 /* PopoverContainerViewController.swift */,
+				33718B21277ACCA70048CD12 /* BottomSheet */,
+				33718B28277ACCA70048CD12 /* StandardModalContainerViewController.swift */,
+			);
+			path = BottomSheet;
+			sourceTree = "<group>";
+		};
+		33718B21277ACCA70048CD12 /* BottomSheet */ = {
+			isa = PBXGroup;
+			children = (
+				33718B22277ACCA70048CD12 /* BottomSheetable.swift */,
+				33718B23277ACCA70048CD12 /* BottomSheetNavigationController.swift */,
+				33718B24277ACCA70048CD12 /* BottomSheetViewModel.swift */,
+				33718B25277ACCA70048CD12 /* BottomSheetView.swift */,
+				33718B26277ACCA70048CD12 /* TransitionAnimator.swift */,
+				33718B27277ACCA70048CD12 /* GrabberView.swift */,
+			);
+			path = BottomSheet;
+			sourceTree = "<group>";
+		};
+		33718B35277ACCA70048CD12 /* Elevation */ = {
+			isa = PBXGroup;
+			children = (
+				33718B36277ACCA70048CD12 /* Elevatable.swift */,
+				33718B37277ACCA70048CD12 /* Views */,
+			);
+			path = Elevation;
+			sourceTree = "<group>";
+		};
+		33718B37277ACCA70048CD12 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				33718B38277ACCA70048CD12 /* ElevatingTableViewCell.swift */,
+				33718B39277ACCA70048CD12 /* ElevatingView.swift */,
+				33718B3A277ACCA70048CD12 /* ElevatingControl.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		33718B3B277ACCA70048CD12 /* StarRating */ = {
+			isa = PBXGroup;
+			children = (
+				33718B3C277ACCA70048CD12 /* GlassStarRatingView+Model.swift */,
+				33718B3D277ACCA70048CD12 /* GlassStarRatingView.swift */,
+				33718B3E277ACCA70048CD12 /* GlassUserStarRatingView.swift */,
+				33718B3F277ACCA80048CD12 /* GlassUserStarView.swift */,
+			);
+			path = StarRating;
+			sourceTree = "<group>";
+		};
+		33718B40277ACCA80048CD12 /* SparkView */ = {
+			isa = PBXGroup;
+			children = (
+				33718B41277ACCA80048CD12 /* SparkView.swift */,
+			);
+			path = SparkView;
+			sourceTree = "<group>";
+		};
+		33718B42277ACCA80048CD12 /* ProductList */ = {
+			isa = PBXGroup;
+			children = (
+				33718B43277ACCA80048CD12 /* GlassProductList+InfoView.swift */,
+				33718B44277ACCA80048CD12 /* GlassProductList+PriceView.swift */,
+				33718B45277ACCA80048CD12 /* GlassProductList+ProductImageView.swift */,
+				33718B46277ACCA80048CD12 /* GlassProductListTopInfoView.swift */,
+				33718B47277ACCA80048CD12 /* GlassProductListCollectionCell.swift */,
+				33718B48277ACCA80048CD12 /* GlassProductList+Discount.swift */,
+				33718B49277ACCA80048CD12 /* GlassProductList+CarePlan.swift */,
+				33718B4A277ACCA80048CD12 /* GlassProductList.swift */,
+				33718B4B277ACCA80048CD12 /* GlassProductListCenterInfoView.swift */,
+				33718B4C277ACCA80048CD12 /* GlassProductListBottomInfoView.swift */,
+				33718B4D277ACCA80048CD12 /* GlassProductList+Model.swift */,
+			);
+			path = ProductList;
+			sourceTree = "<group>";
+		};
+		33718B4F277ACCA80048CD12 /* Containers */ = {
+			isa = PBXGroup;
+			children = (
+				33718B50277ACCA80048CD12 /* GlassCardsRow.swift */,
+				33718B51277ACCA80048CD12 /* GlassCardHeader.swift */,
+				33718B52277ACCA80048CD12 /* GlassCard.swift */,
+				33718B53277ACCA80048CD12 /* GlassCardTemplate.swift */,
+			);
+			path = Containers;
+			sourceTree = "<group>";
+		};
+		33718B55277ACCA80048CD12 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				33718B56277ACCA80048CD12 /* GlassFonts.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		33718B57277ACCA80048CD12 /* SparkSplashViewController */ = {
+			isa = PBXGroup;
+			children = (
+				33718B58277ACCA80048CD12 /* SparkSplashViewController.swift */,
+			);
+			path = SparkSplashViewController;
+			sourceTree = "<group>";
+		};
+		33718B59277ACCA80048CD12 /* Accessibility */ = {
+			isa = PBXGroup;
+			children = (
+				33718B5A277ACCA80048CD12 /* AccessibilityFocusManager.swift */,
+				33718B5B277ACCA80048CD12 /* Accessible.swift */,
+			);
+			path = Accessibility;
+			sourceTree = "<group>";
+		};
+		33718B5C277ACCA80048CD12 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				33718B5D277ACCA80048CD12 /* ErrorViewController.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		33718B5E277ACCA80048CD12 /* Tag */ = {
+			isa = PBXGroup;
+			children = (
+				33718B5F277ACCA80048CD12 /* GlassTagModel.swift */,
+				33718B60277ACCA80048CD12 /* UIKit */,
+			);
+			path = Tag;
+			sourceTree = "<group>";
+		};
+		33718B60277ACCA80048CD12 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				33718B61277ACCA80048CD12 /* GlassTag.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		33718B63277ACCA80048CD12 /* Scrollbar */ = {
+			isa = PBXGroup;
+			children = (
+				33718B64277ACCA80048CD12 /* GlassScrollbar.swift */,
+			);
+			path = Scrollbar;
+			sourceTree = "<group>";
+		};
+		33718B66277ACCA80048CD12 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				33718B67277ACCA80048CD12 /* GlassAnimations.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		33718B68277ACCA80048CD12 /* SegmentControl */ = {
+			isa = PBXGroup;
+			children = (
+				33718B69277ACCA80048CD12 /* ScrollableSegmentControl.swift */,
+				33718B6A277ACCA80048CD12 /* GlassSegmentedControl.swift */,
+			);
+			path = SegmentControl;
+			sourceTree = "<group>";
+		};
+		33718B6B277ACCA80048CD12 /* CollapseView */ = {
+			isa = PBXGroup;
+			children = (
+				33718B6C277ACCA80048CD12 /* CollapseView.swift */,
+			);
+			path = CollapseView;
+			sourceTree = "<group>";
+		};
+		33718C32277BEB830048CD12 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				33718C58277E491D0048CD12 /* Shared */,
+				33718C34277BEBC40048CD12 /* Home */,
+				3317359927FA29F2007E0BC0 /* NewGame */,
+				3332399627C88095009194B5 /* League */,
+				33718C43277C38910048CD12 /* Team */,
+				33718C4C277CEBB90048CD12 /* Player */,
+				332FE0CA27CA79F100520AB3 /* GameSummary */,
+				3317976427CDC9CA00CF65F5 /* GameHighlights */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		33718C33277BEB900048CD12 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				337187E3277AC3060048CD12 /* HomeCoordinator.swift */,
+				331735A627FA2B6D007E0BC0 /* TeamSelectionCoordinator.swift */,
+				3332399427C8800D009194B5 /* LeagueCoordinator.swift */,
+				335BEB7127F5248D0071FD53 /* TeamCoordinator.swift */,
+				33718C51277CF0B20048CD12 /* PlayerCoordinator.swift */,
+				332FE0CD27CA7D3B00520AB3 /* GameSummaryCoordinator.swift */,
+				3317976227CDC95A00CF65F5 /* GameHighlightsCoordinator.swift */,
+				33810C8427FBFFE000C02EB1 /* PlayerLevelUpCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		33718C34277BEBC40048CD12 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				33718A21277AC48A0048CD12 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		33718C35277BEBCE0048CD12 /* LeagueStandings */ = {
+			isa = PBXGroup;
+			children = (
+				33718C36277BEBEC0048CD12 /* LeagueStandingsViewController.swift */,
+				33718C38277BEC0C0048CD12 /* TeamStandingsView.swift */,
+				33718C3A277BF14C0048CD12 /* TeamStandingsCell.swift */,
+			);
+			path = LeagueStandings;
+			sourceTree = "<group>";
+		};
+		33718C3E277BF8E60048CD12 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				331735A027FA2AA9007E0BC0 /* NewGame */,
+				3317359C27FA2A17007E0BC0 /* League */,
+				3317359D27FA2A27007E0BC0 /* Team */,
+				3317359E27FA2A39007E0BC0 /* Player */,
+				3317359F27FA2A4C007E0BC0 /* Game */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		33718C43277C38910048CD12 /* Team */ = {
+			isa = PBXGroup;
+			children = (
+				3317359027FA1A3D007E0BC0 /* TeamSchedule */,
+				3317358F27FA1A2B007E0BC0 /* TeamRoster */,
+				33718C44277C38A00048CD12 /* TeamViewController.swift */,
+			);
+			path = Team;
+			sourceTree = "<group>";
+		};
+		33718C4C277CEBB90048CD12 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				33718C4D277CEBC80048CD12 /* PlayerViewController.swift */,
+				33810C8627FC011A00C02EB1 /* PlayerRatingsViewController.swift */,
+				33810C8827FC048600C02EB1 /* PlayerRatingView.swift */,
+				33810C8A27FC063E00C02EB1 /* PlayerRatingCell.swift */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		33718C55277E48AA0048CD12 /* LeagueLeaders */ = {
+			isa = PBXGroup;
+			children = (
+				33718C56277E48C10048CD12 /* LeagueLeadersViewController.swift */,
+				33F5576927822C37000CED02 /* LeagueLeaderView.swift */,
+				33F5576B27823100000CED02 /* LeagueLeaderCell.swift */,
+			);
+			path = LeagueLeaders;
+			sourceTree = "<group>";
+		};
+		33718C58277E491D0048CD12 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				33718C59277E49380048CD12 /* SortableTableHeaderView.swift */,
+				3357930027BB63CA00EBFC7F /* PixelatedImageView.swift */,
+				3305B96827FB95D8009DD870 /* FiveStarRatingView.swift */,
+				33A919FB27FE65E80073431F /* BarRatingView.swift */,
+				33AC33E82807C711004F6B54 /* TeamIconNameView.swift */,
+				336579732810ECE300AA242F /* Presentation.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		336E37E727729A8D002E1088 /* Sports */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 336E381227729A8F002E1088 /* Build configuration list for PBXNativeTarget "Sports" */;
+			buildPhases = (
+				336E37E427729A8D002E1088 /* Sources */,
+				336E37E527729A8D002E1088 /* Frameworks */,
+				336E37E627729A8D002E1088 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sports;
+			productName = Sports;
+			productReference = 336E37E827729A8D002E1088 /* Sports.app */;
+			productType = "com.apple.product-type.application";
+		};
+		336E37FD27729A8F002E1088 /* SportsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 336E381527729A8F002E1088 /* Build configuration list for PBXNativeTarget "SportsTests" */;
+			buildPhases = (
+				336E37FA27729A8F002E1088 /* Sources */,
+				336E37FB27729A8F002E1088 /* Frameworks */,
+				336E37FC27729A8F002E1088 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				336E380027729A8F002E1088 /* PBXTargetDependency */,
+			);
+			name = SportsTests;
+			productName = SportsTests;
+			productReference = 336E37FE27729A8F002E1088 /* SportsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		336E380727729A8F002E1088 /* SportsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 336E381827729A8F002E1088 /* Build configuration list for PBXNativeTarget "SportsUITests" */;
+			buildPhases = (
+				336E380427729A8F002E1088 /* Sources */,
+				336E380527729A8F002E1088 /* Frameworks */,
+				336E380627729A8F002E1088 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				336E380A27729A8F002E1088 /* PBXTargetDependency */,
+			);
+			name = SportsUITests;
+			productName = SportsUITests;
+			productReference = 336E380827729A8F002E1088 /* SportsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		336E37E027729A8D002E1088 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					336E37E727729A8D002E1088 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					336E37FD27729A8F002E1088 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 336E37E727729A8D002E1088;
+					};
+					336E380727729A8F002E1088 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 336E37E727729A8D002E1088;
+					};
+				};
+			};
+			buildConfigurationList = 336E37E327729A8D002E1088 /* Build configuration list for PBXProject "Sports" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 336E37DF27729A8D002E1088;
+			productRefGroup = 336E37E927729A8D002E1088 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				336E37E727729A8D002E1088 /* Sports */,
+				336E37FD27729A8F002E1088 /* SportsTests */,
+				336E380727729A8F002E1088 /* SportsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		336E37E627729A8D002E1088 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				336E37F827729A8E002E1088 /* LaunchScreen.storyboard in Resources */,
+				336E37F527729A8E002E1088 /* Assets.xcassets in Resources */,
+				33718B7B277ACCA80048CD12 /* GlassAssets.xcassets in Resources */,
+				33718BE9277ACCA80048CD12 /* GlassColor.xcassets in Resources */,
+				33718B76277ACCA80048CD12 /* PreviewAssets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		336E37FC27729A8F002E1088 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		336E380627729A8F002E1088 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		336E37E427729A8D002E1088 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33718BF4277ACCA80048CD12 /* PopoverContainerViewController.swift in Sources */,
+				33718BD7277ACCA80048CD12 /* GlassRadioButtonGroup.swift in Sources */,
+				331735A727FA2B6D007E0BC0 /* TeamSelectionCoordinator.swift in Sources */,
+				33718BA2277ACCA80048CD12 /* GlassAccessoryToolbar.swift in Sources */,
+				33718BBE277ACCA80048CD12 /* UITabBarItem+Extension.swift in Sources */,
+				33718BAE277ACCA80048CD12 /* GlassStepperView.swift in Sources */,
+				33718BDE277ACCA80048CD12 /* GlassSwiftUIPrimaryButton.swift in Sources */,
+				33718BE6277ACCA80048CD12 /* LoggingViewController.swift in Sources */,
+				336CD56627C59FEF00E47DDE /* Pixel.swift in Sources */,
+				33718C24277ACCA90048CD12 /* Accessible.swift in Sources */,
+				33718BE7277ACCA80048CD12 /* LoggingTableViewCell.swift in Sources */,
+				33718C49277C3DB00048CD12 /* PlayerListingCell.swift in Sources */,
+				33718BA7277ACCA80048CD12 /* GlassBadge+Model.swift in Sources */,
+				33718C17277ACCA90048CD12 /* GlassProductList.swift in Sources */,
+				331735A927FA2DD3007E0BC0 /* TeamSelectionView.swift in Sources */,
+				335BEB7227F5248D0071FD53 /* TeamCoordinator.swift in Sources */,
+				33718B9D277ACCA80048CD12 /* GlassBarLabelGroup.swift in Sources */,
+				33323CCA27C895C9009194B5 /* LeagueSchedulePresentation.swift in Sources */,
+				336E382C277409A1002E1088 /* Team.swift in Sources */,
+				33718BB5277ACCA80048CD12 /* OnViewVisible.swift in Sources */,
+				33718C30277BE8350048CD12 /* League.swift in Sources */,
+				33718C09277ACCA90048CD12 /* ElevatingView.swift in Sources */,
+				33F5576C27823100000CED02 /* LeagueLeaderCell.swift in Sources */,
+				33718BFB277ACCA90048CD12 /* StandardModalContainerViewController.swift in Sources */,
+				33718BCD277ACCA80048CD12 /* UIView+isViewObscured.swift in Sources */,
+				33718C12277ACCA90048CD12 /* GlassProductList+ProductImageView.swift in Sources */,
+				33718BA6277ACCA80048CD12 /* GlassBadge.swift in Sources */,
+				33718B78277ACCA80048CD12 /* GlassProgressIndicator.swift in Sources */,
+				33718B8B277ACCA80048CD12 /* GlassAppearance.swift in Sources */,
+				33718B9B277ACCA80048CD12 /* LayoutAnchorable+CenteringInside.swift in Sources */,
+				33718B86277ACCA80048CD12 /* ViewConstructable.swift in Sources */,
+				33718C0E277ACCA90048CD12 /* GlassUserStarView.swift in Sources */,
+				33718BB2277ACCA80048CD12 /* GlassStepperInnerView.swift in Sources */,
+				33718B93277ACCA80048CD12 /* LayoutConstrainingEdges.swift in Sources */,
+				33718C2D277ACCA90048CD12 /* GlassSegmentedControl.swift in Sources */,
+				33718BCE277ACCA80048CD12 /* View+Extension.swift in Sources */,
+				335BEB7627F526680071FD53 /* TeamPresentation.swift in Sources */,
+				33718C1A277ACCA90048CD12 /* GlassProductList+Model.swift in Sources */,
+				33718BDB277ACCA80048CD12 /* GlassRadioButton.swift in Sources */,
+				33718BDF277ACCA80048CD12 /* GlobalBanner.swift in Sources */,
+				33718BAC277ACCA80048CD12 /* GlassSwiftUIBadge.swift in Sources */,
+				33718BAB277ACCA80048CD12 /* GlassSwiftUILabel.swift in Sources */,
+				33718BBF277ACCA80048CD12 /* UIWindow+Extension.swift in Sources */,
+				336E382427729D11002E1088 /* PlayerFactory.swift in Sources */,
+				3332399527C8800D009194B5 /* LeagueCoordinator.swift in Sources */,
+				336E382127729C1C002E1088 /* Player.swift in Sources */,
+				33718B7E277ACCA80048CD12 /* BaseViewController.swift in Sources */,
+				33718B6D277ACCA80048CD12 /* ListItemView.swift in Sources */,
+				33718C27277ACCA90048CD12 /* GlassTag.swift in Sources */,
+				33718BD8277ACCA80048CD12 /* GlassButton.swift in Sources */,
+				33718BA0277ACCA80048CD12 /* GlassTextFieldDelegate.swift in Sources */,
+				33718B87277ACCA80048CD12 /* BaseView.swift in Sources */,
+				33718BC2277ACCA80048CD12 /* NSDirectionalEdgeInsets+Extensions.swift in Sources */,
+				33718B9A277ACCA80048CD12 /* LayoutConstrainingAxes.swift in Sources */,
+				33718BAF277ACCA80048CD12 /* GlassStepperView+Presentation.swift in Sources */,
+				33718C21277ACCA90048CD12 /* GlassFonts.swift in Sources */,
+				33718C25277ACCA90048CD12 /* ErrorViewController.swift in Sources */,
+				33718BB3277ACCA80048CD12 /* GlassFeatureUpdateView.swift in Sources */,
+				33718C5A277E49380048CD12 /* SortableTableHeaderView.swift in Sources */,
+				33718B73277ACCA80048CD12 /* EasyTipView.swift in Sources */,
+				33718B81277ACCA80048CD12 /* BaseTableViewHeaderFooterView.swift in Sources */,
+				33718B7D277ACCA80048CD12 /* BaseReusableView.swift in Sources */,
+				33718C26277ACCA90048CD12 /* GlassTagModel.swift in Sources */,
+				33718B95277ACCA80048CD12 /* LayoutAnchorable+PinningEdgesTo.swift in Sources */,
+				33718BB4277ACCA80048CD12 /* VisibilityDetector.swift in Sources */,
+				33718BCF277ACCA80048CD12 /* Comparable+Extension.swift in Sources */,
+				33718C1F277ACCA90048CD12 /* GlassCardTemplate.swift in Sources */,
+				332FE0CE27CA7D3B00520AB3 /* GameSummaryCoordinator.swift in Sources */,
+				33718BB8277ACCA80048CD12 /* ContainerView.swift in Sources */,
+				33718BE5277ACCA80048CD12 /* DebugPanelContainerCell.swift in Sources */,
+				33718B72277ACCA80048CD12 /* GlassToolTip.swift in Sources */,
+				336CD56427C59FEF00E47DDE /* UIImage+PaintBucket.swift in Sources */,
+				33718BF2277ACCA80048CD12 /* HTMLBottomSheetViewController.swift in Sources */,
+				3317359827FA22A0007E0BC0 /* TeamSchedulePresentation.swift in Sources */,
+				33718C19277ACCA90048CD12 /* GlassProductListBottomInfoView.swift in Sources */,
+				33BA9EF127CF07ED003AA93A /* GameHighlightsPresentation.swift in Sources */,
+				33718C22277ACCA90048CD12 /* SparkSplashViewController.swift in Sources */,
+				33718B6E277ACCA80048CD12 /* GlassHapticDurations.swift in Sources */,
+				33718C50277CEF3D0048CD12 /* PlayerPresentation.swift in Sources */,
+				33718BFA277ACCA90048CD12 /* GrabberView.swift in Sources */,
+				33718BEA277ACCA80048CD12 /* GlassDivider.swift in Sources */,
+				33718C23277ACCA90048CD12 /* AccessibilityFocusManager.swift in Sources */,
+				33718B94277ACCA80048CD12 /* NSLayoutConstraint+Extension.swift in Sources */,
+				33718C08277ACCA90048CD12 /* ElevatingTableViewCell.swift in Sources */,
+				336E3A6C27752A12002E1088 /* GameSimulator.swift in Sources */,
+				33718BF5277ACCA80048CD12 /* BottomSheetable.swift in Sources */,
+				33718A22277AC48A0048CD12 /* HomeViewController.swift in Sources */,
+				33718BAA277ACCA80048CD12 /* GlassFlag+Model.swift in Sources */,
+				33718C0B277ACCA90048CD12 /* GlassStarRatingView+Model.swift in Sources */,
+				33718BBB277ACCA80048CD12 /* GlassProductCarouselFooterView.swift in Sources */,
+				33718BD4277ACCA80048CD12 /* GlassLinkButton.swift in Sources */,
+				33718BF3277ACCA80048CD12 /* BottomSheetContainerViewController.swift in Sources */,
+				33718B88277ACCA80048CD12 /* GlassCircularBadge.swift in Sources */,
+				33718C0D277ACCA90048CD12 /* GlassUserStarRatingView.swift in Sources */,
+				33718B8A277ACCA80048CD12 /* GlassSnackbarStackView.swift in Sources */,
+				33810C8527FBFFE000C02EB1 /* PlayerLevelUpCoordinator.swift in Sources */,
+				336E382A2774097E002E1088 /* TeamFactory.swift in Sources */,
+				331735AD27FA30FC007E0BC0 /* Int+Extensions.swift in Sources */,
+				33718C14277ACCA90048CD12 /* GlassProductListCollectionCell.swift in Sources */,
+				33718C37277BEBEC0048CD12 /* LeagueStandingsViewController.swift in Sources */,
+				33323CC827C89469009194B5 /* GameScheduleCell.swift in Sources */,
+				33810C8727FC011A00C02EB1 /* PlayerRatingsViewController.swift in Sources */,
+				335A05D427C079A20000D37E /* FaceFactory.swift in Sources */,
+				33718BA4277ACCA80048CD12 /* GlassChip.swift in Sources */,
+				33718BDA277ACCA80048CD12 /* GlassButtonStyling.swift in Sources */,
+				33718BA9277ACCA80048CD12 /* GlassFlag.swift in Sources */,
+				33718BB6277ACCA80048CD12 /* AccessibilityCustomAction.swift in Sources */,
+				33718B6F277ACCA80048CD12 /* GlassIcon.swift in Sources */,
+				33718C1D277ACCA90048CD12 /* GlassCardHeader.swift in Sources */,
+				33718B9F277ACCA80048CD12 /* GlassProgressView.swift in Sources */,
+				33718B89277ACCA80048CD12 /* GlassSnackbar.swift in Sources */,
+				33718C20277ACCA90048CD12 /* GlassImageDimension.swift in Sources */,
+				33718BD1277ACCA80048CD12 /* GlassCalloutTipView.swift in Sources */,
+				33718C15277ACCA90048CD12 /* GlassProductList+Discount.swift in Sources */,
+				333F8D612782399600F051E5 /* Position.swift in Sources */,
+				33718BE8277ACCA80048CD12 /* GlassColor.swift in Sources */,
+				33C05E3027D3E2A600EA5BB8 /* PlayerHighlightProfileView.swift in Sources */,
+				33718B82277ACCA80048CD12 /* BaseAnnotationView.swift in Sources */,
+				33718C45277C38A00048CD12 /* TeamViewController.swift in Sources */,
+				3313275327CE7F46009D4DBD /* UIView+Extensions.swift in Sources */,
+				33718A20277AC3BD0048CD12 /* Coordinator.swift in Sources */,
+				332FE0CC27CA7A2C00520AB3 /* GameSummaryViewController.swift in Sources */,
+				33718C3B277BF14C0048CD12 /* TeamStandingsCell.swift in Sources */,
+				33718C39277BEC0C0048CD12 /* TeamStandingsView.swift in Sources */,
+				33718C2E277ACCA90048CD12 /* CollapseView.swift in Sources */,
+				33A919FC27FE65E80073431F /* BarRatingView.swift in Sources */,
+				33718B7F277ACCA80048CD12 /* BaseTableViewCell.swift in Sources */,
+				3357930127BB63CA00EBFC7F /* PixelatedImageView.swift in Sources */,
+				33718BF9277ACCA90048CD12 /* TransitionAnimator.swift in Sources */,
+				33718BBA277ACCA80048CD12 /* GlassProductCarouselHeaderView.swift in Sources */,
+				33718B9C277ACCA80048CD12 /* UILayoutPriority+Extensions.swift in Sources */,
+				33718B7C277ACCA80048CD12 /* GlassAsset.swift in Sources */,
+				33718BBC277ACCA80048CD12 /* GlassProductCarouselLayout.swift in Sources */,
+				33718BF0277ACCA80048CD12 /* ErrorAlertViewController.swift in Sources */,
+				33718C57277E48C10048CD12 /* LeagueLeadersViewController.swift in Sources */,
+				331F663B27C31EC300878C0B /* DataStore.swift in Sources */,
+				33718B84277ACCA80048CD12 /* BaseCollectionReusableView.swift in Sources */,
+				33718BB1277ACCA80048CD12 /* GlassStepperInnerView+Animator.swift in Sources */,
+				336E382F277527CD002E1088 /* LeagueDataSource.swift in Sources */,
+				33718B98277ACCA80048CD12 /* Layout.swift in Sources */,
+				33AC33E92807C711004F6B54 /* TeamIconNameView.swift in Sources */,
+				33718B74277ACCA80048CD12 /* GlassSpacing.swift in Sources */,
+				336E3A6A277529BC002E1088 /* Game.swift in Sources */,
+				331735A227FA2AC8007E0BC0 /* TeamSelectionPresentation.swift in Sources */,
+				3332399827C880AD009194B5 /* LeagueViewController.swift in Sources */,
+				33718BA5277ACCA80048CD12 /* GlassProductLabel.swift in Sources */,
+				33718BB7277ACCA80048CD12 /* ContainerViewController.swift in Sources */,
+				33718BB9277ACCA80048CD12 /* DemoWindow.swift in Sources */,
+				3317976327CDC95A00CF65F5 /* GameHighlightsCoordinator.swift in Sources */,
+				335527E5280EFC5000A96974 /* PlayerCardViewController.swift in Sources */,
+				33718BA8277ACCA80048CD12 /* GlassLabel.swift in Sources */,
+				33718C40277BF8FC0048CD12 /* LeagueStandingsPresentation.swift in Sources */,
+				33718B90277ACCA80048CD12 /* LayoutConstrainingInsets.swift in Sources */,
+				3332399A27C888FC009194B5 /* LeaguePresentation.swift in Sources */,
+				33718C52277CF0B20048CD12 /* PlayerCoordinator.swift in Sources */,
+				33718C0F277ACCA90048CD12 /* SparkView.swift in Sources */,
+				33718B9E277ACCA80048CD12 /* GlassBarIndicator.swift in Sources */,
+				331F663727C31CF300878C0B /* Scheduler.swift in Sources */,
+				33718C2C277ACCA90048CD12 /* ScrollableSegmentControl.swift in Sources */,
+				33718BEB277ACCA80048CD12 /* GlassAlertMessage.swift in Sources */,
+				33718C4B277C408F0048CD12 /* TeamRosterPresentation.swift in Sources */,
+				335E653327D1C42C00FA9281 /* GameHighlightZones.swift in Sources */,
+				33718BE0277ACCA80048CD12 /* AutosizingTableView.swift in Sources */,
+				33718BE1277ACCA80048CD12 /* AutosizingScrollView.swift in Sources */,
+				33718C1C277ACCA90048CD12 /* GlassCardsRow.swift in Sources */,
+				33718B96277ACCA80048CD12 /* LayoutConstrainingOffsets.swift in Sources */,
+				33718BD9277ACCA80048CD12 /* GlassCheckbox.swift in Sources */,
+				33718B7A277ACCA80048CD12 /* StackViewController.swift in Sources */,
+				336CD56527C59FEF00E47DDE /* ImageBuffer.swift in Sources */,
+				33718B77277ACCA80048CD12 /* GlassRoundProgressIndicator.swift in Sources */,
+				33718C1E277ACCA90048CD12 /* GlassCard.swift in Sources */,
+				33718B91277ACCA80048CD12 /* LayoutAnchorable+SizingTo.swift in Sources */,
+				33718B92277ACCA80048CD12 /* LayoutAnchorable.swift in Sources */,
+				331735AB27FA2FA0007E0BC0 /* TeamSelectionCell.swift in Sources */,
+				33718B75277ACCA80048CD12 /* GlassSwatch.swift in Sources */,
+				3317976827CDCCB200CF65F5 /* HighlightPlayerView.swift in Sources */,
+				33718BE3277ACCA80048CD12 /* DebugPanelContainerViewController.swift in Sources */,
+				335527E3280EFBEB00A96974 /* PlayerCardCell.swift in Sources */,
+				33718C1B277ACCA90048CD12 /* GlassString.swift in Sources */,
+				33323CC627C892C2009194B5 /* GameScheduleView.swift in Sources */,
+				337187E4277AC3060048CD12 /* HomeCoordinator.swift in Sources */,
+				33718BF1277ACCA80048CD12 /* KeyboardObserver.swift in Sources */,
+				33F5576E278231A6000CED02 /* LeagueLeadersPresentation.swift in Sources */,
+				33718BF8277ACCA90048CD12 /* BottomSheetView.swift in Sources */,
+				33718BC9277ACCA80048CD12 /* CAMediaTimingFunction.swift in Sources */,
+				33718BD6277ACCA80048CD12 /* GlassSecondaryButton.swift in Sources */,
+				33718C07277ACCA90048CD12 /* Elevatable.swift in Sources */,
+				33718C16277ACCA90048CD12 /* GlassProductList+CarePlan.swift in Sources */,
+				33718B85277ACCA80048CD12 /* BaseControl.swift in Sources */,
+				33718B70277ACCA80048CD12 /* Transition.swift in Sources */,
+				33718BC5277ACCA80048CD12 /* NSMutableAttributedString+Extension.swift in Sources */,
+				33718C28277ACCA90048CD12 /* GlassErrorImage.swift in Sources */,
+				33718BD2277ACCA80048CD12 /* GlassCalloutView.swift in Sources */,
+				3317359627FA2097007E0BC0 /* TeamScheduleViewController.swift in Sources */,
+				33718BDC277ACCA80048CD12 /* GlassToggle.swift in Sources */,
+				33718BF6277ACCA80048CD12 /* BottomSheetNavigationController.swift in Sources */,
+				33718BDD277ACCA80048CD12 /* GlassSwiftUIIconButton.swift in Sources */,
+				33718B83277ACCA80048CD12 /* GlassBaseViewController.swift in Sources */,
+				33718BE4277ACCA80048CD12 /* DebugPanelWindow.swift in Sources */,
+				33718BCB277ACCA80048CD12 /* Image+Extension.swift in Sources */,
+				33718BAD277ACCA80048CD12 /* GlassNavigationController.swift in Sources */,
+				33718BC4277ACCA80048CD12 /* Device+Extension.swift in Sources */,
+				33718B80277ACCA80048CD12 /* BaseCollectionViewCell.swift in Sources */,
+				33718B79277ACCA80048CD12 /* PassThroughScrollView.swift in Sources */,
+				33718C2B277ACCA90048CD12 /* GlassAnimations.swift in Sources */,
+				33718B97277ACCA80048CD12 /* LayoutConstraining.swift in Sources */,
+				33718BC8277ACCA80048CD12 /* Bundle+GlassUI.swift in Sources */,
+				336E382827740925002E1088 /* LeagueFactory.swift in Sources */,
+				3313275027CE7A92009D4DBD /* TeamHUDView.swift in Sources */,
+				332FE0D027CA7DAC00520AB3 /* GameSummaryPresentation.swift in Sources */,
+				33718C4E277CEBC80048CD12 /* PlayerViewController.swift in Sources */,
+				336579742810ECE300AA242F /* Presentation.swift in Sources */,
+				33718C29277ACCA90048CD12 /* GlassScrollbar.swift in Sources */,
+				33718BC1277ACCA80048CD12 /* UIImage+Extension.swift in Sources */,
+				33718BBD277ACCA80048CD12 /* GlassBubbleView.swift in Sources */,
+				33718BC3277ACCA80048CD12 /* UIViewController+Extension.swift in Sources */,
+				33718BEC277ACCA80048CD12 /* GlassFilterChip.swift in Sources */,
+				336E382627729D5B002E1088 /* NameFactory.swift in Sources */,
+				335BEB7427F5252C0071FD53 /* TeamRosterViewController.swift in Sources */,
+				33718C13277ACCA90048CD12 /* GlassProductListTopInfoView.swift in Sources */,
+				33718C18277ACCA90048CD12 /* GlassProductListCenterInfoView.swift in Sources */,
+				3317359B27FA2A09007E0BC0 /* TeamSelectionViewController.swift in Sources */,
+				33718C11277ACCA90048CD12 /* GlassProductList+PriceView.swift in Sources */,
+				33718B99277ACCA80048CD12 /* LayoutAnchorable+PinningEdgesInside.swift in Sources */,
+				3305B96927FB95D8009DD870 /* FiveStarRatingView.swift in Sources */,
+				336E37EC27729A8D002E1088 /* AppDelegate.swift in Sources */,
+				33810C8D27FC094600C02EB1 /* PlayerRatingsPresentation.swift in Sources */,
+				33718BA1277ACCA80048CD12 /* GlassTextField.swift in Sources */,
+				33718BCC277ACCA80048CD12 /* CGSize+Extension.swift in Sources */,
+				33718BCA277ACCA80048CD12 /* UIBarButtonItem+Extension.swift in Sources */,
+				33F5576A27822C37000CED02 /* LeagueLeaderView.swift in Sources */,
+				33718BA3277ACCA80048CD12 /* GlassTextView.swift in Sources */,
+				33718BD0277ACCA80048CD12 /* UITableView+Extension.swift in Sources */,
+				33718BD3277ACCA80048CD12 /* NudgeView.swift in Sources */,
+				3317976627CDC9EB00CF65F5 /* GameHighlightsViewController.swift in Sources */,
+				33718C0C277ACCA90048CD12 /* GlassStarRatingView.swift in Sources */,
+				33718BC0277ACCA80048CD12 /* UIView+Extension.swift in Sources */,
+				33718BE2277ACCA80048CD12 /* GlassPII.swift in Sources */,
+				33718BF7277ACCA80048CD12 /* BottomSheetViewModel.swift in Sources */,
+				33718BC6277ACCA80048CD12 /* UICollectionView+Extension.swift in Sources */,
+				33810C8927FC048600C02EB1 /* PlayerRatingView.swift in Sources */,
+				33718C10277ACCA90048CD12 /* GlassProductList+InfoView.swift in Sources */,
+				33718B8F277ACCA80048CD12 /* GlassComponentManager.swift in Sources */,
+				33718BEE277ACCA80048CD12 /* GlassLoadingView.swift in Sources */,
+				335527E1280E29E700A96974 /* PlayerCardView.swift in Sources */,
+				33718BC7277ACCA80048CD12 /* UIStackView+Extension.swift in Sources */,
+				33718C47277C39790048CD12 /* PlayerListingView.swift in Sources */,
+				33323CC427C891DB009194B5 /* LeagueScheduleViewController.swift in Sources */,
+				3317359427FA2097007E0BC0 /* TeamGameScheduleCell.swift in Sources */,
+				33718BED277ACCA80048CD12 /* GlassActivityIndicator.swift in Sources */,
+				3313274E27CE777A009D4DBD /* HighlightHUDView.swift in Sources */,
+				33718BEF277ACCA80048CD12 /* GlassLoadingViewController.swift in Sources */,
+				33718B71277ACCA80048CD12 /* GlassPageIndicator.swift in Sources */,
+				33718C0A277ACCA90048CD12 /* ElevatingControl.swift in Sources */,
+				33810C8B27FC063E00C02EB1 /* PlayerRatingCell.swift in Sources */,
+				33718BD5277ACCA80048CD12 /* UIControl+OnTapBlocks.swift in Sources */,
+				33718BB0277ACCA80048CD12 /* GlassStepperInnerView+Presentation.swift in Sources */,
+				3317359527FA2097007E0BC0 /* TeamGameScheduleView.swift in Sources */,
+				33C05E2E27D3BCA000EA5BB8 /* UIImage+Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		336E37FA27729A8F002E1088 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				336E380327729A8F002E1088 /* SportsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		336E380427729A8F002E1088 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				336E380D27729A8F002E1088 /* SportsUITests.swift in Sources */,
+				336E380F27729A8F002E1088 /* SportsUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		336E380027729A8F002E1088 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 336E37E727729A8D002E1088 /* Sports */;
+			targetProxy = 336E37FF27729A8F002E1088 /* PBXContainerItemProxy */;
+		};
+		336E380A27729A8F002E1088 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 336E37E727729A8D002E1088 /* Sports */;
+			targetProxy = 336E380927729A8F002E1088 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		336E37F627729A8E002E1088 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				336E37F727729A8E002E1088 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		336E381027729A8F002E1088 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		336E381127729A8F002E1088 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		336E381327729A8F002E1088 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3Y535X8CA5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Sports/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.module.Sports;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		336E381427729A8F002E1088 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3Y535X8CA5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Sports/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.module.Sports;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		336E381627729A8F002E1088 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3Y535X8CA5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.module.SportsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sports.app/Sports";
+			};
+			name = Debug;
+		};
+		336E381727729A8F002E1088 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3Y535X8CA5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.module.SportsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sports.app/Sports";
+			};
+			name = Release;
+		};
+		336E381927729A8F002E1088 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3Y535X8CA5;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.module.SportsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Sports;
+			};
+			name = Debug;
+		};
+		336E381A27729A8F002E1088 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3Y535X8CA5;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.module.SportsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Sports;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		336E37E327729A8D002E1088 /* Build configuration list for PBXProject "Sports" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				336E381027729A8F002E1088 /* Debug */,
+				336E381127729A8F002E1088 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		336E381227729A8F002E1088 /* Build configuration list for PBXNativeTarget "Sports" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				336E381327729A8F002E1088 /* Debug */,
+				336E381427729A8F002E1088 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		336E381527729A8F002E1088 /* Build configuration list for PBXNativeTarget "SportsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				336E381627729A8F002E1088 /* Debug */,
+				336E381727729A8F002E1088 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		336E381827729A8F002E1088 /* Build configuration list for PBXNativeTarget "SportsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				336E381927729A8F002E1088 /* Debug */,
+				336E381A27729A8F002E1088 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 336E37E027729A8D002E1088 /* Project object */;
+}

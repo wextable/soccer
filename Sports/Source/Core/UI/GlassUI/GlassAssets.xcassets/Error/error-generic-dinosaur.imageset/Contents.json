@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "error-generic-dinosaur.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
