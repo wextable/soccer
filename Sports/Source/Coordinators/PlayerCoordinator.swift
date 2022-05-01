@@ -80,42 +80,6 @@ extension PlayerCoordinator: PlayerViewControllerDelegate {
 
     func testing_upgradeRating(_ rating: Player.Rating) {
 
-        let defaultRatingIncrease = 5
-        switch rating {
-        case .speed:
-            guard player.ratings.speed < player.potential.speed else { return }
-            player.ratings.speed = min(player.ratings.speed + defaultRatingIncrease,
-                                       player.potential.speed)
-        case .shooting:
-            guard player.ratings.shooting < player.potential.shooting else { return }
-            player.ratings.shooting = min(player.ratings.shooting + defaultRatingIncrease,
-                                          player.potential.shooting)
-        case .passing:
-            guard player.ratings.passing < player.potential.passing else { return }
-            player.ratings.passing = min(player.ratings.passing + defaultRatingIncrease,
-                                         player.potential.passing)
-        case .dribbling:
-            guard player.ratings.dribbling < player.potential.dribbling else { return }
-            player.ratings.dribbling = min(player.ratings.dribbling + defaultRatingIncrease,
-                                           player.potential.dribbling)
-        case .defending:
-            guard player.ratings.defending < player.potential.defending else { return }
-            player.ratings.defending = min(player.ratings.defending + defaultRatingIncrease,
-                                           player.potential.defending)
-        case .goalkeeping:
-            guard player.ratings.goalkeeping < player.potential.goalkeeping else { return }
-            player.ratings.goalkeeping = min(player.ratings.goalkeeping + defaultRatingIncrease,
-                                             player.potential.goalkeeping)
-        }
-
-        player.xp = 0
-        player.xpLevel += 1
-
-        let team = dataSource.data.league.team(withId: player.teamId ?? "")
-        let model = PlayerViewController.Model(shouldShowCloseButton: presentation.isPresent,
-                                               player: player,
-                                               team: team,
-                                               dataStore: dataStore)
-        viewController.model = model
+        
     }
 }

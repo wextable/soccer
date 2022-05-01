@@ -7,8 +7,14 @@
 
 import UIKit
 
+protocol PlayerListingCellDelegate: AnyObject {
+    func checkboxToggled(isSelected: Bool, sender: PlayerListingCell)
+}
+
 class PlayerListingCell: BaseTableViewCell {
 
+    weak var delegate: PlayerListingCellDelegate?
+    
     let cellView: PlayerListingView = .init()
 
     var model: PlayerListingView.Model = .init() {
@@ -27,7 +33,7 @@ class PlayerListingCell: BaseTableViewCell {
         super.constructView()
 
         selectionStyle = .none
-
+        cellView.delegate = self
         applyModel()
     }
 
@@ -41,4 +47,10 @@ class PlayerListingCell: BaseTableViewCell {
         cellView.constraints(pinningTo: contentView).activate()
     }
 
+}
+
+extension PlayerListingCell: PlayerListingViewDelegate {
+    func checkboxToggled(isSelected: Bool, sender: PlayerListingView) {
+        delegate?.checkboxToggled(isSelected: isSelected, sender: self)
+    }
 }

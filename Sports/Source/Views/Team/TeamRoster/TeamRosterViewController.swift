@@ -9,6 +9,9 @@ import UIKit
 
 protocol TeamRosterViewControllerDelegate: AnyObject {
     func playerSelected(withId id: String, sender: TeamRosterViewController)
+    func player(withId id: String,
+                startingToggled isStarting: Bool,
+                sender: TeamRosterViewController)
 }
 
 class TeamRosterViewController: BaseViewController {
@@ -110,6 +113,7 @@ class TeamRosterViewController: BaseViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: PlayerListingCell.reuseIdentifier,
                                                      for: indexPath) as? PlayerListingCell
             cell?.model = cellModel
+            cell?.delegate = self
             return cell
         }
     }
@@ -131,13 +135,22 @@ extension TeamRosterViewController: UITableViewDelegate {
     }
 }
 
+extension TeamRosterViewController: PlayerListingCellDelegate {
+    func checkboxToggled(isSelected: Bool, sender: PlayerListingCell) {
+        delegate?.player(withId: sender.model.id,
+                         startingToggled: isSelected,
+                         sender: self)
+    }
+}
+
 class PlayerListingTableHeaderView: BaseTableViewHeaderFooterView {
 
     private let headerView: UIView = {
         let model = PlayerListingView.Model(id: "",
                                             position: "Pos",
                                             name: "Name",
-                                            overallText: "Ovr",
+                                            condition: "Cond",
+                                            overallText: "    Ovr",
                                             offense: "Off",
                                             defense: "Def",
                                             goals: "Gol",
@@ -167,6 +180,7 @@ class PlayerListingTableHeaderView: BaseTableViewHeaderFooterView {
 extension TeamRosterViewController {
     struct Model {
         var title: String = ""
+        var isUserTeam: Bool = false
         var playerModels: [PlayerListingView.Model] = []
     }
 }

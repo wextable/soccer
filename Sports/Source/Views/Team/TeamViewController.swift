@@ -10,6 +10,9 @@ import CloudKit
 
 protocol TeamViewControllerDelegate: AnyObject {
     func playerSelected(withId id: String, sender: TeamViewController)
+    func player(withId id: String,
+                startingToggled isStarting: Bool,
+                sender: TeamViewController)
     func myLeagueSelected(_ sender: TeamViewController)
     func playGameSelected(_ sender: TeamViewController)
     func gameSelected(withId id: String, sender: TeamViewController)
@@ -193,6 +196,14 @@ extension TeamViewController {
 extension TeamViewController: TeamRosterViewControllerDelegate {
     func playerSelected(withId id: String, sender: TeamRosterViewController) {
         delegate?.playerSelected(withId: id, sender: self)
+    }
+
+    func player(withId id: String,
+                startingToggled isStarting: Bool,
+                sender: TeamRosterViewController) {
+        delegate?.player(withId: id,
+                         startingToggled: isStarting,
+                         sender: self)
     }
 }
 

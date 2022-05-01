@@ -160,8 +160,8 @@ extension GameSimulator {
     private static func selectGoalScorer(from team: Team) -> Player {
 
         var totalTeamRating = 0.0
-        for player in team.players {
-            let rating = Double(player.ratings.overallScoring - 50)
+        for player in team.starters {
+            let rating = Double(player.overallScoring - 50)
             switch player.position {
             case .keeper: break
             case .defender: totalTeamRating += rating * 1.5
@@ -171,8 +171,8 @@ extension GameSimulator {
         }
 
         var randomRating = Double(Int.random(in: 0...Int(totalTeamRating)))
-        for player in team.players {
-            let rating = Double(player.ratings.overallScoring - 50)
+        for player in team.starters {
+            let rating = Double(player.overallScoring - 50)
             var playerRating = 0.0
             switch player.position {
             case .keeper: break
@@ -199,7 +199,7 @@ extension GameSimulator {
 
     static func selectGoalContributor(from team: Team, excluding: [Player]) -> Player? {
 
-        let remainingPlayers = team.players.filter {
+        let remainingPlayers = team.starters.filter {
             return !excluding.contains($0)
         }
 
@@ -207,9 +207,9 @@ extension GameSimulator {
         for player in remainingPlayers {
             switch player.position {
             case .keeper: break
-            case .defender: totalTeamRating += player.ratings.overallAssist
-            case .midfielder: totalTeamRating += player.ratings.overallAssist * 2
-            case .forward: totalTeamRating += player.ratings.overallAssist * 3
+            case .defender: totalTeamRating += player.overallAssist
+            case .midfielder: totalTeamRating += player.overallAssist * 2
+            case .forward: totalTeamRating += player.overallAssist * 3
             }
         }
 
@@ -218,9 +218,9 @@ extension GameSimulator {
             var playerRating = 0
             switch player.position {
             case .keeper: break
-            case .defender: playerRating = player.ratings.overallAssist
-            case .midfielder: playerRating = player.ratings.overallAssist * 2
-            case .forward: playerRating = player.ratings.overallAssist * 3
+            case .defender: playerRating = player.overallAssist
+            case .midfielder: playerRating = player.overallAssist * 2
+            case .forward: playerRating = player.overallAssist * 3
             }
             if randomRating <= playerRating {
                 return player
@@ -232,12 +232,12 @@ extension GameSimulator {
     }
 
     private static func selectGoalKeeper(from team: Team) -> Player {
-        return team.keepers[0]
+        return team.starters.first(where: { $0.position == .keeper }) ?? team.starters[0]
     }
 
     static func selectGoalDefender(from team: Team, excluding: [Player]) -> Player? {
 
-        let remainingPlayers = team.players.filter {
+        let remainingPlayers = team.starters.filter {
             return !excluding.contains($0)
         }
 
@@ -245,9 +245,9 @@ extension GameSimulator {
         for player in remainingPlayers {
             switch player.position {
             case .keeper: break
-            case .defender: totalTeamRating += player.ratings.overallDefensive * 3
-            case .midfielder: totalTeamRating += player.ratings.overallDefensive * 2
-            case .forward: totalTeamRating += player.ratings.overallDefensive
+            case .defender: totalTeamRating += player.overallDefensive * 3
+            case .midfielder: totalTeamRating += player.overallDefensive * 2
+            case .forward: totalTeamRating += player.overallDefensive
             }
         }
 
@@ -256,9 +256,9 @@ extension GameSimulator {
             var playerRating = 0
             switch player.position {
             case .keeper: break
-            case .defender: playerRating = player.ratings.overallDefensive * 3
-            case .midfielder: playerRating = player.ratings.overallDefensive * 2
-            case .forward: playerRating = player.ratings.overallDefensive
+            case .defender: playerRating = player.overallDefensive * 3
+            case .midfielder: playerRating = player.overallDefensive * 2
+            case .forward: playerRating = player.overallDefensive
             }
             if randomRating <= playerRating {
                 return player

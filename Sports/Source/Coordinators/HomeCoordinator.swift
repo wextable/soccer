@@ -63,15 +63,17 @@ extension HomeCoordinator {
     }
 
     private func simulateSeason() {
-        for week in dataSource.data.league.schedule {
-            for game in week {
-                let home = dataSource.data.league.team(withId: game.homeTeamId)
-                let away = dataSource.data.league.team(withId: game.awayTeamId)
-                GameSimulator.simulateGame(game, homeTeam: home, awayTeam: away)
-                dataSource.saveGame(game)
-            }
-        }
-        dataStore.saveLeague(dataSource.data.league)
+        dataSource.simulateSeason()
+//        for week in dataSource.data.league.schedule {
+//            for game in week {
+//                let home = dataSource.data.league.team(withId: game.homeTeamId)
+//                let away = dataSource.data.league.team(withId: game.awayTeamId)
+//                GameSimulator.simulateGame(game, homeTeam: home, awayTeam: away)
+//                dataSource.recordGameStats(game)
+//            }
+//        }
+//        dataStore.saveLeague(dataSource.data.league)
+        
     }
 
     private func goToTeamSelection() {

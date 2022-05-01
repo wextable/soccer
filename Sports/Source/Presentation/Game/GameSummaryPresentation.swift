@@ -107,7 +107,7 @@ extension GameSummaryViewController.Model {
 
     private static func topPlayers(numPlayers: Int,
                                    from team: Team) -> [Player] {
-        let topPlayers = team.players.sorted { $0.ratings.overall > $1.ratings.overall }
+        let topPlayers = team.starters.sorted { $0.overallRating > $1.overallRating }
         let maxNumPlayers = min(numPlayers, topPlayers.count)
         return Array(topPlayers.prefix(maxNumPlayers))
     }
@@ -124,7 +124,7 @@ extension PlayerCardView.Model {
                   name: player.firstInitialAndLastName,
                   image: dataStore.getPlayerImage(player, from: team),
                   position: player.position,
-                  ratingOutOfFive: player.ratings.overallStarRating,
+                  ratingOutOfFive: player.overallStarRating,
                   stats: stats)
     }
 }

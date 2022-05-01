@@ -67,7 +67,7 @@ extension HighlightPlayerView.Model {
 
         let zones = GameHighlightZones()
         let playerSize = zones.playerSize
-        let name = String(player.firstName.first!) + ". " + player.lastName
+        let name = player.firstInitialAndLastName
         var jerseyColor = isOnHomeTeam ? team.primaryColor.uiColor : team.secondaryColor.uiColor
         if player.position == .keeper {
             jerseyColor = isOnHomeTeam ? UIColor.keeperHomeColor : UIColor.keeperAwayColor

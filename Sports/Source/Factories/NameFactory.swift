@@ -34,21 +34,37 @@ class NameFactory {
     "Jules", "Mohamed", "Mustafa", "Shahid", "Jamal", "Shariffe", "Zameer", "Aladdin", "Kareem", "Saladin", "Xerxes",
     "Augustus", "Montezuma", "Washington", "Jefferson", "Madison", "Pablo", "Chomsky", "Vladimir", "Rohan", "Akash",
     "Shashant", "Benjamin", "Frivolity", "Shadrack", "Leviticus", "Danny", "Bobby", "Bob", "Jack", "Wesley", "Lane",
-    "Dave", "Christopher", "Chris", "John", "Mike", "Lonnie", "Dick", "Andy", "Andrew", "Eric", "Frank", "Greg",
+    "Dave", "Christopher", "Chris", "John", "Mike", "Lonnie", "Dick", "Andy", "Eric", "Frank", "Greg", "Gary",
     "Tennessee", "Chode", "Pico", "Harry", "Henry", "Klamath", "Hood", "Puerto Rico", "Sanchez", "Wall", "Zapato",
     "Orky", "Zarate", "Hannibal", "Rex", "Pistacio", "Justinian", "Kevin", "Phillips", "Strings", "Earnest",
     "Dusty", "Wyatt", "Hatfield", "McCoy", "Jimmy", "Melvin", "Precious", "Leon", "Cooper", "Fisher", "Tanner",
     "Finnigan", "Allday", "Donkey", "Marvin", "Morgan", "Dwane", "Matthew", "Mark", "Abednego", "Stag", "Ross",
-    "Rock", "Gus", "Bruce", "Pearl", "Newton", "Slappy", "Happy", "Asthma", "Pedro", "Pezhmon", "Dwight", "Nathan",
+    "Rock", "Gus", "Bruce", "Pearl", "Newton", "Slappy", "Happy", "Asthma", "Pedro", "Pezhmon", "Dwight", "Nathaniel",
     "Red", "Oscar", "Oliver", "Burns", "Nixon", "Patrick", "Irving", "Quincy", "DeLancy", "Randy", "Ricky", "Richie",
     "Robbie", "Ohio", "Florida", "Sam", "Texas", "Tyrone", "Valencia", "Valentino", "Rudolph", "Grant", "Bert",
     "Ernie", "Grover", "Murphy", "Wildman", "Wimpy", "West", "Webster", "Garcia", "Clementine", "Carthage",
     "Curtis", "Ish", "Isaac", "Icarus", "Ishmail", "Isreal", "Idaho", "Kenny", "Knight", "Norman", "Neil", "O'neil",
     "Uche", "Nexus", "Love", "Otis", "OshKosh", "Quinn", "Queef", "Quartz", "Queen", "Undertow", "Ulysses",
     "Udon", "Udder", "Ulrich", "Vargas", "Utah", "Yellow", "Yancy", "Zenith", "Polio", "Bunny", "Ellsworth",
-    "Elijah", "Salvador", "Emerson", "Neckbeard", "Cadillac", "Brody"]
+    "Elijah", "Salvador", "Emerson", "Neckbeard", "Cadillac", "Brody", "Spencer", "Kenneth", "Engelbert", "Rod",
+    "Gonzales", "Alberto", "Pierre", "Billiam", "Chestnutt", "Hammersmith", "Choctaw", "Cratchett", "Lance", "Lancelot",
+    "Grub", "Strawberry", "Huckleberry", "Chorizo", "Stiffy", "Craig", "Michelangelo", "Leonardo", "Joao", "Gilbert",
+    "Darrius", "Mister", "Freddie", "Mercury", "McDaniel", "Allah", "James"]
 
-    static func makeName() -> String {
-        return names.randomElement() ?? "Engelbert"
+    static func makeFirstName() -> String {
+        guard Int.random(in: 1...100) < 99 else { return "" }
+        return names.randomElement()!
+    }
+
+    static func makeLastName() -> String {
+        var lastName = names.randomElement()!
+        if Int.random(in: 1...100) >= 99 {
+            lastName += " " + makeSuffix()
+        }
+        return lastName
+    }
+
+    private static func makeSuffix() -> String {
+        return ["Sr.", "Jr.", "III", "IV"].randomElement()!
     }
 }

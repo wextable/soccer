@@ -23,7 +23,7 @@ extension LeagueLeadersViewController.Model {
             } else if $0.stats.assists < $1.stats.assists {
                 return false
             } else {
-                return $0.ratings.overall > $1.ratings.overall
+                return $0.overallRating > $1.overallRating
             }
         }
         
@@ -55,8 +55,8 @@ extension LeagueLeaderView.Model {
                   assists: "\(player.stats.assists)",
                   saves: "\(player.stats.saves)",
                   cleanSheets: "\(player.stats.cleanSheets)",
-                  overallRatingOutOfFive: player.ratings.overallStarRating,
-                  overallPotentialOutOfFive: player.potential.overallStarRating)
+                  overallRatingOutOfFive: player.overallStarRating,
+                  overallPotentialOutOfFive: player.overallStarRatingPotential)
 //                  overall: "\(player.ratings.overall)/\(player.potential.overall)")
 
     }

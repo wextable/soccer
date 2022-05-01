@@ -53,6 +53,10 @@ extension League {
         return players
     }
 
+    var userTeam: Team {
+        return team(withId: userTeamId)
+    }
+
     func team(withId id: String) -> Team {
         return teams.first(where: { $0.id == id })!
     }

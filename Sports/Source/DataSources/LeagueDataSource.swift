@@ -22,6 +22,12 @@ class LeagueDataSource {
         dataStore.saveLeague(league)
     }
 
+    func simulateSeason() {
+        for _ in 0..<data.league.schedule.count {
+            simulateWeek()
+        }
+    }
+
     func simulateWeek() {
         guard data.league.currentWeek < data.league.schedule.count else { return }
 
@@ -29,24 +35,31 @@ class LeagueDataSource {
             let home = data.league.team(withId: game.homeTeamId)
             let away = data.league.team(withId: game.awayTeamId)
             GameSimulator.simulateGame(game, homeTeam: home, awayTeam: away)
-            saveGame(game)
+
+            recordGameStats(game)
+
+            if home.id == data.league.userTeamId {
+                progressXp(for: home, from: game, isHomeTeam: true)
+            } else if away.id == data.league.userTeamId {
+                progressXp(for: away, from: game, isHomeTeam: false)
+            }
+
+            progressCondition(for: home)
+            progressCondition(for: away)
         }
-        data.league.currentWeek += 1
+
+        advanceWeek()
+
         dataStore.saveLeague(data.league)
     }
 
-    func saveGame(_ game: Game) {
+    private func recordGameStats(_ game: Game) {
         guard let home = data.league.teams.first(where: { $0.id == game.homeTeamId }),
               let away = data.league.teams.first(where: { $0.id == game.awayTeamId }) else {
                   return
               }
 
-        let standardXpBump = 10
-        let goalXpBump = 5
-        let assistXpBump = 2
-        let saveXpBump = 2
-        let cleanSheetXpBump = 2
-
+        // Team record
         if game.homeScore > game.awayScore {
             home.wins += 1
             away.losses += 1
@@ -58,69 +71,151 @@ class LeagueDataSource {
             away.draws += 1
         }
 
+        // Team goals
         home.goalsFor += game.homeScore
         home.goalsAgainst += game.awayScore
         away.goalsFor += game.awayScore
         away.goalsAgainst += game.homeScore
 
+        // Home goals an assists
         for homeGoal in game.homeGoals {
             guard let player = home.players.first(where: { $0.id == homeGoal.shooter.id }) else {
                 continue
             }
             player.stats.goals += 1
-            player.increaseXp(by: goalXpBump)
             if let assisterId = homeGoal.passer?.id,
                let assister = home.players.first(where: { $0.id == assisterId }) {
                 assister.stats.assists += 1
-                assister.increaseXp(by: assistXpBump)
             }
         }
 
+        // Away goals an assists
         for awayGoal in game.awayGoals {
             guard let player = away.players.first(where: { $0.id == awayGoal.shooter.id }) else {
                 continue
             }
             player.stats.goals += 1
-            player.increaseXp(by: goalXpBump)
             if let assisterId = awayGoal.passer?.id,
                let assister = away.players.first(where: { $0.id == assisterId }) {
                 assister.stats.assists += 1
-                assister.increaseXp(by: assistXpBump)
             }
         }
 
+        // Saves
         for shot in game.shots.filter({ $0.result == .save }) {
             if shot.isForHomeTeam,
-               let player = away.players.first(where: { $0.position == .keeper }) {
+               let player = away.starters.first(where: { $0.position == .keeper }) {
                 player.stats.saves += 1
-                player.increaseXp(by: saveXpBump)
             } else if !shot.isForHomeTeam,
-                let player = home.players.first(where: { $0.position == .keeper }) {
+                let player = home.starters.first(where: { $0.position == .keeper }) {
                 player.stats.saves += 1
-                player.increaseXp(by: saveXpBump)
             }
         }
 
+        // Home clean sheets
         if game.homeGoals.isEmpty,
-           let player = away.players.first(where: { $0.position == .keeper }) {
+           let player = away.starters.first(where: { $0.position == .keeper }) {
             player.stats.cleanSheets += 1
-            player.increaseXp(by: cleanSheetXpBump)
         }
 
+        // Away clean sheets
         if game.awayGoals.isEmpty,
-           let player = home.players.first(where: { $0.position == .keeper }) {
+           let player = home.starters.first(where: { $0.position == .keeper }) {
             player.stats.cleanSheets += 1
-            player.increaseXp(by: cleanSheetXpBump)
+        }
+    }
+
+    private func progressXp(for team: Team, from game: Game, isHomeTeam: Bool) {
+
+        // XP for goals
+        for goal in isHomeTeam ? game.homeGoals : game.awayGoals {
+            guard let player = team.players.first(where: { $0.id == goal.shooter.id }) else {
+                continue
+            }
+
+            player.increaseXp(by: GameConfig.XP.goalXpBump)
+            if let assisterId = goal.passer?.id,
+               let assister = team.players.first(where: { $0.id == assisterId }) {
+                assister.increaseXp(by: GameConfig.XP.assistXpBump)
+            }
         }
 
+        // XP for saves
+        let numSaves = game.shots.filter({
+            $0.result == .save &&
+            ((isHomeTeam && $0.isForHomeTeam) || (!isHomeTeam && !$0.isForHomeTeam))
+        }).count
 
-        for player in home.players {
-            player.increaseXp(by: standardXpBump)
-        }
-        for player in away.players {
-            player.increaseXp(by: standardXpBump)
+        if let player = team.starters.first(where: { $0.position == .keeper }) {
+            player.increaseXp(by: GameConfig.XP.saveXpBump * numSaves)
         }
 
+        // XP for clean sheet
+        if (isHomeTeam && game.awayGoals.isEmpty) || (!isHomeTeam && game.homeGoals.isEmpty) {
+            for player in team.starters {
+                switch player.position {
+                case .keeper:
+                    player.increaseXp(by: GameConfig.XP.keeperCleanSheetXpBump)
+                case .defender:
+                    player.increaseXp(by: GameConfig.XP.defenderCleanSheetXpBump)
+                default:
+                    break
+                }
+            }
+        }
+
+        // XP for playing in the game
+        for player in team.starters {
+            player.increaseXp(by: GameConfig.XP.standardXpBump)
+        }
+    }
+
+    private func progressCondition(for team: Team) {
+        // Condition
+        for player in team.players {
+            if player.isStarting {
+                player.decreaseCondition(by: GameConfig.Condition.standardGameFatigue)
+            } else if player.injury == nil {
+                player.increaseCondition(by: GameConfig.Condition.standardWeeklyRegeneration)
+            }
+        }
+    }
+
+    private func advanceWeek() {
+        data.league.currentWeek += 1
+
+        // Injuries!
+        advanceInjuries()
+        addNewInjuries()
+
+        // AI starting lineups
+        for team in data.league.teams {
+            if team.id != data.league.userTeamId {
+                TeamAI.setStartingLineup(for: team)
+            }
+        }
+    }
+
+    private func advanceInjuries() {
+        for team in data.league.teams {
+            team.players.forEach { $0.injury?.advanceWeek() }
+        }
+    }
+
+    private func addNewInjuries() {
+        let healthyPlayers = data.league.userTeam.starters.filter { $0.injury == nil }
+        if let player = healthyPlayers.randomElement() {
+            player.addInjury()
+        }
+    }
+}
+
+extension LeagueDataSource {
+    func healPlayer(_ player: Player) {
+        player.injury = nil
+        player.condition = GameConfig.Injury.conditionUponRecovery
+
+        dataStore.saveLeague(data.league)
     }
 }
 

@@ -53,6 +53,14 @@ extension TeamCoordinator: TeamViewControllerDelegate {
         coordinator.start()
     }
 
+    func player(withId id: String,
+                startingToggled isStarting: Bool,
+                sender: TeamViewController) {
+        let player = team.players.first(where: { $0.id == id })!
+        player.isStarting = isStarting
+        reloadView()
+    }
+
     func myLeagueSelected(_ sender: TeamViewController) {
         let leagueCoordinator = LeagueCoordinator(navigationController: navigationController,
                                                   dataSource: dataSource,
@@ -63,28 +71,6 @@ extension TeamCoordinator: TeamViewControllerDelegate {
         leagueCoordinator.start()
     }
 
-
-    private func levelUpPlayer(_ player: Player?, from pool: [Player]) {
-        guard let player = player else { return }
-
-        let coordinator = PlayerLevelUpCoordinator(presenter: viewController,
-                                                   dataSource: dataSource,
-                                                   dataStore: dataStore,
-                                                   player: player)
-        addChild(coordinator: coordinator)
-        coordinator.onFinish = { [weak self] result in
-            guard let self = self else { return }
-            let model = TeamViewController.Model(team: self.team,
-                                                 in: self.dataSource.data.league)
-            self.viewController.model = model
-
-            var remainingPool = pool
-            remainingPool.remove(at: 0)
-            self.levelUpPlayer(remainingPool.first, from: remainingPool)
-        }
-        coordinator.start()
-    }
-
     func playGameSelected(_ sender: TeamViewController) {
         let currentWeek = dataSource.data.league.currentWeek
         guard currentWeek < team.schedule.count,
@@ -93,6 +79,12 @@ extension TeamCoordinator: TeamViewControllerDelegate {
               }
 
         guard let game = dataSource.data.league.game(withId: currentGame.id) else { return }
+
+        guard team.isStartingLineupSet else {
+            // TODO: show an alert
+            return
+        }
+
         let coordinator = GameSummaryCoordinator(presentation: .push(navigationController),
                                                  dataSource: dataSource,
                                                  dataStore: dataStore,
@@ -126,17 +118,103 @@ extension TeamCoordinator: TeamViewControllerDelegate {
 }
 
 extension TeamCoordinator {
+
+    private func reloadView() {
+        let model = TeamViewController.Model(team: team,
+                                             in: dataSource.data.league)
+        viewController.model = model
+    }
     
     private func handleGameFinished(result: GameSummaryCoordinatorResult) {
         switch result {
         case .popped(let didAdvanceWeek):
             if didAdvanceWeek {
-                let model = TeamViewController.Model(team: team,
-                                                     in: dataSource.data.league)
-                viewController.model = model
+                handleInjuries() { [weak self] in
+                    guard let self = self else { return }
+                    self.levelUpPlayers() { [weak self] in
+                        guard let self = self else { return }
+                        self.reloadView()
+                    }
+                }
             }
         default:
             break
         }
+    }
+
+    private func handleInjuries(completion: @escaping () -> Void) {
+        if let newlyInjured = team.players.first(where: { $0.injury?.isNew == true }) {
+            showAlert(title: "Uh oh!",
+                      message: newlyInjured.injury!.notification(playerName: newlyInjured.fullName)) { [weak self] _ in
+                self?.progressInjuries(completion: completion)
+            }
+        } else {
+            progressInjuries(completion: completion)
+        }
+    }
+
+    private func progressInjuries(completion: @escaping () -> Void) {
+        let newlyRecoveredPlayers = team.players.filter { $0.injury?.isRecovered == true }
+        guard !newlyRecoveredPlayers.isEmpty else {
+            completion()
+            return
+        }
+
+        var recoveryMessage: String = "The following players have recovered from their injuries:"
+        for player in newlyRecoveredPlayers {
+
+            recoveryMessage += "\n\(player.fullName) (\(player.injury!.type.rawValue))"
+
+            dataSource.healPlayer(player)
+        }
+
+        showAlert(title: "Recovery!", message: recoveryMessage) { _ in
+            completion()
+        }
+    }
+
+    private func levelUpPlayers(completion: @escaping () -> Void) {
+        let playersToLevelUp = team.players.filter { $0.xp >= $0.potentialXP }
+        levelUpPlayer(playersToLevelUp.first,
+                      from: playersToLevelUp,
+                      completion: completion)
+    }
+
+    private func levelUpPlayer(_ player: Player?,
+                               from pool: [Player],
+                               completion: @escaping () -> Void) {
+        guard let player = player else {
+            completion()
+            return
+        }
+
+        let coordinator = PlayerLevelUpCoordinator(presenter: viewController,
+                                                   dataSource: dataSource,
+                                                   dataStore: dataStore,
+                                                   player: player)
+        addChild(coordinator: coordinator)
+        coordinator.onFinish = { [weak self] result in
+            guard let self = self else { return }
+
+            var remainingPool = pool
+            remainingPool.remove(at: 0)
+            self.levelUpPlayer(remainingPool.first,
+                               from: remainingPool,
+                               completion: completion)
+        }
+        coordinator.start()
+    }
+}
+
+private extension TeamCoordinator {
+    func showAlert(title: String,
+                   message: String,
+                   confirmCompletion: ((UIAlertAction) -> Void)? = nil) {
+        let controller = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction.init(title: "OK",
+                                        style: .default,
+                                        handler: confirmCompletion)
+        controller.addAction(action)
+        navigationController.present(controller, animated: true, completion: nil)
     }
 }

@@ -11,23 +11,23 @@ extension PlayerViewController.Model {
 
     init(shouldShowCloseButton: Bool, player: Player, team: Team?, dataStore: DataStore) {
 
-        var defensiveRatingOutOfFive = player.ratings.defensiveStarRating
-        var defensivePotentialOutOfFive = player.potential.defensiveStarRating
+        var defensiveRatingOutOfFive = player.defensiveStarRating
+        var defensivePotentialOutOfFive = player.defensiveStarRatingPotential
         if player.position == .keeper {
-            defensiveRatingOutOfFive = player.ratings.overallStarRating
-            defensivePotentialOutOfFive = player.potential.overallStarRating
+            defensiveRatingOutOfFive = player.overallStarRating
+            defensivePotentialOutOfFive = player.overallStarRatingPotential
         }
 
         self.init(title: "\(player.fullName) (\(player.position.rawValue))",
                   shouldShowCloseButton: shouldShowCloseButton,
                   teamIcon: team?.icon,
                   teamName: team?.name ?? "",
-                  offensiveRatingOutOfFive: player.ratings.offensiveStarRating,
-                  offensivePotentialOutOfFive: player.potential.offensiveStarRating,
+                  offensiveRatingOutOfFive: player.offensiveStarRating,
+                  offensivePotentialOutOfFive: player.offensiveStarRatingPotential,
                   defensiveRatingOutOfFive: defensiveRatingOutOfFive,
                   defensivePotentialOutOfFive: defensivePotentialOutOfFive,
-                  overallRatingOutOfFive: player.ratings.overallStarRating,
-                  overallPotentialOutOfFive: player.potential.overallStarRating,
+                  overallRatingOutOfFive: player.overallStarRating,
+                  overallPotentialOutOfFive: player.overallStarRatingPotential,
                   xp: player.xp,
                   potentialXP: player.potentialXP,
                   xpLevel: player.xpLevel,

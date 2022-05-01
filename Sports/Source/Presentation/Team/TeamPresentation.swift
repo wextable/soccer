@@ -51,7 +51,7 @@ extension TeamViewController.Model {
                   opponentString: opponentString,
                   isUserTeam: isUserTeam,
                   segments: [.teamRoster, .teamSchedule],
-                  teamRosterModel: TeamRosterViewController.Model(team: team),
+                  teamRosterModel: TeamRosterViewController.Model(team: team, isUserTeam: isUserTeam),
                   teamScheduleModel: TeamScheduleViewController.Model(team: team, in: league))
     }
 }

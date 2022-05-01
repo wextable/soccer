@@ -24,12 +24,15 @@ class Team: NSObject, Codable {
 
     var prestige: String
     var players: [Player]
+    var starters: [Player] {
+        return players.filter { $0.isStarting }
+    }
     var ratings: Ratings {
-        return .init(goalkeeping: keepers.map({ $0.ratings.overall }).reduce(0, +) / keepers.count,
-                     defense: defenders.map({ $0.ratings.overall }).reduce(0, +) / defenders.count,
-                     midfield: midfielders.map({ $0.ratings.overall }).reduce(0, +) / midfielders.count,
-                     forwards: forwards.map({ $0.ratings.overall }).reduce(0, +) / forwards.count,
-                     overall: players.map({ $0.ratings.overall }).reduce(0, +) / players.count)
+        return .init(goalkeeping: keepers.map({ $0.overallRating }).reduce(0, +) / keepers.count,
+                     defense: defenders.map({ $0.overallRating }).reduce(0, +) / defenders.count,
+                     midfield: midfielders.map({ $0.overallRating }).reduce(0, +) / midfielders.count,
+                     forwards: forwards.map({ $0.overallRating }).reduce(0, +) / forwards.count,
+                     overall: players.map({ $0.overallRating }).reduce(0, +) / players.count)
     }
 
     var wins: Int = 0
@@ -76,6 +79,13 @@ extension Team {
     var points: Int {
         return wins * 3 + draws
     }
+
+    var isStartingLineupSet: Bool {
+        guard starters.count == GameConfig.TeamMakeup.numStartersPerTeam else {
+            return false
+        }
+        return starters.filter({ $0.position == .keeper }).count == 1
+    }
 }
 
 extension Team {
@@ -90,31 +100,31 @@ extension Team {
 
     var scoringRating: Int {
         let ratingOffset = 40
-        let ratingExponent = 1.22
+        let ratingExponent = 1.21
 
         var rating = 0
         var totalWeight = 0.0
 
-        let forwardWeight = 2.75
-        for f in forwards {
-            if f.ratings.overallScoring > ratingOffset {
-                rating += Int(pow(Double(f.ratings.overallScoring - ratingOffset), ratingExponent) * forwardWeight)
+        let forwardWeight = 2.85
+        for f in forwards where f.isStarting {
+            if f.overallScoring > ratingOffset {
+                rating += Int(pow(Double(f.overallScoring - ratingOffset), ratingExponent) * forwardWeight)
             }
             totalWeight += forwardWeight
         }
 
         let midfielderWeight = 2.0
-        for m in midfielders {
-            if m.ratings.overallScoring > ratingOffset {
-                rating += Int(pow(Double(m.ratings.overallScoring - ratingOffset), ratingExponent) * midfielderWeight)
+        for m in midfielders where m.isStarting {
+            if m.overallScoring > ratingOffset {
+                rating += Int(pow(Double(m.overallScoring - ratingOffset), ratingExponent) * midfielderWeight)
             }
             totalWeight += midfielderWeight
         }
 
-        let defenderWeight = 1.25
-        for d in defenders {
-            if d.ratings.overallScoring > ratingOffset {
-                rating += Int(pow(Double(d.ratings.overallScoring - ratingOffset), ratingExponent) * defenderWeight)
+        let defenderWeight = 1.15
+        for d in defenders where d.isStarting {
+            if d.overallScoring > ratingOffset {
+                rating += Int(pow(Double(d.overallScoring - ratingOffset), ratingExponent) * defenderWeight)
             }
             totalWeight += defenderWeight
         }
@@ -122,69 +132,69 @@ extension Team {
         return Int(Double(rating) / 20.0) //totalWeight)
     }
 
-    var scoringRatingOLD: Int {
-        var rating = 0
-        var totalWeight = 0.0
-
-        let forwardWeight = 2.75
-        for f in forwards {
-            //            print("Forward \(f.firstName) \(f.lastName) = \(f.ratings.overallScoring)")
-            rating += Int(Double(f.ratings.overallScoring) * forwardWeight)
-            totalWeight += forwardWeight
-        }
-
-        let midfielderWeight = 2.0
-        for m in midfielders {
-            //            print("Mid \(m.firstName) \(m.lastName) = \(m.ratings.overallScoring)")
-            rating += Int(Double(m.ratings.overallScoring) * midfielderWeight)
-            totalWeight += midfielderWeight
-        }
-
-        let defenderWeight = 1.25
-        for d in defenders {
-            //            print("Def \(d.firstName) \(d.lastName) = \(d.ratings.overallScoring)")
-            rating += Int(Double(d.ratings.overallScoring) * defenderWeight)
-            totalWeight += defenderWeight
-        }
-
-        return Int(Double(rating) / totalWeight)
-    }
+//    var scoringRatingOLD: Int {
+//        var rating = 0
+//        var totalWeight = 0.0
+//
+//        let forwardWeight = 2.75
+//        for f in forwards where f.isStarting {
+//            //            print("Forward \(f.firstName) \(f.lastName) = \(f.ratings.overallScoring)")
+//            rating += Int(Double(f.overallScoring) * forwardWeight)
+//            totalWeight += forwardWeight
+//        }
+//
+//        let midfielderWeight = 2.0
+//        for m in midfielders where m.isStarting {
+//            //            print("Mid \(m.firstName) \(m.lastName) = \(m.ratings.overallScoring)")
+//            rating += Int(Double(m.overallScoring) * midfielderWeight)
+//            totalWeight += midfielderWeight
+//        }
+//
+//        let defenderWeight = 1.25
+//        for d in defenders where d.isStarting {
+//            //            print("Def \(d.firstName) \(d.lastName) = \(d.ratings.overallScoring)")
+//            rating += Int(Double(d.overallScoring) * defenderWeight)
+//            totalWeight += defenderWeight
+//        }
+//
+//        return Int(Double(rating) / totalWeight)
+//    }
 
     var defensiveRating: Int {
         let ratingOffset = 40
-        let ratingExponent = 1.22
+        let ratingExponent = 1.21
 
         var rating = 0
         var totalWeight = 0.0
 
-        let forwardWeight = 1.25
-        for f in forwards {
-            if f.ratings.overallDefensive > ratingOffset {
-                rating += Int(pow(Double(f.ratings.overallDefensive - ratingOffset), ratingExponent) * forwardWeight)
+        let forwardWeight = 1.2
+        for f in forwards where f.isStarting {
+            if f.overallDefensive > ratingOffset {
+                rating += Int(pow(Double(f.overallDefensive - ratingOffset), ratingExponent) * forwardWeight)
             }
             totalWeight += forwardWeight
         }
 
         let midfielderWeight = 2.0
-        for m in midfielders {
-            if m.ratings.overallDefensive > ratingOffset {
-                rating += Int(pow(Double(m.ratings.overallDefensive - ratingOffset), ratingExponent) * midfielderWeight)
+        for m in midfielders where m.isStarting {
+            if m.overallDefensive > ratingOffset {
+                rating += Int(pow(Double(m.overallDefensive - ratingOffset), ratingExponent) * midfielderWeight)
             }
             totalWeight += midfielderWeight
         }
 
-        let defenderWeight = 2.75
-        for d in defenders {
-            if d.ratings.overallDefensive > ratingOffset {
-                rating += Int(pow(Double(d.ratings.overallDefensive - ratingOffset), ratingExponent) * defenderWeight)
+        let defenderWeight = 2.8
+        for d in defenders where d.isStarting {
+            if d.overallDefensive > ratingOffset {
+                rating += Int(pow(Double(d.overallDefensive - ratingOffset), ratingExponent) * defenderWeight)
             }
             totalWeight += defenderWeight
         }
 
         let keeperWeight = 4.0
-        for k in keepers {
-            if k.ratings.overall > ratingOffset {
-                rating += Int(pow(Double(k.ratings.overall - ratingOffset), ratingExponent) * keeperWeight)
+        for k in keepers where k.isStarting {
+            if k.overallRating > ratingOffset {
+                rating += Int(pow(Double(k.overallRating - ratingOffset), ratingExponent) * keeperWeight)
             }
             totalWeight += keeperWeight
         }
@@ -192,39 +202,39 @@ extension Team {
         return Int(Double(rating) / totalWeight)
     }
 
-    var defensiveRatingOLD: Int {
-        var rating = 0
-        var totalWeight = 0.0
-
-        let forwardWeight = 1.25
-        for f in forwards {
-            //            print("Forward \(f.firstName) \(f.lastName) = \(f.ratings.overallDefensive)")
-            rating += Int(Double(f.ratings.overallDefensive) * forwardWeight)
-            totalWeight += forwardWeight
-        }
-
-        let midfielderWeight = 2.0
-        for m in midfielders {
-            //            print("Mid \(m.firstName) \(m.lastName) = \(m.ratings.overallDefensive)")
-            rating += Int(Double(m.ratings.overallDefensive) * midfielderWeight)
-            totalWeight += midfielderWeight
-        }
-
-        let defenderWeight = 2.75
-        for d in defenders {
-            //            print("Def \(d.firstName) \(d.lastName) = \(d.ratings.overallDefensive)")
-            rating += Int(Double(d.ratings.overallDefensive) * defenderWeight)
-            totalWeight += defenderWeight
-        }
-
-        let keeperWeight = 4.0
-        for k in keepers {
-            rating += Int(Double(k.ratings.overall) * keeperWeight)
-            totalWeight += keeperWeight
-        }
-
-        return Int(Double(rating) / totalWeight)
-    }
+//    var defensiveRatingOLD: Int {
+//        var rating = 0
+//        var totalWeight = 0.0
+//
+//        let forwardWeight = 1.25
+//        for f in forwards where f.isStarting {
+//            //            print("Forward \(f.firstName) \(f.lastName) = \(f.ratings.overallDefensive)")
+//            rating += Int(Double(f.ratings.overallDefensive) * forwardWeight)
+//            totalWeight += forwardWeight
+//        }
+//
+//        let midfielderWeight = 2.0
+//        for m in midfielders where m.isStarting {
+//            //            print("Mid \(m.firstName) \(m.lastName) = \(m.ratings.overallDefensive)")
+//            rating += Int(Double(m.ratings.overallDefensive) * midfielderWeight)
+//            totalWeight += midfielderWeight
+//        }
+//
+//        let defenderWeight = 2.75
+//        for d in defenders where d.isStarting {
+//            //            print("Def \(d.firstName) \(d.lastName) = \(d.ratings.overallDefensive)")
+//            rating += Int(Double(d.ratings.overallDefensive) * defenderWeight)
+//            totalWeight += defenderWeight
+//        }
+//
+//        let keeperWeight = 4.0
+//        for k in keepers where k.isStarting {
+//            rating += Int(Double(k.ratings.overall) * keeperWeight)
+//            totalWeight += keeperWeight
+//        }
+//
+//        return Int(Double(rating) / totalWeight)
+//    }
 
     var offensiveStarRating: Double {
         return overallStarRating(overall: scoringRating)
@@ -242,9 +252,9 @@ extension Team {
         case 65..<67: return 2.0
         case 67..<70: return 2.5
         case 70..<73: return 3.0
-        case 73..<76: return 3.5
-        case 76..<79: return 4.0
-        case 79..<82: return 4.5
+        case 73..<77: return 3.5
+        case 77..<80: return 4.0
+        case 80..<84: return 4.5
         default: return 5.0
         }
     }

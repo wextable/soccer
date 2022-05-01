@@ -432,7 +432,7 @@ extension GameSummaryViewController {
 
         homeImageView.image = model.homeLogo
 
-        playerCardsLabel.text = "Top Players"
+        playerCardsLabel.text = "Key Players"
         awayCardsController.model = .init(playerCardModels: model.awayPlayerCardModels)
         homeCardsController.model = .init(playerCardModels: model.homePlayerCardModels)
         gamePreviewView.isHidden = (model.awayGoalsText != nil) && (model.homeGoalsText != nil)
