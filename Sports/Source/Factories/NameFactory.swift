@@ -48,8 +48,9 @@ class NameFactory {
     "Udon", "Udder", "Ulrich", "Vargas", "Utah", "Yellow", "Yancy", "Zenith", "Polio", "Bunny", "Ellsworth",
     "Elijah", "Salvador", "Emerson", "Neckbeard", "Cadillac", "Brody", "Spencer", "Kenneth", "Engelbert", "Rod",
     "Gonzales", "Alberto", "Pierre", "Billiam", "Chestnutt", "Hammersmith", "Choctaw", "Cratchett", "Lance", "Lancelot",
-    "Grub", "Strawberry", "Huckleberry", "Chorizo", "Stiffy", "Craig", "Michelangelo", "Leonardo", "Joao", "Gilbert",
-    "Darrius", "Mister", "Freddie", "Mercury", "McDaniel", "Allah", "James"]
+    "Grub", "Strawberry", "Huckleberry", "Chorizo", "Stiffy", "Craig", "Michelangelo", "Leonardo", "João", "Gilbert",
+    "Darrius", "Mister", "Freddie", "Mercury", "McDaniel", "Allah", "James", "Rodriguez", "Karl", "Stevenson", "Sven",
+    "Bernardo", "Vespucci", "Chonker", "Guantanamo", "Jed", "Ping", "Orlando"]
 
     static func makeFirstName() -> String {
         guard Int.random(in: 1...100) < 99 else { return "" }

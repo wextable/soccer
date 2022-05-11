@@ -81,7 +81,7 @@ extension Team {
     }
 
     var isStartingLineupSet: Bool {
-        guard starters.count == GameConfig.TeamMakeup.numStartersPerTeam else {
+        guard starters.count == GameConfig.config.teamMakeup.numStartersPerTeam else {
             return false
         }
         return starters.filter({ $0.position == .keeper }).count == 1
@@ -129,7 +129,7 @@ extension Team {
             totalWeight += defenderWeight
         }
 
-        return Int(Double(rating) / 20.0) //totalWeight)
+        return Int(Double(rating) / 20.0)
     }
 
 //    var scoringRatingOLD: Int {
@@ -199,7 +199,7 @@ extension Team {
             totalWeight += keeperWeight
         }
 
-        return Int(Double(rating) / totalWeight)
+        return Int(Double(rating) / 24.0)
     }
 
 //    var defensiveRatingOLD: Int {
@@ -235,6 +235,10 @@ extension Team {
 //
 //        return Int(Double(rating) / totalWeight)
 //    }
+
+    var overallRating: Int {
+        return (scoringRating + defensiveRating) / 2
+    }
 
     var offensiveStarRating: Double {
         return overallStarRating(overall: scoringRating)

@@ -84,4 +84,10 @@ extension LeagueCoordinator: LeagueViewControllerDelegate {
                                                week: dataSource.data.league.currentWeek - 1)
         viewController.model = model
     }
+
+    func openDebugMenu(_ sender: LeagueViewController) {
+        let coordinator = DebugMenuCoordinator(presenter: navigationController)
+        addChild(coordinator: coordinator)
+        coordinator.start()
+    }
 }

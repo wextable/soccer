@@ -42,7 +42,7 @@ extension TeamStandingsView.Model {
                   goalDifferential: "\(team.goalsFor - team.goalsAgainst)",
                   offense: "\(team.scoringRating)",
                   defense: "\(team.defensiveRating)",
-                  overall: "\(team.ratings.overall)"
+                  overall: "\(team.overallRating)"
         )
     }
 }

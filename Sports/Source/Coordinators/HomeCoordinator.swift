@@ -35,6 +35,8 @@ final class HomeCoordinator: Coordinator<HomeCoordinatorResult> {
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
 
+        GameConfig.loadStoredConfig()
+
         var loadLeagueButtonTitle: String?
         if let savedLeague = dataStore.loadLastLeagueSave() {
             lastLeagueID = savedLeague.id

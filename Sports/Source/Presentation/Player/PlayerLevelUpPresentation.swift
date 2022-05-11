@@ -22,12 +22,33 @@ extension PlayerLevelUpViewController.Model {
         }
 
         var instructions = "\(player.fullName) has leveled up!\nChoose a skill to improve!"
+        let prefix = ["has been working hard!",
+                      "was practicing late at night all week long.",
+                      "is really dedicated to his craft.",
+                      "is a gym rat.",
+                      "keeps getting better!",
+                      "has been honing his skills.",
+                      "doesn't fuck around.",
+                      "is turning heads at practice.",
+                      "just doesn't ever give up!",
+                      "looks like he's been working out.",
+                      "is always trying to improve.",
+                      "is turning into a stud.",
+                      "has caught our eye this week.",
+                      "really wants to be a good player.",
+                      "must have had sex this week.",
+                      "totally got a blowjob in the parking lot.",
+                      "started micro-dosing.",
+                      "went on a zen meditation retreat.",
+                      "FINALLY got those genital warts removed!",
+                      "might have some real potential."].randomElement()!
         if let chosenSkill = chosenSkill {
-            instructions = "\(player.fullName) has been working hard!\nHis \(chosenSkill.name) has really improved."
+            instructions = "\(player.fullName) \(prefix)\nHis \(chosenSkill.name) has really improved."
             instructions += "\nHe is now at level \(player.xpLevel)."
         }
 
-        self.init(title: "\(player.fullName) (\(player.position.rawValue))",
+        self.init(didLevelUp: chosenSkill != nil,
+                  title: "\(player.fullName) (\(player.position.rawValue))",
                   shouldShowCloseButton: true,
                   teamIcon: team?.icon,
                   teamName: team?.name ?? "",

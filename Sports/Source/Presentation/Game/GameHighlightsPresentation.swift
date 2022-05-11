@@ -90,7 +90,7 @@ extension PlayerHighlightProfileView.Model {
         self.init(backgroundColor: team.primaryColor.uiColor,
                   textColor: textColor,
                   playerImage: dataStore.getPlayerImage(player, from: team),
-                  playerName: player.fullName,
+                  playerName: "\(player.fullName) (\(player.position.shortName))",
                   teamImage: team.icon)
     }
 }

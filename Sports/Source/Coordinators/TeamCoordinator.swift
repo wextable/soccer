@@ -81,7 +81,8 @@ extension TeamCoordinator: TeamViewControllerDelegate {
         guard let game = dataSource.data.league.game(withId: currentGame.id) else { return }
 
         guard team.isStartingLineupSet else {
-            // TODO: show an alert
+            showAlert(title: "Starting Lineup",
+                      message: "Complete your starting lineup before playing.")
             return
         }
 
@@ -129,9 +130,9 @@ extension TeamCoordinator {
         switch result {
         case .popped(let didAdvanceWeek):
             if didAdvanceWeek {
-                handleInjuries() { [weak self] in
+                levelUpPlayers() { [weak self] in
                     guard let self = self else { return }
-                    self.levelUpPlayers() { [weak self] in
+                    self.handleInjuries() { [weak self] in
                         guard let self = self else { return }
                         self.reloadView()
                     }
@@ -144,8 +145,9 @@ extension TeamCoordinator {
 
     private func handleInjuries(completion: @escaping () -> Void) {
         if let newlyInjured = team.players.first(where: { $0.injury?.isNew == true }) {
+            let playerName = "\(newlyInjured.fullName) (\(newlyInjured.position.shortName))"
             showAlert(title: "Uh oh!",
-                      message: newlyInjured.injury!.notification(playerName: newlyInjured.fullName)) { [weak self] _ in
+                      message: newlyInjured.injury!.notification(playerName: playerName)) { [weak self] _ in
                 self?.progressInjuries(completion: completion)
             }
         } else {
@@ -162,10 +164,8 @@ extension TeamCoordinator {
 
         var recoveryMessage: String = "The following players have recovered from their injuries:"
         for player in newlyRecoveredPlayers {
-
-            recoveryMessage += "\n\(player.fullName) (\(player.injury!.type.rawValue))"
-
-            dataSource.healPlayer(player)
+            let playerName = "\(player.fullName) (\(player.position.shortName))"
+            recoveryMessage += "\n\(playerName) (\(player.injury!.type.rawValue))"
         }
 
         showAlert(title: "Recovery!", message: recoveryMessage) { _ in
@@ -174,7 +174,10 @@ extension TeamCoordinator {
     }
 
     private func levelUpPlayers(completion: @escaping () -> Void) {
-        let playersToLevelUp = team.players.filter { $0.xp >= $0.potentialXP }
+        let playersToLevelUp = team.players.filter {
+            // TODO: once we have an economy, remove the hasReachedPotential part
+            $0.xp >= $0.potentialXP && !$0.hasReachedPotential
+        }
         levelUpPlayer(playersToLevelUp.first,
                       from: playersToLevelUp,
                       completion: completion)

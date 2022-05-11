@@ -133,10 +133,10 @@ class LeagueDataSource {
                 continue
             }
 
-            player.increaseXp(by: GameConfig.XP.goalXpBump)
+            player.increaseXp(by: GameConfig.config.xp.goalXpBump)
             if let assisterId = goal.passer?.id,
                let assister = team.players.first(where: { $0.id == assisterId }) {
-                assister.increaseXp(by: GameConfig.XP.assistXpBump)
+                assister.increaseXp(by: GameConfig.config.xp.assistXpBump)
             }
         }
 
@@ -147,7 +147,7 @@ class LeagueDataSource {
         }).count
 
         if let player = team.starters.first(where: { $0.position == .keeper }) {
-            player.increaseXp(by: GameConfig.XP.saveXpBump * numSaves)
+            player.increaseXp(by: GameConfig.config.xp.saveXpBump * numSaves)
         }
 
         // XP for clean sheet
@@ -155,9 +155,9 @@ class LeagueDataSource {
             for player in team.starters {
                 switch player.position {
                 case .keeper:
-                    player.increaseXp(by: GameConfig.XP.keeperCleanSheetXpBump)
+                    player.increaseXp(by: GameConfig.config.xp.keeperCleanSheetXpBump)
                 case .defender:
-                    player.increaseXp(by: GameConfig.XP.defenderCleanSheetXpBump)
+                    player.increaseXp(by: GameConfig.config.xp.defenderCleanSheetXpBump)
                 default:
                     break
                 }
@@ -166,7 +166,7 @@ class LeagueDataSource {
 
         // XP for playing in the game
         for player in team.starters {
-            player.increaseXp(by: GameConfig.XP.standardXpBump)
+            player.increaseXp(by: GameConfig.config.xp.standardXpBump)
         }
     }
 
@@ -174,9 +174,9 @@ class LeagueDataSource {
         // Condition
         for player in team.players {
             if player.isStarting {
-                player.decreaseCondition(by: GameConfig.Condition.standardGameFatigue)
-            } else if player.injury == nil {
-                player.increaseCondition(by: GameConfig.Condition.standardWeeklyRegeneration)
+                player.decreaseCondition(by: GameConfig.config.condition.standardGameFatigue)
+            } else if !player.isInjured {
+                player.increaseCondition(by: GameConfig.config.condition.standardWeeklyRegeneration)
             }
         }
     }
@@ -189,33 +189,37 @@ class LeagueDataSource {
         addNewInjuries()
 
         // AI starting lineups
+        setStartingLineups()
+    }
+
+    private func advanceInjuries() {
+        for team in data.league.teams {
+            team.players.forEach {
+                // Remove previously recovered injuries
+                if $0.injury?.isRecovered == true {
+                    $0.injury = nil                    
+                }
+
+                // Advance existing injuries
+                $0.injury?.advanceWeek()
+                if $0.injury?.isRecovered == true {
+                    // For newly recovered injuries, heal the player
+                    $0.condition = GameConfig.config.injury.conditionUponRecovery
+                }
+            }
+        }
+    }
+
+    private func addNewInjuries() {
+        TeamAI.addNewInjuries(for: data.league.teams)
+    }
+
+    private func setStartingLineups() {
         for team in data.league.teams {
             if team.id != data.league.userTeamId {
                 TeamAI.setStartingLineup(for: team)
             }
         }
-    }
-
-    private func advanceInjuries() {
-        for team in data.league.teams {
-            team.players.forEach { $0.injury?.advanceWeek() }
-        }
-    }
-
-    private func addNewInjuries() {
-        let healthyPlayers = data.league.userTeam.starters.filter { $0.injury == nil }
-        if let player = healthyPlayers.randomElement() {
-            player.addInjury()
-        }
-    }
-}
-
-extension LeagueDataSource {
-    func healPlayer(_ player: Player) {
-        player.injury = nil
-        player.condition = GameConfig.Injury.conditionUponRecovery
-
-        dataStore.saveLeague(data.league)
     }
 }
 
@@ -233,8 +237,10 @@ extension League {
                 return true
             } else if $1.points > $0.points {
                 return false
+            } else if $0.goalsFor - $0.goalsAgainst > $1.goalsFor - $1.goalsAgainst {
+                return true
             } else {
-                return $0.goalsFor - $0.goalsAgainst > $1.goalsFor - $1.goalsAgainst
+                return $0.overallRating > $1.overallRating
             }
         }
     }

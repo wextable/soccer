@@ -269,7 +269,7 @@ extension TeamViewController {
         }
 
         opponentLabel.attributedText = model.opponentString
-        playGameButtonContainer.isHidden = !model.isUserTeam
+        playGameButtonContainer.isHidden = !model.isUserTeam || model.opponentString == nil
 
         for i in 0..<model.segments.count {
             segmentedControl.setTitle(model.segments[i].title, forSegmentAt: i)

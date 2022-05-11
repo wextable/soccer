@@ -275,6 +275,9 @@
 		33BA9EF127CF07ED003AA93A /* GameHighlightsPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BA9EF027CF07ED003AA93A /* GameHighlightsPresentation.swift */; };
 		33C05E2E27D3BCA000EA5BB8 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C05E2D27D3BCA000EA5BB8 /* UIImage+Extensions.swift */; };
 		33C05E3027D3E2A600EA5BB8 /* PlayerHighlightProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C05E2F27D3E2A600EA5BB8 /* PlayerHighlightProfileView.swift */; };
+		33C230A62820D6D5006B6851 /* DebugMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C230A52820D6D5006B6851 /* DebugMenuViewController.swift */; };
+		33C230A82820DC5C006B6851 /* DebugMenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C230A72820DC5C006B6851 /* DebugMenuCoordinator.swift */; };
+		33C230AB2820DCDE006B6851 /* DebugMenuPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C230AA2820DCDE006B6851 /* DebugMenuPresentation.swift */; };
 		33CB41042819886400CA6128 /* TeamAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CB41032819886400CA6128 /* TeamAI.swift */; };
 		33F5576A27822C37000CED02 /* LeagueLeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F5576927822C37000CED02 /* LeagueLeaderView.swift */; };
 		33F5576C27823100000CED02 /* LeagueLeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F5576B27823100000CED02 /* LeagueLeaderCell.swift */; };
@@ -571,6 +574,9 @@
 		33BA9EF027CF07ED003AA93A /* GameHighlightsPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHighlightsPresentation.swift; sourceTree = "<group>"; };
 		33C05E2D27D3BCA000EA5BB8 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		33C05E2F27D3E2A600EA5BB8 /* PlayerHighlightProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerHighlightProfileView.swift; sourceTree = "<group>"; };
+		33C230A52820D6D5006B6851 /* DebugMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugMenuViewController.swift; sourceTree = "<group>"; };
+		33C230A72820DC5C006B6851 /* DebugMenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugMenuCoordinator.swift; sourceTree = "<group>"; };
+		33C230AA2820DCDE006B6851 /* DebugMenuPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugMenuPresentation.swift; sourceTree = "<group>"; };
 		33CB41032819886400CA6128 /* TeamAI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamAI.swift; sourceTree = "<group>"; };
 		33F5576927822C37000CED02 /* LeagueLeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueLeaderView.swift; sourceTree = "<group>"; };
 		33F5576B27823100000CED02 /* LeagueLeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueLeaderCell.swift; sourceTree = "<group>"; };
@@ -1541,6 +1547,7 @@
 		33718C32277BEB830048CD12 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				33C230A42820D6C4006B6851 /* Debug */,
 				33718C58277E491D0048CD12 /* Shared */,
 				33718C34277BEBC40048CD12 /* Home */,
 				3317359927FA29F2007E0BC0 /* NewGame */,
@@ -1564,6 +1571,7 @@
 				33810C8427FBFFE000C02EB1 /* PlayerLevelUpCoordinator.swift */,
 				332FE0CD27CA7D3B00520AB3 /* GameSummaryCoordinator.swift */,
 				3317976227CDC95A00CF65F5 /* GameHighlightsCoordinator.swift */,
+				33C230A72820DC5C006B6851 /* DebugMenuCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -1589,6 +1597,7 @@
 		33718C3E277BF8E60048CD12 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				33C230A92820DCCB006B6851 /* Debug */,
 				331735A027FA2AA9007E0BC0 /* NewGame */,
 				3317359C27FA2A17007E0BC0 /* League */,
 				3317359D27FA2A27007E0BC0 /* Team */,
@@ -1642,6 +1651,22 @@
 				3309FA7E2818D97D0077A2A3 /* CheckboxView.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		33C230A42820D6C4006B6851 /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				33C230A52820D6D5006B6851 /* DebugMenuViewController.swift */,
+			);
+			path = Debug;
+			sourceTree = "<group>";
+		};
+		33C230A92820DCCB006B6851 /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				33C230AA2820DCDE006B6851 /* DebugMenuPresentation.swift */,
+			);
+			path = Debug;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1820,6 +1845,7 @@
 				33718BDF277ACCA80048CD12 /* GlobalBanner.swift in Sources */,
 				33718BAC277ACCA80048CD12 /* GlassSwiftUIBadge.swift in Sources */,
 				33718BAB277ACCA80048CD12 /* GlassSwiftUILabel.swift in Sources */,
+				33C230A82820DC5C006B6851 /* DebugMenuCoordinator.swift in Sources */,
 				33718BBF277ACCA80048CD12 /* UIWindow+Extension.swift in Sources */,
 				336E382427729D11002E1088 /* PlayerFactory.swift in Sources */,
 				3332399527C8800D009194B5 /* LeagueCoordinator.swift in Sources */,
@@ -1835,6 +1861,7 @@
 				33718B9A277ACCA80048CD12 /* LayoutConstrainingAxes.swift in Sources */,
 				33718BAF277ACCA80048CD12 /* GlassStepperView+Presentation.swift in Sources */,
 				33718C21277ACCA90048CD12 /* GlassFonts.swift in Sources */,
+				33C230AB2820DCDE006B6851 /* DebugMenuPresentation.swift in Sources */,
 				33718C25277ACCA90048CD12 /* ErrorViewController.swift in Sources */,
 				33718BB3277ACCA80048CD12 /* GlassFeatureUpdateView.swift in Sources */,
 				33718C5A277E49380048CD12 /* SortableTableHeaderView.swift in Sources */,
@@ -1972,6 +1999,7 @@
 				33718B85277ACCA80048CD12 /* BaseControl.swift in Sources */,
 				33718B70277ACCA80048CD12 /* Transition.swift in Sources */,
 				33718BC5277ACCA80048CD12 /* NSMutableAttributedString+Extension.swift in Sources */,
+				33C230A62820D6D5006B6851 /* DebugMenuViewController.swift in Sources */,
 				33718C28277ACCA90048CD12 /* GlassErrorImage.swift in Sources */,
 				33718BD2277ACCA80048CD12 /* GlassCalloutView.swift in Sources */,
 				3317359627FA2097007E0BC0 /* TeamScheduleViewController.swift in Sources */,
@@ -2212,7 +2240,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3Y535X8CA5;
+				DEVELOPMENT_TEAM = 4A73GN8N2F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Sports/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -2241,7 +2269,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3Y535X8CA5;
+				DEVELOPMENT_TEAM = 4A73GN8N2F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Sports/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

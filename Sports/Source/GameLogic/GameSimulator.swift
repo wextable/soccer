@@ -36,13 +36,13 @@ class GameSimulator {
         // 15: 3
         // y = mx + b
         // y = 4x/30 + 1
-        let homeGoalStd = Double(homeDiff) / 7.5 + 1.2
+        let homeGoalStd = Double(homeDiff) / GameConfig.config.gameAI.ratingDiffPerGoal + 1.0 + GameConfig.config.gameAI.homeFieldAdvantage
 //        print("homeGoalStd = \(homeGoalStd)")
 
-        let awayGoalStd = Double(awayDiff) / 7.5 + 1.0
+        let awayGoalStd = Double(awayDiff) / GameConfig.config.gameAI.ratingDiffPerGoal + 1.0
 //        print("awayGoalStd = \(awayGoalStd)")
 
-        let halfSpan = 300
+        let halfSpan = Int(GameConfig.config.gameAI.halfWidthGoalBellCurve * 100.0)
         let random = GKRandomSource()
         let scoreDistribution = GKGaussianDistribution(randomSource: random, lowestValue: -halfSpan, highestValue: halfSpan)
 

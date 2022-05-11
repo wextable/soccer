@@ -13,6 +13,7 @@ protocol LeagueViewControllerDelegate: AnyObject {
     func playerSelected(withId id: String, sender: LeagueViewController)
     func gameSelected(withId id: String, sender: LeagueViewController)
     func simulateWeek(sender: LeagueViewController)
+    func openDebugMenu(_ sender: LeagueViewController)
 }
 
 class LeagueViewController: BaseViewController {
@@ -25,22 +26,7 @@ class LeagueViewController: BaseViewController {
     let leagueScheduleViewController = LeagueScheduleViewController(model: .init())
     let leagueLeadersViewController = LeagueLeadersViewController(model: .init())
 
-    var model: Model {
-        didSet { applyModel() }
-    }
-
-    private func applyModel() {
-        title = model.title
-
-        for i in 0..<model.segments.count {
-            segmentedControl.setTitle(model.segments[i].title, forSegmentAt: i)
-        }
-        leagueStandingsViewController.model = model.leagueStandingsModel
-        leagueLeadersViewController.model = model.leagueLeadersModel
-        leagueScheduleViewController.model = model.leagueScheduleModel
-
-        updateSegment()
-    }
+    var model: Model { didSet { applyModel() } }
 
     // MARK: Initialization
 
@@ -60,6 +46,10 @@ class LeagueViewController: BaseViewController {
         super.constructView()
         view.backgroundColor = .white
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
+        navigationItem.rightBarButtonItem = .init(title: "<debug menu>",
+                                                  style: .plain,
+                                                  target: self,
+                                                  action: #selector(debugMenuTapped))
 
         segmentedControl.addTarget(self, action: #selector(self.segmentedValueChanged(_:)), for: .valueChanged)
 
@@ -109,7 +99,6 @@ class LeagueViewController: BaseViewController {
     // MARK: Actions
 
     @objc private func segmentedValueChanged(_ sender: UISegmentedControl) {
-        print("Selected Segment Index is : \(sender.selectedSegmentIndex)")
         updateSegment()
     }
 
@@ -120,6 +109,9 @@ class LeagueViewController: BaseViewController {
         delegate?.simulateWeek(sender: self)
     }
 
+    @objc private func debugMenuTapped() {
+        delegate?.openDebugMenu(self)
+    }
 }
 
 extension LeagueViewController {
@@ -158,6 +150,19 @@ extension LeagueViewController {
         var leagueStandingsModel: LeagueStandingsViewController.Model = .init()
         var leagueScheduleModel: LeagueScheduleViewController.Model = .init()
         var leagueLeadersModel: LeagueLeadersViewController.Model = .init()
+    }
+
+    private func applyModel() {
+        title = model.title
+
+        for i in 0..<model.segments.count {
+            segmentedControl.setTitle(model.segments[i].title, forSegmentAt: i)
+        }
+        leagueStandingsViewController.model = model.leagueStandingsModel
+        leagueLeadersViewController.model = model.leagueLeadersModel
+        leagueScheduleViewController.model = model.leagueScheduleModel
+
+        updateSegment()
     }
 }
 

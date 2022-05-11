@@ -137,7 +137,8 @@ extension Player {
                 Double(shooting) * 0.18 +
                 Double(passing) * 0.26 +
                 Double(dribbling) * 0.2 +
-                Double(defending) * 0.14
+                Double(defending) * 0.14 +
+                2.0
             case .forward:
                 overall = Double(speed) * 0.3 +
                 Double(shooting) * 0.3 +
@@ -169,6 +170,15 @@ extension Player {
                        Double(passing) * 0.35)
         }
     }
+
+    var hasReachedPotential: Bool {
+        return ratings.speed == potential.speed &&
+        ratings.shooting == potential.shooting &&
+        ratings.passing == potential.passing &&
+        ratings.dribbling == potential.dribbling &&
+        ratings.defending == potential.defending &&
+        ratings.goalkeeping == potential.goalkeeping
+    }
 }
 
 extension Player {
@@ -198,7 +208,10 @@ extension Player {
     }
 
     var overallDefensive: Int {
-        getOverallDefensive()
+        switch position {
+        case .keeper: return getOverallRating()
+        default: return getOverallDefensive()
+        }
     }
     var overallDefensivePotential: Int {
         getOverallDefensive(isPotential: true)
@@ -263,12 +276,13 @@ extension Player {
     }
 
     private func effectiveRating(_ rating: Int) -> Int {
-        let effectiveness: Double = 100 - ((100 - Double(condition)) * GameConfig.Condition.effectivenesFactor)
+        let effectiveness: Double = 100 - ((100 - Double(condition)) * GameConfig.config.condition.effectivenesFactor)
         return Int(Double(rating) * (effectiveness/100))
     }
 }
 
 extension Player {
+
     struct Injury: Codable {
         let type: InjuryType
         private let causeDescription: String?
@@ -280,25 +294,80 @@ extension Player {
             numWeeksToHeal == 0
         }
 
+        enum Severity: Int {
+            case mild = 1
+            case medium = 2
+            case severe = 3
+        }
+
         enum InjuryType: String, CaseIterable, Codable {
             case acl = "torn ACL"
+            case aneurism = "aneurism"
             case ankle = "sprained ankle"
+            case arm = "broken arm"
             case concussion = "concussion"
+            case diarrhea = "wicked case of diarrhea"
+            case ear = "cauliflower ear"
             case hamstring = "pulled hamstring"
+            case hangover = "terrible fucking hangover"
+            case jaw = "dislocated jaw"
+            case neck = "broken neck"
+            case nose = "broken nose"
+            case rectum = "hemorraging rectum"
+            case retina = "detached retina"
+            case schlong = "badly bruised schlong"
+            case testicle = "ruptured testicle"
+            case toe = "severed toe"
 
             var duration: Int {
                 switch self {
-                case .acl: return Int.random(in: 4...10)
+                case .acl: return Int.random(in: 6...10)
+                case .aneurism: return Int.random(in: 6...10)
                 case .ankle: return Int.random(in: 1...3)
+                case .arm: return Int.random(in: 3...5)
                 case .concussion: return Int.random(in: 1...2)
-                case .hamstring: return Int.random(in: 1...3)
+                case .diarrhea: return 1
+                case .ear: return Int.random(in: 1...3)
+                case .hamstring: return Int.random(in: 2...4)
+                case .hangover: return 1
+                case .jaw: return Int.random(in: 1...4)
+                case .neck: return Int.random(in: 8...12)
+                case .nose: return Int.random(in: 3...5)
+                case .rectum: return Int.random(in: 3...5)
+                case .retina: return Int.random(in: 2...3)
+                case .schlong: return 1
+                case .testicle: return Int.random(in: 4...8)
+                case .toe: return Int.random(in: 2...3)
+                }
+            }
+
+            var severity: Severity {
+                switch self {
+                case .acl: return .severe
+                case .aneurism: return .severe
+                case .ankle: return .mild
+                case .arm: return .medium
+                case .concussion: return .mild
+                case .diarrhea: return .mild
+                case .ear: return .mild
+                case .hamstring: return .medium
+                case .hangover: return .mild
+                case .jaw: return .medium
+                case .neck: return .severe
+                case .nose: return .mild
+                case .rectum: return .medium
+                case .retina: return .medium
+                case .schlong: return .mild
+                case .testicle: return .severe
+                case .toe: return .medium
                 }
             }
         }
 
-        static func makeRandom(causeDescription: String? = nil) -> Self {
-            self.init(type: InjuryType.allCases.randomElement()!,
-                      causeDescription: causeDescription)
+        static func makeRandom(maxSeverity: Severity, causeDescription: String? = nil) -> Self {
+            let possibleTypes = InjuryType.allCases.filter { $0.severity.rawValue <= maxSeverity.rawValue }
+            return self.init(type: possibleTypes.randomElement()!,
+                             causeDescription: causeDescription)
         }
 
         private init(type: InjuryType, causeDescription: String? = nil) {
@@ -317,13 +386,27 @@ extension Player {
             if let cause = causeDescription {
                 string += "\n\(cause)"
             }
-            string += "\nIt will take \(numWeeksToHeal) weeks to heal."
+            if numWeeksToHeal == 1 {
+                string += "\nIt will take \(numWeeksToHeal) week to heal."
+            } else {
+                string += "\nIt will take \(numWeeksToHeal) weeks to heal."
+            }
             return string
         }
     }
 
-    func addInjury() {
-        injury = .makeRandom(causeDescription: "fucking guy")
+    var isInjured: Bool {
+        return injury?.isRecovered == false
+    }
+
+    func addInjury(causeDescription: String = "") {
+        let severity: Injury.Severity
+        switch condition {
+        case Int.min..<50: severity = .severe
+        case 50..<80: severity = .medium
+        default: severity = .mild
+        }
+        injury = .makeRandom(maxSeverity: severity, causeDescription: causeDescription)
         condition = 0
         isStarting = false
     }

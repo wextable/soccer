@@ -22,8 +22,10 @@ extension LeagueLeadersViewController.Model {
                 return true
             } else if $0.stats.assists < $1.stats.assists {
                 return false
+            } else if $0.overallRating > $1.overallRating {
+                return true
             } else {
-                return $0.overallRating > $1.overallRating
+                return $0.overallRatingPotential > $1.overallRatingPotential
             }
         }
         

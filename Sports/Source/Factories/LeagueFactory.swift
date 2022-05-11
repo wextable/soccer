@@ -92,10 +92,10 @@ extension LeagueFactory {
     private static func makePlayerPool(numTeams: Int) -> [Player] {
         var positions: [Position] = []
         var pool: [Player] = []
-        for _ in 0..<numTeams * GameConfig.TeamMakeup.maxNumKeepersPerTeam { positions.append(.keeper) }
-        for _ in 0..<numTeams * GameConfig.TeamMakeup.maxNumPositionalPerTeam { positions.append(.defender) }
-        for _ in 0..<numTeams * GameConfig.TeamMakeup.maxNumPositionalPerTeam { positions.append(.midfielder) }
-        for _ in 0..<numTeams * GameConfig.TeamMakeup.maxNumPositionalPerTeam { positions.append(.forward) }
+        for _ in 0..<numTeams * GameConfig.config.teamMakeup.maxNumKeepersPerTeam { positions.append(.keeper) }
+        for _ in 0..<numTeams * GameConfig.config.teamMakeup.maxNumPositionalPerTeam { positions.append(.defender) }
+        for _ in 0..<numTeams * GameConfig.config.teamMakeup.maxNumPositionalPerTeam { positions.append(.midfielder) }
+        for _ in 0..<numTeams * GameConfig.config.teamMakeup.maxNumPositionalPerTeam { positions.append(.forward) }
 
         for pos in positions {
             let p = PlayerFactory.makePlayer(position: pos)
@@ -117,26 +117,26 @@ extension LeagueFactory {
 
     private static func areRostersFull(for teams: [Team]) -> Bool {
         return !teams.contains(where: {
-            $0.players.count < GameConfig.TeamMakeup.maxNumPlayersPerTeam
+            $0.players.count < GameConfig.config.teamMakeup.maxNumPlayersPerTeam
         })
     }
 
     private static func draftPlayer(for team: Team, from players: [Player]) -> Player? {
-        guard team.players.count < GameConfig.TeamMakeup.numStartersPerTeam else {
+        guard team.players.count < GameConfig.config.teamMakeup.numStartersPerTeam else {
             return draftReservePlayer(for: team, from: players)
         }
 
-        let isLastPlayer = team.players.count == GameConfig.TeamMakeup.numStartersPerTeam - 1
+        let isLastPlayer = team.players.count == GameConfig.config.teamMakeup.numStartersPerTeam - 1
 
         let startingPlayer =  players.first { bestPlayer in
             let existing = team.players.filter { $0.position == bestPlayer.position }
             switch bestPlayer.position {
-            case .keeper: return existing.count < GameConfig.TeamMakeup.maxNumStartingKeepersPerTeam
+            case .keeper: return existing.count < GameConfig.config.teamMakeup.maxNumStartingKeepersPerTeam
             default:
                 if isLastPlayer {
-                    return existing.count < GameConfig.TeamMakeup.maxNumStartingPositionalPerTeam
+                    return existing.count < GameConfig.config.teamMakeup.maxNumStartingPositionalPerTeam
                 } else {
-                    return existing.count < GameConfig.TeamMakeup.maxNumStartingPositionalPerTeam - 1
+                    return existing.count < GameConfig.config.teamMakeup.maxNumStartingPositionalPerTeam - 1
                 }
             }
         }
@@ -146,13 +146,13 @@ extension LeagueFactory {
     }
 
     private static func draftReservePlayer(for team: Team, from players: [Player]) -> Player? {
-        guard team.players.count < GameConfig.TeamMakeup.maxNumPlayersPerTeam else { return nil }
+        guard team.players.count < GameConfig.config.teamMakeup.maxNumPlayersPerTeam else { return nil }
 
         return players.first { bestPlayer in
             let existing = team.players.filter { $0.position == bestPlayer.position }
             switch bestPlayer.position {
-            case .keeper: return existing.count < GameConfig.TeamMakeup.maxNumKeepersPerTeam
-            default: return existing.count < GameConfig.TeamMakeup.maxNumPositionalPerTeam
+            case .keeper: return existing.count < GameConfig.config.teamMakeup.maxNumKeepersPerTeam
+            default: return existing.count < GameConfig.config.teamMakeup.maxNumPositionalPerTeam
             }
         }
     }

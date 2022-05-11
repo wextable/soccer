@@ -20,7 +20,7 @@ extension PlayerListingView.Model {
 
     init(player: Player, on team: Team, isUserTeam: Bool) {
 
-        var isCheckboxEnabled = isUserTeam && player.injury == nil
+        var isCheckboxEnabled = isUserTeam && !player.isInjured
         if !player.isStarting {
             
             if player.position == .keeper {
@@ -31,14 +31,14 @@ extension PlayerListingView.Model {
                 let numStartingNonKeepers = team.starters.filter(
                     { $0.position != .keeper }
                 ).count
-                if numStartingNonKeepers >= GameConfig.TeamMakeup.numStartersPerTeam - 1 {
+                if numStartingNonKeepers >= GameConfig.config.teamMakeup.numStartersPerTeam - 1 {
                     isCheckboxEnabled = false
                 }
             }
         }
 
         var statusIcon: UIImage?
-        if player.injury != nil {
+        if player.isInjured {
             statusIcon = UIImage(named: "icon_status_injury")
         }
 

@@ -67,27 +67,27 @@ extension PlayerLevelUpCoordinator: PlayerLevelUpViewControllerDelegate {
         switch rating {
         case .speed:
             guard player.ratings.speed < player.potential.speed else { return }
-            player.ratings.speed = min(player.ratings.speed + GameConfig.XP.levelUpAmountSpeed,
+            player.ratings.speed = min(player.ratings.speed + GameConfig.config.xp.levelUpAmountSpeed,
                                        player.potential.speed)
         case .shooting:
             guard player.ratings.shooting < player.potential.shooting else { return }
-            player.ratings.shooting = min(player.ratings.shooting + GameConfig.XP.levelUpAmountShooting,
+            player.ratings.shooting = min(player.ratings.shooting + GameConfig.config.xp.levelUpAmountShooting,
                                           player.potential.shooting)
         case .passing:
             guard player.ratings.passing < player.potential.passing else { return }
-            player.ratings.passing = min(player.ratings.passing + GameConfig.XP.levelUpAmountPassing,
+            player.ratings.passing = min(player.ratings.passing + GameConfig.config.xp.levelUpAmountPassing,
                                          player.potential.passing)
         case .dribbling:
             guard player.ratings.dribbling < player.potential.dribbling else { return }
-            player.ratings.dribbling = min(player.ratings.dribbling + GameConfig.XP.levelUpAmountDribbling,
+            player.ratings.dribbling = min(player.ratings.dribbling + GameConfig.config.xp.levelUpAmountDribbling,
                                            player.potential.dribbling)
         case .defending:
             guard player.ratings.defending < player.potential.defending else { return }
-            player.ratings.defending = min(player.ratings.defending + GameConfig.XP.levelUpAmountDefending,
+            player.ratings.defending = min(player.ratings.defending + GameConfig.config.xp.levelUpAmountDefending,
                                            player.potential.defending)
         case .goalkeeping:
             guard player.ratings.goalkeeping < player.potential.goalkeeping else { return }
-            player.ratings.goalkeeping = min(player.ratings.goalkeeping + GameConfig.XP.levelUpAmountGoalkeeping,
+            player.ratings.goalkeeping = min(player.ratings.goalkeeping + GameConfig.config.xp.levelUpAmountGoalkeeping,
                                              player.potential.goalkeeping)
         }
 
