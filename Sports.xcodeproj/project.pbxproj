@@ -41,6 +41,27 @@
 		333F8D612782399600F051E5 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333F8D602782399600F051E5 /* Position.swift */; };
 		33407B18281A1A8100FB22A9 /* PlayerLevelUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33407B17281A1A8100FB22A9 /* PlayerLevelUpViewController.swift */; };
 		33407B1A281A200B00FB22A9 /* PlayerLevelUpPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33407B19281A200B00FB22A9 /* PlayerLevelUpPresentation.swift */; };
+		335017E6282C9F8E00AF31E2 /* scaramucci.caf in Resources */ = {isa = PBXBuildFile; fileRef = 335017D3282C9F8A00AF31E2 /* scaramucci.caf */; };
+		335017E7282C9F8E00AF31E2 /* pass_to.caf in Resources */ = {isa = PBXBuildFile; fileRef = 335017D4282C9F8B00AF31E2 /* pass_to.caf */; };
+		335017E8282C9F8E00AF31E2 /* passes_to.caf in Resources */ = {isa = PBXBuildFile; fileRef = 335017D5282C9F8B00AF31E2 /* passes_to.caf */; };
+		335017E9282C9F8E00AF31E2 /* beautiful_pass_from.caf in Resources */ = {isa = PBXBuildFile; fileRef = 335017D6282C9F8B00AF31E2 /* beautiful_pass_from.caf */; };
+		335017EA282C9F8E00AF31E2 /* great_ball.caf in Resources */ = {isa = PBXBuildFile; fileRef = 335017D7282C9F8B00AF31E2 /* great_ball.caf */; };
+		335017EB282C9F8E00AF31E2 /* gets_it_from.caf in Resources */ = {isa = PBXBuildFile; fileRef = 335017D8282C9F8B00AF31E2 /* gets_it_from.caf */; };
+		335017EC282C9F8E00AF31E2 /* chode.caf in Resources */ = {isa = PBXBuildFile; fileRef = 335017D9282C9F8C00AF31E2 /* chode.caf */; };
+		335017ED282C9F8E00AF31E2 /* pistacio.caf in Resources */ = {isa = PBXBuildFile; fileRef = 335017DA282C9F8C00AF31E2 /* pistacio.caf */; };
+		335017EE282C9F8E00AF31E2 /* he_sees.caf in Resources */ = {isa = PBXBuildFile; fileRef = 335017DB282C9F8C00AF31E2 /* he_sees.caf */; };
+		335017EF282C9F8E00AF31E2 /* gives_it_to.caf in Resources */ = {isa = PBXBuildFile; fileRef = 335017DC282C9F8C00AF31E2 /* gives_it_to.caf */; };
+		335017F0282C9F8E00AF31E2 /* magnusson.caf in Resources */ = {isa = PBXBuildFile; fileRef = 335017DD282C9F8C00AF31E2 /* magnusson.caf */; };
+		335017F1282C9F8E00AF31E2 /* buckwalter.caf in Resources */ = {isa = PBXBuildFile; fileRef = 335017DE282C9F8D00AF31E2 /* buckwalter.caf */; };
+		335017F2282C9F8E00AF31E2 /* passes_the_ball.caf in Resources */ = {isa = PBXBuildFile; fileRef = 335017DF282C9F8D00AF31E2 /* passes_the_ball.caf */; };
+		335017F3282C9F8E00AF31E2 /* hes_got.caf in Resources */ = {isa = PBXBuildFile; fileRef = 335017E0282C9F8D00AF31E2 /* hes_got.caf */; };
+		335017F4282C9F8E00AF31E2 /* johnson.caf in Resources */ = {isa = PBXBuildFile; fileRef = 335017E1282C9F8D00AF31E2 /* johnson.caf */; };
+		335017F5282C9F8E00AF31E2 /* pause.caf in Resources */ = {isa = PBXBuildFile; fileRef = 335017E2282C9F8D00AF31E2 /* pause.caf */; };
+		335017F6282C9F8E00AF31E2 /* opportunity_here.caf in Resources */ = {isa = PBXBuildFile; fileRef = 335017E3282C9F8E00AF31E2 /* opportunity_here.caf */; };
+		335017F7282C9F8E00AF31E2 /* jeremy.caf in Resources */ = {isa = PBXBuildFile; fileRef = 335017E4282C9F8E00AF31E2 /* jeremy.caf */; };
+		335017F8282C9F8E00AF31E2 /* queef.caf in Resources */ = {isa = PBXBuildFile; fileRef = 335017E5282C9F8E00AF31E2 /* queef.caf */; };
+		335017FC282C9FD600AF31E2 /* SequencePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335017FB282C9FD600AF31E2 /* SequencePlayer.swift */; };
+		335017FE282C9FEB00AF31E2 /* AudioStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335017FD282C9FEB00AF31E2 /* AudioStrings.swift */; };
 		335527E1280E29E700A96974 /* PlayerCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335527E0280E29E700A96974 /* PlayerCardView.swift */; };
 		335527E3280EFBEB00A96974 /* PlayerCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335527E2280EFBEB00A96974 /* PlayerCardCell.swift */; };
 		335527E5280EFC5000A96974 /* PlayerCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335527E4280EFC5000A96974 /* PlayerCardViewController.swift */; };
@@ -336,6 +357,27 @@
 		333F8D602782399600F051E5 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		33407B17281A1A8100FB22A9 /* PlayerLevelUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerLevelUpViewController.swift; sourceTree = "<group>"; };
 		33407B19281A200B00FB22A9 /* PlayerLevelUpPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerLevelUpPresentation.swift; sourceTree = "<group>"; };
+		335017D3282C9F8A00AF31E2 /* scaramucci.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = scaramucci.caf; sourceTree = "<group>"; };
+		335017D4282C9F8B00AF31E2 /* pass_to.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pass_to.caf; sourceTree = "<group>"; };
+		335017D5282C9F8B00AF31E2 /* passes_to.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = passes_to.caf; sourceTree = "<group>"; };
+		335017D6282C9F8B00AF31E2 /* beautiful_pass_from.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = beautiful_pass_from.caf; sourceTree = "<group>"; };
+		335017D7282C9F8B00AF31E2 /* great_ball.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = great_ball.caf; sourceTree = "<group>"; };
+		335017D8282C9F8B00AF31E2 /* gets_it_from.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gets_it_from.caf; sourceTree = "<group>"; };
+		335017D9282C9F8C00AF31E2 /* chode.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = chode.caf; sourceTree = "<group>"; };
+		335017DA282C9F8C00AF31E2 /* pistacio.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pistacio.caf; sourceTree = "<group>"; };
+		335017DB282C9F8C00AF31E2 /* he_sees.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = he_sees.caf; sourceTree = "<group>"; };
+		335017DC282C9F8C00AF31E2 /* gives_it_to.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gives_it_to.caf; sourceTree = "<group>"; };
+		335017DD282C9F8C00AF31E2 /* magnusson.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = magnusson.caf; sourceTree = "<group>"; };
+		335017DE282C9F8D00AF31E2 /* buckwalter.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = buckwalter.caf; sourceTree = "<group>"; };
+		335017DF282C9F8D00AF31E2 /* passes_the_ball.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = passes_the_ball.caf; sourceTree = "<group>"; };
+		335017E0282C9F8D00AF31E2 /* hes_got.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hes_got.caf; sourceTree = "<group>"; };
+		335017E1282C9F8D00AF31E2 /* johnson.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = johnson.caf; sourceTree = "<group>"; };
+		335017E2282C9F8D00AF31E2 /* pause.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pause.caf; sourceTree = "<group>"; };
+		335017E3282C9F8E00AF31E2 /* opportunity_here.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = opportunity_here.caf; sourceTree = "<group>"; };
+		335017E4282C9F8E00AF31E2 /* jeremy.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = jeremy.caf; sourceTree = "<group>"; };
+		335017E5282C9F8E00AF31E2 /* queef.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = queef.caf; sourceTree = "<group>"; };
+		335017FB282C9FD600AF31E2 /* SequencePlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequencePlayer.swift; sourceTree = "<group>"; };
+		335017FD282C9FEB00AF31E2 /* AudioStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioStrings.swift; sourceTree = "<group>"; };
 		335527E0280E29E700A96974 /* PlayerCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCardView.swift; sourceTree = "<group>"; };
 		335527E2280EFBEB00A96974 /* PlayerCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCardCell.swift; sourceTree = "<group>"; };
 		335527E4280EFC5000A96974 /* PlayerCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCardViewController.swift; sourceTree = "<group>"; };
@@ -760,6 +802,82 @@
 			path = LeagueSchedule;
 			sourceTree = "<group>";
 		};
+		335017CE282C9F3800AF31E2 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				335017FB282C9FD600AF31E2 /* SequencePlayer.swift */,
+				335017FD282C9FEB00AF31E2 /* AudioStrings.swift */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		335017CF282C9F4700AF31E2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				335017D0282C9F5D00AF31E2 /* Audio */,
+				336E37F427729A8E002E1088 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		335017D0282C9F5D00AF31E2 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				335017D1282C9F6700AF31E2 /* Commentary */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		335017D1282C9F6700AF31E2 /* Commentary */ = {
+			isa = PBXGroup;
+			children = (
+				335017D2282C9F6D00AF31E2 /* TestingTesting123 */,
+			);
+			path = Commentary;
+			sourceTree = "<group>";
+		};
+		335017D2282C9F6D00AF31E2 /* TestingTesting123 */ = {
+			isa = PBXGroup;
+			children = (
+				335017FA282C9FA100AF31E2 /* Names */,
+				335017F9282C9F9500AF31E2 /* Pass */,
+				335017E2282C9F8D00AF31E2 /* pause.caf */,
+			);
+			path = TestingTesting123;
+			sourceTree = "<group>";
+		};
+		335017F9282C9F9500AF31E2 /* Pass */ = {
+			isa = PBXGroup;
+			children = (
+				335017D6282C9F8B00AF31E2 /* beautiful_pass_from.caf */,
+				335017D8282C9F8B00AF31E2 /* gets_it_from.caf */,
+				335017DC282C9F8C00AF31E2 /* gives_it_to.caf */,
+				335017D7282C9F8B00AF31E2 /* great_ball.caf */,
+				335017DB282C9F8C00AF31E2 /* he_sees.caf */,
+				335017E0282C9F8D00AF31E2 /* hes_got.caf */,
+				335017E3282C9F8E00AF31E2 /* opportunity_here.caf */,
+				335017D4282C9F8B00AF31E2 /* pass_to.caf */,
+				335017DF282C9F8D00AF31E2 /* passes_the_ball.caf */,
+				335017D5282C9F8B00AF31E2 /* passes_to.caf */,
+			);
+			path = Pass;
+			sourceTree = "<group>";
+		};
+		335017FA282C9FA100AF31E2 /* Names */ = {
+			isa = PBXGroup;
+			children = (
+				335017DE282C9F8D00AF31E2 /* buckwalter.caf */,
+				335017D9282C9F8C00AF31E2 /* chode.caf */,
+				335017E4282C9F8E00AF31E2 /* jeremy.caf */,
+				335017E1282C9F8D00AF31E2 /* johnson.caf */,
+				335017DD282C9F8C00AF31E2 /* magnusson.caf */,
+				335017DA282C9F8C00AF31E2 /* pistacio.caf */,
+				335017E5282C9F8E00AF31E2 /* queef.caf */,
+				335017D3282C9F8A00AF31E2 /* scaramucci.caf */,
+			);
+			path = Names;
+			sourceTree = "<group>";
+		};
 		336CD56027C59FEF00E47DDE /* PaintBucket */ = {
 			isa = PBXGroup;
 			children = (
@@ -793,8 +911,8 @@
 		336E37EA27729A8D002E1088 /* Sports */ = {
 			isa = PBXGroup;
 			children = (
+				335017CF282C9F4700AF31E2 /* Resources */,
 				336E381E27729AE1002E1088 /* Source */,
-				336E37F427729A8E002E1088 /* Assets.xcassets */,
 				336E37F627729A8E002E1088 /* LaunchScreen.storyboard */,
 				336E37F927729A8E002E1088 /* Info.plist */,
 			);
@@ -821,6 +939,7 @@
 		336E381E27729AE1002E1088 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				335017CE282C9F3800AF31E2 /* Audio */,
 				336E37EB27729A8D002E1088 /* AppDelegate.swift */,
 				336CD56027C59FEF00E47DDE /* PaintBucket */,
 				331F663827C31D0A00878C0B /* GameLogic */,
@@ -1773,11 +1892,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				335017F0282C9F8E00AF31E2 /* magnusson.caf in Resources */,
+				335017F3282C9F8E00AF31E2 /* hes_got.caf in Resources */,
+				335017EC282C9F8E00AF31E2 /* chode.caf in Resources */,
 				336E37F827729A8E002E1088 /* LaunchScreen.storyboard in Resources */,
+				335017EF282C9F8E00AF31E2 /* gives_it_to.caf in Resources */,
+				335017F5282C9F8E00AF31E2 /* pause.caf in Resources */,
+				335017F2282C9F8E00AF31E2 /* passes_the_ball.caf in Resources */,
+				335017E6282C9F8E00AF31E2 /* scaramucci.caf in Resources */,
+				335017F6282C9F8E00AF31E2 /* opportunity_here.caf in Resources */,
+				335017EE282C9F8E00AF31E2 /* he_sees.caf in Resources */,
+				335017E7282C9F8E00AF31E2 /* pass_to.caf in Resources */,
+				335017EA282C9F8E00AF31E2 /* great_ball.caf in Resources */,
 				336E37F527729A8E002E1088 /* Assets.xcassets in Resources */,
+				335017F1282C9F8E00AF31E2 /* buckwalter.caf in Resources */,
+				335017ED282C9F8E00AF31E2 /* pistacio.caf in Resources */,
 				33718B7B277ACCA80048CD12 /* GlassAssets.xcassets in Resources */,
+				335017F4282C9F8E00AF31E2 /* johnson.caf in Resources */,
+				335017E9282C9F8E00AF31E2 /* beautiful_pass_from.caf in Resources */,
 				33718BE9277ACCA80048CD12 /* GlassColor.xcassets in Resources */,
+				335017F7282C9F8E00AF31E2 /* jeremy.caf in Resources */,
+				335017E8282C9F8E00AF31E2 /* passes_to.caf in Resources */,
+				335017EB282C9F8E00AF31E2 /* gets_it_from.caf in Resources */,
 				33718B76277ACCA80048CD12 /* PreviewAssets.xcassets in Resources */,
+				335017F8282C9F8E00AF31E2 /* queef.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2051,11 +2189,13 @@
 				33718BF7277ACCA80048CD12 /* BottomSheetViewModel.swift in Sources */,
 				33718BC6277ACCA80048CD12 /* UICollectionView+Extension.swift in Sources */,
 				33810C8927FC048600C02EB1 /* PlayerRatingView.swift in Sources */,
+				335017FC282C9FD600AF31E2 /* SequencePlayer.swift in Sources */,
 				33718C10277ACCA90048CD12 /* GlassProductList+InfoView.swift in Sources */,
 				33718B8F277ACCA80048CD12 /* GlassComponentManager.swift in Sources */,
 				33718BEE277ACCA80048CD12 /* GlassLoadingView.swift in Sources */,
 				335527E1280E29E700A96974 /* PlayerCardView.swift in Sources */,
 				33718BC7277ACCA80048CD12 /* UIStackView+Extension.swift in Sources */,
+				335017FE282C9FEB00AF31E2 /* AudioStrings.swift in Sources */,
 				33718C47277C39790048CD12 /* PlayerListingView.swift in Sources */,
 				33323CC427C891DB009194B5 /* LeagueScheduleViewController.swift in Sources */,
 				3317359427FA2097007E0BC0 /* TeamGameScheduleCell.swift in Sources */,

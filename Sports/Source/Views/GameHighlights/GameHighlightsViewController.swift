@@ -40,6 +40,9 @@ class GameHighlightsViewController: BaseViewController {
         return GameHighlightZones()
     }()
 
+    // MARK: Audio
+    var sequencePlayer: SequencePlayerCaching?
+
     // MARK: Debug Views
     private let showZones = false
     private let fieldZone = UIView()
@@ -640,6 +643,11 @@ extension GameHighlightsViewController {
         }
 
         animateKeeper(keeper: keeper, ballPosition: ballImageView.center)
+
+        // TESTING
+        let passCommentary = PassCommentary(from: passer, to: shooter)
+        sequencePlayer = SequencePlayerCaching(soundAssetNames: passCommentary.soundNames)
+        sequencePlayer?.play()
     }
 
     func animatePostPass(shooter: HighlightPlayerView.Model,

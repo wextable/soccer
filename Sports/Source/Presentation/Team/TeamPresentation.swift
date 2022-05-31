@@ -15,10 +15,26 @@ extension TeamViewController.Model {
         let title = isUserTeam ? "My Team" : "\(team.longName) \(team.nickName)"
 
         var teamName = team.name
+        var pointsOffset = 0
         if let teamRank = league.rankedTeams.firstIndex(where: { $0.id == team.id }) {
+            if teamRank == 0 {
+                pointsOffset = team.points - league.rankedTeams[1].points
+            } else {
+                pointsOffset = team.points - league.rankedTeams[teamRank - 1].points
+            }
             teamName = "#\(teamRank + 1) \(teamName)"
         }
-        let record = "\(teamName) (\(team.wins)-\(team.draws)-\(team.losses))"
+        var pointsString = ""
+        if pointsOffset == 1 {
+            pointsString = " (+\(pointsOffset)pt)"
+        } else if pointsOffset > 1 {
+            pointsString = " (+\(pointsOffset)pts)"
+        } else if pointsOffset == -1 {
+            pointsString = " (\(pointsOffset)pt)"
+        } else if pointsOffset < -1 {
+            pointsString = " (\(pointsOffset)pts)"
+        }
+        let record = "\(teamName) (\(team.wins)-\(team.draws)-\(team.losses))\(pointsString)"
 
         var opponentString: NSMutableAttributedString?
         if isUserTeam,

@@ -46,7 +46,9 @@ class HighlightPlayerView: BaseView {
 extension HighlightPlayerView {
     struct Model {
         var playerSize: CGSize = .init(width: 36, height: 18)
-        var name: String = ""
+        var displayName: String = ""
+        var firstName: String = ""
+        var lastName: String = ""
         var ratings: Player.Ratings = .init(speed: 50,
                                             shooting: 50,
                                             passing: 50,
@@ -78,7 +80,7 @@ extension HighlightPlayerView {
                                                   withColor: model.jerseyColor,
                                                   tolerance: 1)
 
-        nameLabel.text = model.name
+        nameLabel.text = model.displayName
         nameLabel.frame = CGRect(x: labelX,
                                  y: labelY,
                                  width: labelWidth,

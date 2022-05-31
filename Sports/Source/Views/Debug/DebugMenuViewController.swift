@@ -192,6 +192,7 @@ extension DebugMenuViewController {
                                       preferredStyle: .alert)
 
         alert.addTextField { textField in
+            textField.keyboardType = .numberPad
             textField.placeholder = initialValue
         }
 

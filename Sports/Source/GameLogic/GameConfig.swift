@@ -120,8 +120,8 @@ extension Configuration {
     struct Injury: Codable {
         var injuryChanceCondition1 = 50
         var injuryChanceCondition20 = 25
-        var injuryChanceCondition40 = 5
-        var injuryChanceCondition60 = 2
+        var injuryChanceCondition40 = 8
+        var injuryChanceCondition60 = 3
         var injuryChanceCondition80 = 1
 
         var conditionUponRecovery = 75
